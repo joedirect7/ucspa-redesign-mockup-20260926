@@ -4,11 +4,11 @@
 
 Soft-power / deserve / owed copy from `COPY-FAIR-DESERVE-DRAFT.md` is **APPLIED** on the mockup (Joe Suskind, 2026-09-26).
 
-- Home H1: YOUR INSURANCE HAS AN ADJUSTER. SO SHOULD YOU.
-- Hero panel: THE SETTLEMENT YOU DESERVE. WITHOUT THE HEADACHES. Tag: Lower stress. Higher settlement.
+- Home H1: daily rotation from `content/hero-h1-pool.js` (starts with YOUR INSURANCE HAS AN ADJUSTER. SO SHOULD YOU. and YOUR CLAIM. OUR MISSION.). See `HERO-H1-POOL.md`.
+- Hero panel: THE SETTLEMENT YOU DESERVE. WITHOUT THE HEADACHES. Tag: Lower stress. Higher settlement. These do not rotate.
 - Stat row: Licensed · 8+ States served · 0 Upfront fees. No percent-payout tile.
 - Sitewide: “maximum payout / 700% difference / higher payouts” lines replaced with deserve, owed, fair settlement, and what the policy covers.
-- Generators (`scripts/build_all.py`, `scripts/chrome.py`) use the same lines so a regenerate does not bring the old headlines back.
+- Generators (`scripts/build_all.py`, `scripts/chrome.py`, `scripts/hero_h1.py`) read the H1 pool so a regenerate keeps the rotation and does not bring the old headlines back.
 - OPPAGA **747%** stays a historical source note in `BLOG-COPY-RATINGS.md` and `BLOG-REVAMP-PLAN.md` only. It is not a marketing headline in HTML.
 
 Live ucspa.com WordPress was not edited.
