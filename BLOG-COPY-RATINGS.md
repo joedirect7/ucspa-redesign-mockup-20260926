@@ -281,7 +281,7 @@ Checked relative links in:
 - **Scores:** Ed 7 · Trust 7 · Read 8 · SEO 8 · Fresh 4 · Conv 8 → **Composite 7.0**  
 - **Verdict:** Refresh+Redate  
 - **Proposed new date:** 2026-11-19  
-- **Note:** Keep OPPAGA PDF citation for “747%” — do **not** invent alternate stats. Align “700%/747%” consistency sitewide only if already sourced.
+- **Note:** OPPAGA 747% stays a source citation in this doc only. Mockup HTML does not use it (or “700%”) as a marketing headline. Do not invent an alternate stat.
 
 #### 23. How to Dispute a Home Insurance Claim Settlement or Denial
 - **URL:** https://www.ucspa.com/blog/how-to-dispute-a-home-insurance-claim-settlement-or-denial  
