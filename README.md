@@ -51,6 +51,7 @@ Mirrored folders with `index.html`:
 
 - `scripts/chrome.py` — shared header/footer/nav
 - `scripts/build_all.py` — page generators (re-run regenerates)
+- `content/hero-h1-pool.js` — approved home H1s; daily America/New_York rotation (see `HERO-H1-POOL.md`)
 
 ## Important notes
 

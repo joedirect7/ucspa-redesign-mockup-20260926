@@ -12,6 +12,7 @@ from chrome import (
     write_page, trust_strip, cta_band, depth_prefix, esc,
     PHONE_DISPLAY, PHONE_TEL, PHONE_ALT, PHONE_ALT_TEL, EMAIL, NAV, LOCATIONS,
 )
+from hero_h1 import hero_h1_markup, hero_h1_scripts, load_pool
 
 BASE = Path(__file__).resolve().parents[1]
 
@@ -92,12 +93,17 @@ def benefit_three():
 
 # ---------- HOME ----------
 def build_home():
+    # H1 comes from content/hero-h1-pool.js and rotates in the browser.
+    # Panel + tag stay on the locked soft-power lines in that same file.
+    pool = load_pool()
+    panel = esc(pool["fixed"]["panel"])
+    tag = esc(pool["fixed"]["tag"])
     body = f'''
 <section class="hero">
   <div class="container hero__grid">
     <div class="hero__content">
       <div class="hero__eyebrow">Public Adjusters You Can Trust</div>
-      <h1>YOUR INSURANCE HAS AN ADJUSTER. SO SHOULD YOU.</h1>
+      {hero_h1_markup()}
       <p class="hero__lead">We help homeowners, building owners, property managers and contractors file property damage claims, pursue a fair settlement and eliminate the headaches of dealing with insurance companies.</p>
       <div class="hero__actions">
         <a class="btn btn--primary btn--lg" href="insurance-claim-help/">Claim Free Inspection</a>
@@ -110,8 +116,8 @@ def build_home():
       </div>
     </div>
     <div class="hero__panel">
-      <p class="hero__tag">Lower stress. Higher settlement.</p>
-      <h2>THE SETTLEMENT YOU DESERVE. WITHOUT THE HEADACHES.</h2>
+      <p class="hero__tag">{tag}</p>
+      <h2>{panel}</h2>
       <p style="margin-bottom:1.5rem">Inspect → Respond → Recover — properly. Your insurance has an adjuster. So should you.</p>
       <a class="btn btn--primary btn--block" href="insurance-claim-help/">Get Started</a>
       <p style="margin-top:1rem;margin-bottom:0;font-size:var(--text-xs);text-align:center;color:rgba(255,255,255,.55)">Or call <a href="tel:{PHONE_TEL}" style="color:var(--ucs-teal-300)">{PHONE_DISPLAY}</a></p>
@@ -198,6 +204,7 @@ def build_home():
   </div>
 </section>
 {cta_band("")}
+{hero_h1_scripts("")}
 '''
     write_page(BASE, "", "index.html",
         "Public Adjusters You Can Trust | United Claims Specialists",

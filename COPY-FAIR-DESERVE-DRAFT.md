@@ -3,6 +3,8 @@ Date: 2026-09-26 · Mockup only · **APPLIED** (Joe 2026-09-26)
 
 Status: applied across mockup HTML, hero variants, and `scripts/build_all.py` / `scripts/chrome.py`. Live WordPress was not touched. The tables below stay as the record of what changed.
 
+Home H1 is now a daily America/New_York rotation of the approved pool in `content/hero-h1-pool.js` (see `HERO-H1-POOL.md`). The panel and tag below stay fixed.
+
 ## Voice lock (Joe 2026-09-26)
 - Directions **2–4**: deserve / entitled · owed / policy-true · soft power (premium, lower stress)
 - Hero panel lean: **C** — THE SETTLEMENT YOU DESERVE. WITHOUT THE HEADACHES.
@@ -14,7 +16,7 @@ Status: applied across mockup HTML, hero variants, and `scripts/build_all.py` / 
 
 | Slot | Current | Proposed |
 |---|---|---|
-| H1 | ON AVERAGE… 700% HIGHER… (or similar) | YOUR INSURANCE HAS AN ADJUSTER. SO SHOULD YOU. |
+| H1 | ON AVERAGE… 700% HIGHER… (or similar) | Approved pool, daily rotation. Starts with YOUR INSURANCE HAS AN ADJUSTER. SO SHOULD YOU. and YOUR CLAIM. OUR MISSION. |
 | Hero panel H2 | WE HELP YOU GET THE MAXIMUM PAYOUT, FAST! | **THE SETTLEMENT YOU DESERVE. WITHOUT THE HEADACHES.** |
 | Hero panel tag | (optional second beat) | **Lower stress. Higher settlement.** |
 | Hero panel body | Inspect → Respond → Recover… | Inspect → Respond → Recover — properly. Your insurance has an adjuster. So should you. |
@@ -51,7 +53,7 @@ Status: applied across mockup HTML, hero variants, and `scripts/build_all.py` / 
 
 | Current | Proposed |
 |---|---|
-| ON AVERAGE, PEOPLE WHO USE A PUBLIC ADJUSTER GET 700% HIGHER PAYMENTS | YOUR INSURANCE HAS AN ADJUSTER. SO SHOULD YOU. |
+| ON AVERAGE, PEOPLE WHO USE A PUBLIC ADJUSTER GET 700% HIGHER PAYMENTS | Home H1 pool in `content/hero-h1-pool.js` (daily). First line: YOUR INSURANCE HAS AN ADJUSTER. SO SHOULD YOU. |
 | Hero / navy 700% tiles | Drop numeric claim → Licensed / on your side |
 | A public adjuster can make a 700% difference in your payout. | A public adjuster can be the difference between an underpaid claim and the settlement you deserve. |
 | People who use a public adjuster get 700% higher payouts, on average. | People who hire a public adjuster are far more likely to recover what they’re actually owed. |
