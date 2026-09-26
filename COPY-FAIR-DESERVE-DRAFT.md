@@ -1,5 +1,7 @@
 # Copy draft — deserve / owed / soft power (retire “maximum”)
-Date: 2026-09-26 · Mockup only · **not applied** until Joe OK
+Date: 2026-09-26 · Mockup only · **APPLIED** (Joe 2026-09-26)
+
+Status: applied across mockup HTML, hero variants, and `scripts/build_all.py` / `scripts/chrome.py`. Live WordPress was not touched. The tables below stay as the record of what changed.
 
 ## Voice lock (Joe 2026-09-26)
 - Directions **2–4**: deserve / entitled · owed / policy-true · soft power (premium, lower stress)

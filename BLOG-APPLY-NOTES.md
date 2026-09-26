@@ -108,5 +108,6 @@
 - **PR opened:** https://github.com/joedirect7/ucspa-redesign-mockup-20260926/pull/2
 - Branch: `blog-revamp-redate-20260926` (from `/workspace/ucs-seo/gh-pages-deploy/`)
 - CloudAgent tool was not available to this executor subagent; pushed via existing `gh-pages-deploy` git tree + `gh pr create` (allowed fallback).
+- **2026-09-26 merge:** `origin/main` soft-power (PR #1) merged in. Blog redates, topic heroes, prose CTAs, and the OPPAGA 747% body cite in `top-reasons-to-hire-a-public-adjuster` kept. Sitewide footer/hero/generator copy stays on main’s “pursue a fair settlement” / “YOUR INSURANCE HAS AN ADJUSTER” lines. No 700% or maximum-payout headlines reintroduced.
 - Live HubSpot / ucspa.com CMS: **untouched**.
 
