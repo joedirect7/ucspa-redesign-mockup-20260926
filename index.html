@@ -75,8 +75,30 @@
 <main id="main">
 
 <section class="hero hero--visual">
-  <div class="hero__media" aria-hidden="true">
-    <img src="assets/img/damage/hero-storm-home.png" alt="Storm-damaged home with emergency tarp after severe weather">
+  <div class="hero__media hero__media--rotator" aria-hidden="true">
+    <div class="hero-slide is-active" data-label="Storm damage" data-href="storm-damage/">
+      <img src="assets/img/damage/hero-storm-home.png" alt="Storm-damaged home with emergency tarp after severe weather">
+    </div>
+    <div class="hero-slide" data-label="Water damage" data-href="water-damage/">
+      <img src="assets/img/damage/water-interior.png" alt="Interior water damage with stained ceiling and dehumidifier">
+    </div>
+    <div class="hero-slide" data-label="Hail &amp; roof damage" data-href="roof-leak/">
+      <img src="assets/img/damage/hail-roof.png" alt="Hail-damaged asphalt shingles on a residential roof">
+    </div>
+    <div class="hero-slide" data-label="Fire damage" data-href="fire-damage-insurance-claims/">
+      <img src="assets/img/scenes/fire.jpg" alt="Fire-damaged residential property after a loss">
+    </div>
+    <div class="hero-slide" data-label="Wind damage" data-href="storm-damage/">
+      <img src="assets/img/scenes/wind.jpg" alt="Wind and storm damage to a property">
+    </div>
+    <a class="hero-slide__chip" href="storm-damage/">Storm damage</a>
+    <div class="hero-slide__dots" role="presentation">
+      <button type="button" class="is-active" aria-label="Show storm damage"></button>
+      <button type="button" aria-label="Show water damage"></button>
+      <button type="button" aria-label="Show hail and roof damage"></button>
+      <button type="button" aria-label="Show fire damage"></button>
+      <button type="button" aria-label="Show wind damage"></button>
+    </div>
   </div>
   <div class="container hero__grid">
     <div class="hero__content">
