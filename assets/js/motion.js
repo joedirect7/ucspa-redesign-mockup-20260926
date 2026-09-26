@@ -24,7 +24,7 @@
 })();
 
 (function () {
-  var root = document.querySelector(".hero__media--rotator");
+  var root = document.querySelector(".hero__media--rotator, .hero__media--dissolve");
   if (!root) return;
 
   var slides = Array.prototype.slice.call(root.querySelectorAll(".hero-slide"));
@@ -35,7 +35,8 @@
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var i = 0;
   var timer = null;
-  var INTERVAL = 5500;
+  var INTERVAL = parseInt(root.getAttribute("data-interval") || "5500", 10);
+  if (isNaN(INTERVAL) || INTERVAL < 2000) INTERVAL = 5500;
 
   function show(n) {
     i = (n + slides.length) % slides.length;
@@ -75,8 +76,15 @@
     });
   });
 
-  root.addEventListener("mouseenter", stop);
-  root.addEventListener("mouseleave", start);
+  // Pause on hover when pointer-events enabled (dissolve sets auto via data-pause)
+  if (root.getAttribute("data-pause") === "hover") {
+    root.style.pointerEvents = "auto";
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+  } else {
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+  }
   root.addEventListener("focusin", stop);
   root.addEventListener("focusout", start);
 
