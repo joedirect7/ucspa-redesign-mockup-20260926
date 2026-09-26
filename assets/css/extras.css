@@ -402,3 +402,14 @@
     animation: none !important;
   }
 }
+
+/* Linked license badge in footer */
+a.lic-badge {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+a.lic-badge:hover {
+  border-color: #99cc02;
+  color: #fff;
+}
