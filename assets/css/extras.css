@@ -98,7 +98,7 @@
   overflow: hidden;
   pointer-events: none;
 }
-.hero--visual .hero__media img {
+.hero--visual .hero__media:not(.hero__media--rotator) > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -266,7 +266,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .media-frame--hero img,
-  .hero--visual .hero__media img,
+  .hero--visual .hero__media:not(.hero__media--rotator) > img,
   .page-hero--visual::before {
     animation: none !important;
     transform: none !important;
@@ -289,26 +289,47 @@
   max-height: 220px;
 }
 
-/* Home hero damage rotator — soft crossfade for relatability */
-.hero__media--rotator {
-  /* stacked slides */
-}
-.hero__media--rotator .hero-slide {
+/* Home hero damage rotator — one visible slide, soft crossfade */
+.hero--visual .hero__media.hero__media--rotator {
   position: absolute;
   inset: 0;
-  opacity: 0;
-  transition: opacity 1.35s ease-in-out;
   z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* content above stays clickable; chips re-enable below */
+}
+.hero__media--rotator .hero-slide {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 .hero__media--rotator .hero-slide.is-active {
   opacity: 1;
+  visibility: visible;
   z-index: 1;
 }
 .hero__media--rotator .hero-slide img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: ken-burns 18s ease-in-out infinite alternate;
+  object-position: center 40%;
+  transform: scale(1.02);
+  animation: none; /* ken-burns only on active — avoids mobile compositing glitches */
+}
+.hero__media--rotator .hero-slide.is-active img {
+  animation: ken-burns 18s var(--ease-out) infinite alternate;
+}
+.hero-slide__chip,
+.hero-slide__dots {
+  pointer-events: auto;
 }
 .hero-slide__chip {
   position: absolute;
@@ -377,7 +398,7 @@
   .hero__media--rotator .hero-slide {
     transition: none !important;
   }
-  .hero__media--rotator .hero-slide img {
+  .hero__media--rotator .hero-slide.is-active img {
     animation: none !important;
   }
 }
