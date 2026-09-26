@@ -242,18 +242,22 @@ strong { font-weight: 650; }
   flex-shrink: 0;
 }
 .logo:hover { color: var(--ucs-navy-900); }
-.logo__mark {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: var(--radius-md);
-  background: var(--grad-hero);
-  display: grid;
-  place-items: center;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  box-shadow: var(--shadow-sm);
+/* Keyed 3D mark — no plate. .logo__mark text tile is retired. */
+.logo__img {
+  display: block;
+  height: 2.75rem;
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 2px 6px rgba(26, 26, 26, 0.16));
+}
+.logo__img--chrome {
+  height: 2.35rem;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
 .logo__text { line-height: 1.15; }
 .logo__text span {
@@ -263,6 +267,11 @@ strong { font-weight: 650; }
   color: var(--color-text-muted);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+@media (max-width: 720px) {
+  .logo { gap: 0.55rem; }
+  .logo__img { height: 2.2rem; }
+  .site-header .logo { font-size: 0.95rem; }
 }
 
 .nav-desktop {
