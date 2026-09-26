@@ -1,0 +1,47 @@
+/* Micro-interactions & polish layer */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero__content > * {
+  animation: fade-up 0.7s var(--ease-out) both;
+}
+.hero__content > *:nth-child(2) { animation-delay: 0.08s; }
+.hero__content > *:nth-child(3) { animation-delay: 0.16s; }
+.hero__content > *:nth-child(4) { animation-delay: 0.24s; }
+.hero__content > *:nth-child(5) { animation-delay: 0.32s; }
+
+.card, .blog-card, .btn {
+  will-change: transform;
+}
+
+/* Soft glass panel for claim-help */
+.glass-panel {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px) saturate(1.2);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-2xl);
+}
+
+/* Magazine article pullquote */
+.pullquote {
+  margin: var(--space-10) 0;
+  padding: var(--space-6) var(--space-8);
+  border-left: 3px solid var(--ucs-teal-500);
+  background: var(--ucs-teal-50);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-size: var(--text-xl);
+  font-weight: 550;
+  color: var(--ucs-navy-900);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+}
+
+/* Subtle section divider wave */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-border-strong), transparent);
+  border: 0;
+  margin: 0;
+}
