@@ -6,6 +6,9 @@
 
 **Canonical conversion URL:** https://www.ucspa.com/insurance-claim-help
 
+**Date rule (Joe 2026-09-26):** Proposed publish/updated dates must **not** be in the future. Refresh+Redate window = end of 2025 through **2026-09-26** (today, America/New_York). Prior Oct 2026–Jan 2027 draft dates were replaced.
+
+
 ---
 
 ## Counts (this pass)
@@ -16,7 +19,7 @@
 | **Refresh+Redate** | 28 | Priority for mockup index + redate window |
 | **Light polish only** | 4 | Typo / demote; not priority for redate train |
 | **Exclude (stale)** | 21+ accessed / inventory-flagged | Hide from mockup index; noindex or archive in CMS later |
-| **Incomplete fetch — skip** | ~300+ stubs + 5 wrong-slug mockup folders | Do not score or rewrite; paste from CMS before publish |
+| **Incomplete fetch — skip** | **0 outstanding** (of 305: 302 full, 2 thin, 1 dead) | See `BLOG-REFETCH-RESULTS.md`. Refresh decisions wait on Joe. |
 
 **Explicit recommendation:** Do **not** revise every blog. Visual redesign + selective internal links to `/insurance-claim-help` is enough for most. Push Refresh+Redate only on evergreen teaching pillars; Exclude named-storm / COVID / 2012 Citizens news.
 
@@ -34,42 +37,42 @@
 
 ### Priority B — Refresh+Redate queue (proposed publish dates)
 
-Spread across revamp window (Oct 2026–Jan 2027) + pre-hurricane season for prep posts. **Keep core teaching; light polish only; add claim-help link.**
+Spread across revamp window (**2025-11-04 → 2026-09-09**, no future dates) + pre-hurricane season for prep posts (May 2026). **Keep core teaching; light polish only; add claim-help link.**
 
 | Order | Slug (live) | Proposed new date | Refresh notes (no new claims) |
 |------:|-------------|-------------------|--------------------------------|
-| 1 | `difference-in-coverage-for-regular-storms-vs-hurricanes-0` | **2026-10-06** | Re-verify citation links; add to mockup |
-| 2 | `burden-of-proof-in-florida` | **2026-10-08** | **Remove expired Irma “September 10” appeal line** |
-| 3 | `signs-of-water-damage-in-your-walls-0` | **2026-10-13** | Fix mockup slug (`-0`); light trim repetition |
-| 4 | `bad-faith-insurance-claims` | **2026-10-15** | Typo polish; pair related to CRN |
-| 5 | `civil-remedy-notices` | **2026-10-16** | Keep 624.155 list; label 2019 HB 301 as historical |
-| 6 | `when-does-homeowners-insurance-cover-roof-replacements-0` | **2026-10-20** | Fix mockup slug |
-| 7 | `churn-and-burn-insurance-adjusting` | **2026-10-22** | Keep Merlin cite |
-| 8 | `what-happens-when-you-dont-call-a-public-adjuster-0` | **2026-10-27** | Fix mockup slug; keep denial-language examples |
-| 9 | `what-you-need-to-know-about-sworn-statement-in-proof-of-loss` | **2026-10-29** | “accuracies” → “inaccuracies” |
-| 10 | `top-five-tips-on-filing-a-mold-damage-claim-0` | **2026-11-03** | Fix mockup slug; keep CDC/FEMA cites |
-| 11 | `preparing-for-examination-under-oat` | **2026-11-05** | Optional redirect to fixed slug |
-| 12 | `why-you-should-not-accept-an-insurance-companys-first-offer-0` | **2026-11-10** | Restore full body in mockup |
-| 13 | `appraisals-in-hurricane-damage-insurance-claim-disputes` | **2026-11-12** | Frame Irma spike as historical |
-| 14 | `insurance-claim-denied-these-are-the-next-steps-0` | **2026-11-17** | Link denied-claims + claim-help |
-| 15 | `top-reasons-to-hire-a-public-adjuster` | **2026-11-19** | Keep OPPAGA 747% cite only |
-| 16 | `top-5-benefits-for-hiring-a-public-insurance-adjuster-0` | **2026-11-24** | Light tighten marketing density |
-| 17 | `how-to-dispute-a-home-insurance-claim-settlement-or-denial` | **2026-12-01** | |
-| 18 | `how-do-i-reopen-an-insurance-claim` | **2026-12-03** | Confirm reopen windows with Joe before publish |
-| 19 | `condo-insurance-claims` | **2026-12-08** | Restore full body in mockup |
-| 20 | `does-homeowners-insurance-cover-land-erosion` | **2026-12-10** | “lighting” → “lightning” |
-| 21 | `casualty-loss-deduction` | **2026-12-15** | Update TCJA sunset framing via public IRS only |
-| 22 | `canine-liability-exclusion` | **2026-12-17** | Keep III cite as dated unless Joe supplies current III figure |
-| 23 | `completing-a-total-loss-inventory` | **2026-12-22** | |
-| 24 | `for-property-loss-claims-what-is-replacement-cost-vs-actual-cash-value` | **2026-12-29** | Add to mockup — RCV/ACV pillar |
-| 25 | `5-things-your-insurance-company` | **2027-01-05** | Align mockup long slug ↔ live |
-| 26 | `how-to-manage-a-denied-homeowners-insurance-claim` | **2027-01-07** | |
-| 27 | `what-you-need-to-know-about-hail-damage-claims` | **2027-01-12** | Restore full body; keep scammer caution |
-| 28 | `how-can-i-find-a-public-adjuster-near-me` | **2027-01-14** | Soften sales repetition |
-| 29 | `why-reopen-a-denied-insurance-claim` | **2027-01-19** | Cross-link reopen how-to |
-| 30 | `contractors-legally-negotiate-insurance-claims` | **2027-01-21** | Keep 626.854 core warning |
-| — | `top-five-tips-on-hurricane-preparation-0` | **2026-05-15** | Pre-season; replace NOAA 2024 outlook with current public NOAA only |
-| — | `an-ounce-of-prevention-minimizing-hurricane-damage` | **2026-05-22** | Fix `usfl.com` → ucspa.com |
+| 1 | `difference-in-coverage-for-regular-storms-vs-hurricanes-0` | **2025-11-04** | Re-verify citation links; add to mockup |
+| 2 | `burden-of-proof-in-florida` | **2025-11-11** | **Remove expired Irma “September 10” appeal line** |
+| 3 | `signs-of-water-damage-in-your-walls-0` | **2025-11-18** | Fix mockup slug (`-0`); light trim repetition |
+| 4 | `bad-faith-insurance-claims` | **2025-11-25** | Typo polish; pair related to CRN |
+| 5 | `civil-remedy-notices` | **2025-12-02** | Keep 624.155 list; label 2019 HB 301 as historical |
+| 6 | `when-does-homeowners-insurance-cover-roof-replacements-0` | **2025-12-09** | Fix mockup slug |
+| 7 | `churn-and-burn-insurance-adjusting` | **2025-12-16** | Keep Merlin cite |
+| 8 | `what-happens-when-you-dont-call-a-public-adjuster-0` | **2026-01-06** | Fix mockup slug; keep denial-language examples |
+| 9 | `what-you-need-to-know-about-sworn-statement-in-proof-of-loss` | **2026-01-13** | “accuracies” → “inaccuracies” |
+| 10 | `top-five-tips-on-filing-a-mold-damage-claim-0` | **2026-01-20** | Fix mockup slug; keep CDC/FEMA cites |
+| 11 | `preparing-for-examination-under-oat` | **2026-01-27** | Optional redirect to fixed slug |
+| 12 | `why-you-should-not-accept-an-insurance-companys-first-offer-0` | **2026-02-03** | Restore full body in mockup |
+| 13 | `appraisals-in-hurricane-damage-insurance-claim-disputes` | **2026-02-10** | Frame Irma spike as historical |
+| 14 | `insurance-claim-denied-these-are-the-next-steps-0` | **2026-02-17** | Link denied-claims + claim-help |
+| 15 | `top-reasons-to-hire-a-public-adjuster` | **2026-02-24** | Keep OPPAGA 747% cite only |
+| 16 | `top-5-benefits-for-hiring-a-public-insurance-adjuster-0` | **2026-03-03** | Light tighten marketing density |
+| 17 | `how-to-dispute-a-home-insurance-claim-settlement-or-denial` | **2026-03-10** | |
+| 18 | `how-do-i-reopen-an-insurance-claim` | **2026-03-17** | Confirm reopen windows with Joe before publish |
+| 19 | `condo-insurance-claims` | **2026-03-24** | Restore full body in mockup |
+| 20 | `does-homeowners-insurance-cover-land-erosion` | **2026-03-31** | “lighting” → “lightning” |
+| 21 | `casualty-loss-deduction` | **2026-04-07** | Update TCJA sunset framing via public IRS only |
+| 22 | `canine-liability-exclusion` | **2026-04-14** | Keep III cite as dated unless Joe supplies current III figure |
+| 23 | `completing-a-total-loss-inventory` | **2026-04-21** | |
+| 24 | `for-property-loss-claims-what-is-replacement-cost-vs-actual-cash-value` | **2026-04-28** | Add to mockup — RCV/ACV pillar |
+| 25 | `5-things-your-insurance-company` | **2026-06-02** | Align mockup long slug ↔ live |
+| 26 | `how-to-manage-a-denied-homeowners-insurance-claim` | **2026-06-16** | |
+| 27 | `what-you-need-to-know-about-hail-damage-claims` | **2026-07-07** | Restore full body; keep scammer caution |
+| 28 | `how-can-i-find-a-public-adjuster-near-me` | **2026-07-21** | Soften sales repetition |
+| 29 | `why-reopen-a-denied-insurance-claim` | **2026-08-11** | Cross-link reopen how-to |
+| 30 | `contractors-legally-negotiate-insurance-claims` | **2026-09-09** | Keep 626.854 core warning |
+| — | `top-five-tips-on-hurricane-preparation-0` | **2026-05-12** | Pre-season; replace NOAA 2024 outlook with current public NOAA only |
+| — | `an-ounce-of-prevention-minimizing-hurricane-damage` | **2026-05-19** | Fix `usfl.com` → ucspa.com |
 
 ### Priority C — Light polish / demote from mockup lead
 
