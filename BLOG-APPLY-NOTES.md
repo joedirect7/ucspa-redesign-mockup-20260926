@@ -103,3 +103,10 @@
 - No wholesale rewrites; no invented legal claims/stats.
 - Pillars not yet in mockup folders (storm-vs-hurricane, RCV/ACV, slab leaks, CRN, etc.) — plan dates updated only.
 
+
+## Pages / GitHub
+- **PR opened:** https://github.com/joedirect7/ucspa-redesign-mockup-20260926/pull/2
+- Branch: `blog-revamp-redate-20260926` (from `/workspace/ucs-seo/gh-pages-deploy/`)
+- CloudAgent tool was not available to this executor subagent; pushed via existing `gh-pages-deploy` git tree + `gh pr create` (allowed fallback).
+- Live HubSpot / ucspa.com CMS: **untouched**.
+
