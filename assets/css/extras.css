@@ -75,9 +75,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1);
-  animation: ken-burns 18s var(--ease-out) infinite alternate;
-  will-change: transform;
+  object-position: center center;
+  transform: none;
+  animation: none;
 }
 @keyframes ken-burns {
   from { transform: scale(1); }
@@ -90,6 +90,15 @@
   isolation: isolate;
   overflow: hidden;
   background: var(--ucs-navy-950);
+  /* Keep hero near 16:9 / cinematic — tall heroes force object-fit:cover to zoom in */
+  min-height: clamp(22rem, 52vw, 36rem);
+  max-height: min(72vh, 640px);
+  display: flex;
+  align-items: stretch;
+}
+.hero--visual > .container,
+.hero--visual .hero__grid {
+  width: 100%;
 }
 .hero--visual .hero__media {
   position: absolute;
@@ -102,10 +111,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 55%;
-  transform: scale(1);
-  animation: ken-burns 28s var(--ease-out) infinite alternate;
-  will-change: transform;
+  object-position: center center;
+  transform: none;
+  animation: none;
 }
 .hero--visual::before {
   /* Dark gradient so lime accents + white copy stay readable */
@@ -160,10 +168,9 @@
   z-index: 0;
   background-image: var(--page-hero-img);
   background-size: cover;
-  background-position: center;
-  transform: scale(1.02);
-  animation: ken-burns 18s var(--ease-out) infinite alternate;
-  will-change: transform;
+  background-position: center center;
+  transform: none;
+  animation: none;
 }
 .page-hero--visual::after {
   content: "";
@@ -216,7 +223,7 @@
   transition: transform 0.7s var(--ease-out);
 }
 .card--media:hover .card__media img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 .card--media:hover {
   transform: translateY(-5px);
@@ -320,12 +327,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
-  transform: scale(1.02);
-  animation: none; /* ken-burns only on active — avoids mobile compositing glitches */
+  object-position: center center;
+  transform: none;
+  animation: none;
 }
 .hero__media--rotator .hero-slide.is-active img {
-  animation: ken-burns 18s var(--ease-out) infinite alternate;
+  animation: none;
 }
 .hero-slide__chip,
 .hero-slide__dots {
@@ -421,14 +428,9 @@ a.lic-badge:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 55%;
-  transform: scale(1);
-  animation: hero-still-drift 28s var(--ease-out) infinite alternate;
-  will-change: transform;
-}
-@keyframes hero-still-drift {
-  from { transform: scale(1) translate3d(0, 0, 0); }
-  to   { transform: scale(1.015) translate3d(-0.4%, 0.25%, 0); }
+  object-position: center center;
+  transform: none;
+  animation: none;
 }
 
 /* Variant B — quiet cinematic dissolve (no dots/chip) */
@@ -462,16 +464,12 @@ a.lic-badge:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 55%;
-  transform: scale(1);
+  object-position: center center;
+  transform: none;
   animation: none;
 }
 .hero__media--dissolve .hero-slide.is-active img {
-  animation: hero-dissolve-kb 28s var(--ease-out) infinite alternate;
-}
-@keyframes hero-dissolve-kb {
-  from { transform: scale(1); }
-  to   { transform: scale(1.015); }
+  animation: none;
 }
 
 /* Variant C — true video background */
@@ -487,7 +485,8 @@ a.lic-badge:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 55%;
+  object-position: center center;
+  transform: none;
 }
 
 /* Floating variant switcher */
