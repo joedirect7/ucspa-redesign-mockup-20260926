@@ -179,7 +179,8 @@ def footer_html(prefix: str) -> str:
   <a class="btn btn--outline btn--sm" style="flex:1" href="tel:{PHONE_TEL}">Call</a>
   <a class="btn btn--primary btn--sm" style="flex:1" href="{prefix}insurance-claim-help/">Free Inspection</a>
 </div>
-<script src="{prefix}assets/js/nav.js" defer></script>'''
+<script src="{prefix}assets/js/nav.js" defer></script>
+<script src="{prefix}assets/js/motion.js" defer></script>'''
 
 def page_shell(title, description, rel_path, body):
     prefix = depth_prefix(rel_path)
