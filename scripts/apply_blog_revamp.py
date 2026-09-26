@@ -5,6 +5,7 @@ Joe date rule 2026-09-26: no future dates; spread through end-2025 → 2026-09-2
 from __future__ import annotations
 
 import calendar
+import html as htmlmod
 import re
 from datetime import date
 from pathlib import Path
@@ -263,22 +264,15 @@ def card_html(slug: str, title: str, excerpt: str, d: date | None, hero_exists: 
         meta = f'<div class="article-meta"><span><time datetime="{iso(d)}">{fmt_display(d)}</time></span></div>'
     else:
         meta = '<div class="article-meta"><span>Resources</span></div>'
-    excerpt = excerpt.replace("### ", "").strip()
+    # Article HTML is already escaped (`&#x27;`, `&quot;`). Unescape to plain
+    # text before escaping again, or the leading `&` becomes `&amp;` and
+    # cards render the entity names (`&quot;`, `&#x27;`) literally.
+    excerpt = htmlmod.unescape(excerpt).replace("### ", "").strip()
+    excerpt = re.sub(r"\s+", " ", excerpt)
     if len(excerpt) > 160:
         excerpt = excerpt[:157].rsplit(" ", 1)[0] + "…"
-    # escape
-    excerpt = (
-        excerpt.replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
-    title_esc = (
-        title.replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
+    excerpt = htmlmod.escape(excerpt, quote=False)
+    title_esc = htmlmod.escape(htmlmod.unescape(title), quote=False)
     return (
         f'<article class="blog-card">\n'
         f'      {thumb}\n'
