@@ -112,7 +112,7 @@ def header_html(prefix: str) -> str:
   </div>
   <div class="container header-main">
     <a class="logo" href="{prefix}index.html">
-      <span class="logo__mark">UCS</span>
+      <img class="logo__img" src="{prefix}assets/img/ucs-logo-3d.png" alt="UCS" width="1359" height="611">
       <span class="logo__text">United Claims Specialists<span>Public Adjusters</span></span>
     </a>
     <ul class="nav-desktop">{"".join(items)}</ul>
@@ -138,7 +138,7 @@ def footer_html(prefix: str) -> str:
   <div class="container footer-grid">
     <div class="footer-brand">
       <a class="logo" href="{prefix}index.html" style="color:#fff">
-        <span class="logo__mark">UCS</span>
+        <img class="logo__img logo__img--chrome" src="{prefix}assets/img/ucs-3d-chrome-keyed.png" alt="UCS" width="259" height="110">
         <span class="logo__text" style="color:#fff">United Claims Specialists<span style="color:rgba(255,255,255,.55)">Public Adjusters</span></span>
       </a>
       <p>We help homeowners, building owners, property managers and contractors file property damage claims, pursue a fair settlement, and eliminate the headaches of dealing with insurance claims. Don't file another claim without us!</p>
