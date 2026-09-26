@@ -1,0 +1,7 @@
+UCS live-site color notes (viewed 2026-09-26; 100% browser zoom)
+accent green / primary button: #99CC02 (live theme override; lime)
+utility/top-bar green: #99CC00 (inline button style on homepage)
+dark text / hero charcoal: #2E2E2E
+header background: #FFFFFF (white)
+other backgrounds: #F5F5F5 form fields; #EEEEEE form section
+blue: #0B5FFF appears only as a third-party support-widget theme accent; no blue in the above-fold hero UI

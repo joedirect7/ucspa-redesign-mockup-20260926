@@ -81,7 +81,7 @@
 }
 @keyframes ken-burns {
   from { transform: scale(1); }
-  to { transform: scale(1.06); }
+  to { transform: scale(1.03); }
 }
 
 /* Hero with full-bleed visual */
@@ -102,9 +102,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 55%;
   transform: scale(1);
-  animation: ken-burns 18s var(--ease-out) infinite alternate;
+  animation: ken-burns 28s var(--ease-out) infinite alternate;
   will-change: transform;
 }
 .hero--visual::before {
@@ -421,14 +421,14 @@ a.lic-badge:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center 55%;
   transform: scale(1);
-  animation: hero-still-drift 20s var(--ease-out) infinite alternate;
+  animation: hero-still-drift 28s var(--ease-out) infinite alternate;
   will-change: transform;
 }
 @keyframes hero-still-drift {
   from { transform: scale(1) translate3d(0, 0, 0); }
-  to   { transform: scale(1.02) translate3d(-0.6%, 0.4%, 0); }
+  to   { transform: scale(1.015) translate3d(-0.4%, 0.25%, 0); }
 }
 
 /* Variant B — quiet cinematic dissolve (no dots/chip) */
@@ -462,16 +462,16 @@ a.lic-badge:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 55%;
   transform: scale(1);
   animation: none;
 }
 .hero__media--dissolve .hero-slide.is-active img {
-  animation: hero-dissolve-kb 22s var(--ease-out) infinite alternate;
+  animation: hero-dissolve-kb 28s var(--ease-out) infinite alternate;
 }
 @keyframes hero-dissolve-kb {
   from { transform: scale(1); }
-  to   { transform: scale(1.03); }
+  to   { transform: scale(1.015); }
 }
 
 /* Variant C — true video background */
@@ -487,7 +487,7 @@ a.lic-badge:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 55%;
 }
 
 /* Floating variant switcher */
