@@ -1,5 +1,15 @@
 # Copy Notes
 
+## City mockups visual pass 2026-09-28 (ET)
+
+Applied the same treatment to Paramus, Hackensack, Englewood, White Plains, Tarrytown (folder `locations/<city>/index.html` + flat `locations/<city>.html`) and confirmed locations index:
+
+- Real keyed 3D UCS logo in header (`../../assets/img/ucs-logo-3d.png` / `../assets/img/…`) — replaces `refs/icons/logo.jpg`
+- More indented top gutters: wrap padding + extra inset on topbar / site-header / hero
+- Locations index already uses premium photo tiles (prior commit)
+
+HubSpot untouched.
+
 ## Homepage + locations visual pass 2026-09-28 (ET)
 
 Mockup-only (GitHub Pages). HubSpot / live WordPress **not** touched in this pass.

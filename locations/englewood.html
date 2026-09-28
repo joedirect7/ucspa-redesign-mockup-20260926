@@ -42,7 +42,7 @@
     a { color: var(--lime); text-decoration: none; }
     a:hover { text-decoration: underline; }
     h2, h3, h4, h5, h6 { font-family: Poppins, sans-serif; font-weight: 700; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; width: 100%; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.75rem, 5.5vw, 3.5rem); width: 100%; }
 
     .mock-banner {
       background: #fff8d6;
@@ -89,8 +89,12 @@
       display: flex; align-items: stretch; justify-content: space-between;
       gap: 12px; min-height: 78px;
     }
-    .logo-link { display: flex; align-items: center; padding: 10px 0; }
-    .logo-link img { height: 52px; width: auto; }
+    .logo-link { display: flex; align-items: center; padding: 10px 0; gap: 0.5rem; }
+    .logo-link img {
+      height: 56px; width: auto; max-width: none;
+      background: transparent; border: 0; border-radius: 0;
+      filter: drop-shadow(0 2px 6px rgba(26,26,26,0.16));
+    }
     .header-right {
       display: flex; align-items: stretch; gap: 0; flex: 1; justify-content: flex-end;
     }
@@ -381,6 +385,17 @@
       .topbar-inner { justify-content: center; }
       .call-now { padding: 18px 16px; }
     }
+  
+    /* city-top-inset — more indented header + hero */
+    .site-header .wrap,
+    .topbar .wrap,
+    .hero .wrap {
+      padding-left: clamp(2rem, 6.5vw, 4rem);
+      padding-right: clamp(2rem, 6.5vw, 4rem);
+    }
+    @media (max-width: 720px) {
+      .logo-link img { height: 44px; }
+    }
   </style>
 </head>
 <body>
@@ -426,7 +441,7 @@
   <header class="site-header">
     <div class="wrap site-header-inner">
       <a class="logo-link" href="https://www.ucspa.com/">
-        <img src="englewood/refs/icons/logo.jpg" alt="United Claims Specialists" />
+        <img src="../assets/img/ucs-logo-3d.png" alt="United Claims Specialists" />
       </a>
       <div class="header-right">
         <nav class="main" aria-label="Primary">
