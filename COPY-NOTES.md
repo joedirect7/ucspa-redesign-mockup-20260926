@@ -1,5 +1,15 @@
 # Copy Notes
 
+## City hero soft establishing 2026-09-28 (ET)
+
+Joe: Hackensack courthouse was too zoomed in (same class of bug as home).
+
+- Rebaked courthouse to **1920×960 soft 0.85** establishing frame (edge-strip fill).
+- Soft-rebaked Paramus / Englewood / White Plains / Tarrytown heroes at soft **0.91**.
+- Softened city hero CSS band (2:1 aspect, shorter min-height) so cover does not re-zoom.
+- Process documented in `locations/HERO-BAKE.md` — use for all future city heroes.
+
+
 ## City mockups visual pass 2026-09-28 (ET)
 
 Applied the same treatment to Paramus, Hackensack, Englewood, White Plains, Tarrytown (folder `locations/<city>/index.html` + flat `locations/<city>.html`) and confirmed locations index:

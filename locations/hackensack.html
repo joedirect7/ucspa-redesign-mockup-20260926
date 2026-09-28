@@ -120,9 +120,14 @@
     .call-now:hover { background: var(--ink); color: var(--white) !important; }
 
     .hero {
-      position: relative; min-height: 520px;
-      background: #222 center/cover no-repeat; color: var(--white);
+      /* Soft establishing band — avoid tall cover zoom into city photos */
+      position: relative;
+      min-height: clamp(18rem, 38vw, 26rem);
+      max-height: min(62vh, 520px);
+      aspect-ratio: 2 / 1;
+      background: #222 center / cover no-repeat; color: var(--white);
       display: flex; align-items: center;
+      overflow: hidden;
     }
     /* Flat overlay — no gradient fills on this page */
     .hero::after {
@@ -341,7 +346,7 @@
       nav.main { display: none; }
       .pct-bar { justify-content: center; text-align: center; }
       .pct-bar h3, .pct-bar h4 { text-align: center; }
-      .hero { min-height: 440px; }
+      .hero { min-height: 16rem; aspect-ratio: auto; max-height: none; }
       .topbar-inner { justify-content: center; }
       .call-now { padding: 18px 16px; }
     }
@@ -429,7 +434,7 @@
     </div>
   </header>
 
-  <section class="hero" style="background-image:url('refs/hero-hackensack-courthouse.jpg?v=2')" aria-label="Hackensack public adjusters hero">
+  <section class="hero" style="background-image:url('refs/hero-hackensack-courthouse.jpg?v=soft3')" aria-label="Hackensack public adjusters hero">
     <div class="hero-inner">
       <h1>Public Adjusters in <span class="city">Hackensack</span></h1>
       <p class="hero-sub">Your insurance has an adjuster, so should you!</p>

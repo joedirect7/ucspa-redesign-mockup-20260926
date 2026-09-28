@@ -120,7 +120,11 @@
     .call-now:hover { background: var(--ink); color: var(--white) !important; }
 
     .hero {
-      position: relative; min-height: 520px;
+      /* Soft establishing band — avoid tall cover zoom into city photos */
+      position: relative;
+      min-height: clamp(18rem, 38vw, 26rem);
+      max-height: min(62vh, 520px);
+      aspect-ratio: 2 / 1;
       background: #222; color: var(--white);
       display: flex; align-items: center;
       overflow: hidden;
@@ -137,8 +141,9 @@
       position: absolute; inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
-      /* Bias upward so H1 lands on sky / upper glass, not red Westfield letters */
-      object-position: center 22%;
+      /* Soft bake already zoomed out; keep mild upward bias for Paramus letters */
+      object-position: center 28%;
+      transform: scale(1);
       opacity: 0;
       transform: translateX(12px);
       transition: opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
@@ -410,7 +415,7 @@
       nav.main { display: none; }
       .pct-bar { justify-content: center; text-align: center; }
       .pct-bar h3, .pct-bar h4 { text-align: center; }
-      .hero { min-height: 440px; }
+      .hero { min-height: 16rem; aspect-ratio: auto; max-height: none; }
       .topbar-inner { justify-content: center; }
       .call-now { padding: 18px 16px; }
     }
@@ -500,8 +505,8 @@
 
   <section class="hero" id="heroRotator" aria-label="Paramus public adjusters hero">
     <div class="hero-slides" aria-hidden="true">
-      <img class="is-active" src="refs/gsp-better-wide-day.jpg?v=1" alt="" />
-      <img src="refs/gsp-better-golden-hour.jpg?v=1" alt="" />
+      <img class="is-active" src="refs/gsp-better-wide-day.jpg?v=soft3" alt="" />
+      <img src="refs/gsp-better-golden-hour.jpg?v=soft3" alt="" />
     </div>
     <div class="hero-inner">
       <h1>Public Adjusters in <span class="city">Paramus</span></h1>
