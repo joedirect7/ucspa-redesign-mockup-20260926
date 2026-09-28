@@ -45,3 +45,5 @@ Do **not** change layout or check craft. New boards only swap the peril still (p
 - [ ] Hancock cursive present on signature line
 - [ ] Headline + lime amount + UCS logo BL of peril
 - [ ] Memo matches peril type
+
+**v09 addition (2026-09-28):** `approved-v09-wind-exterior-165k.png` — exterior wind/storm (uprooted tree on roof); check_no 1158; same $165K as interior v04 but distinct peril still.
