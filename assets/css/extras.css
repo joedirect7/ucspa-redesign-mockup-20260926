@@ -674,3 +674,25 @@ a.lic-badge:hover {
     transition: none !important;
   }
 }
+
+/* TOP INSET — homepage header + hero more indented */
+.site-header .header-top .container,
+.site-header .header-main.container,
+.site-header .container.header-main {
+  width: min(100% - 2 * var(--gutter-top, 2.5rem), var(--container));
+}
+.hero--visual > .container,
+.hero--visual .hero__grid.container,
+.hero--visual .container.hero__grid {
+  width: min(100% - 2 * var(--gutter-top, 2.5rem), var(--container));
+  margin-inline: auto;
+  padding-block: clamp(1.5rem, 3vw, 2.75rem);
+}
+@media (min-width: 1100px) {
+  .hero--visual .hero__content {
+    padding-right: 1.25rem;
+  }
+  .hero--visual .hero__panel {
+    margin-left: 0.5rem;
+  }
+}

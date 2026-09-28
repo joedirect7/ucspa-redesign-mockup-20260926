@@ -40,3 +40,11 @@ Live site: HubSpot-powered ucspa.com (script-heavy footer in fetches, dated chro
 
 - Live CMS content, DNS, analytics, forms backends
 - Marketing claims / % figures / licensing text (aside from copyright year note)
+
+## 2026-09-28 — Mockup home hero + locations (Pages only)
+
+- Hero rotator: locked HF set (z091 16×9) + keep blue-tarp still
+- Real 3D UCS logo in header/footer
+- Stronger top inset on header/hero
+- Locations: photo tiles (FL/NJ/NY featured) instead of pink-pin white cards
+- Live HubSpot unchanged by this commit

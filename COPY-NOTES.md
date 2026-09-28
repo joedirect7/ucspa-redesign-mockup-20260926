@@ -1,5 +1,16 @@
 # Copy Notes
 
+## Homepage + locations visual pass 2026-09-28 (ET)
+
+Mockup-only (GitHub Pages). HubSpot / live WordPress **not** touched in this pass.
+
+1. **Hero imagery:** Homepage (and dissolve variant) now dissolve-rotates the locked zoom-out 16×9 set from `home-hero-options` / HubSpot `ucs-hero-20260928-z091`: HF-01, HF-20, HF-17, HF-06, HF-12, HF-07, HF-13, LIVE-01f — plus **kept** the prior blue-tarp still (`KEEP-blue-tarp-storm-home.png`) as the 9th slide. Assets live under `assets/img/heroes/`.
+2. **Top inset:** `--gutter-top` + extras rules indent header + hero content further from the edges.
+3. **Real UCS logo:** Header uses `assets/img/ucs-logo-3d.png`; footer uses chrome keyed `assets/img/ucs-3d-chrome-keyed.png` (from PR #6 / brand assets). Placeholder `.logo__mark` plate removed sitewide.
+4. **Locations:** Replaced weak white pin / “Learn more →” card grid with premium treatment — large photo tiles for **Florida / New Jersey / New York**, compact photo cards for LA / TX / LA / GA / PA. Photos from live UCS location page HubSpot assets, stored in `assets/img/locations/`.
+
+Preview: https://joedirect7.github.io/ucspa-redesign-mockup-20260926/ · Locations: https://joedirect7.github.io/ucspa-redesign-mockup-20260926/locations/
+
 ## Applied 2026-09-26 (Joe)
 
 Soft-power / deserve / owed copy from `COPY-FAIR-DESERVE-DRAFT.md` is **APPLIED** on the mockup (Joe Suskind, 2026-09-26).
