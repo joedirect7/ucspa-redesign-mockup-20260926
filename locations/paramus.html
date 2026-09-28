@@ -117,15 +117,44 @@
 
     .hero {
       position: relative; min-height: 520px;
-      background: #222 center/cover no-repeat; color: var(--white);
+      background: #222; color: var(--white);
       display: flex; align-items: center;
+      overflow: hidden;
     }
-    /* Flat overlay — no gradient fills on this page */
+    /* Darker flat overlay — kills red Westfield letters behind lime PARAMUS */
     .hero::after {
-      content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.55);
+      content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.72);
+      z-index: 1; pointer-events: none;
+    }
+    .hero-slides {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .hero-slides img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      /* Bias upward so H1 lands on sky / upper glass, not red Westfield letters */
+      object-position: center 22%;
+      opacity: 0;
+      transform: translateX(12px);
+      transition: opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-slides img.is-active {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 1;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slides img {
+        transition: none;
+        transform: none;
+      }
+      .hero-slides img.is-active { transform: none; }
     }
     .hero-inner {
-      position: relative; z-index: 1; max-width: 780px;
+      position: relative; z-index: 2; max-width: 780px;
       padding: 72px 24px 64px; margin: 0 auto; text-align: center; width: 100%;
     }
     .hero h1 {
@@ -454,7 +483,11 @@
     </div>
   </header>
 
-  <section class="hero" style="background-image:url('paramus/hero-temp-gsp-entrance.jpg?v=1')" aria-label="Paramus public adjusters hero">
+  <section class="hero" id="heroRotator" aria-label="Paramus public adjusters hero">
+    <div class="hero-slides" aria-hidden="true">
+      <img class="is-active" src="paramus/refs/gsp-better-wide-day.jpg?v=1" alt="" />
+      <img src="paramus/refs/gsp-better-golden-hour.jpg?v=1" alt="" />
+    </div>
     <div class="hero-inner">
       <h1>Public Adjusters in <span class="city">Paramus</span></h1>
       <p class="hero-sub">Your insurance has an adjuster, so should you!</p>
@@ -754,6 +787,32 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    var root = document.getElementById("heroRotator");
+    if (!root) return;
+    var slides = Array.prototype.slice.call(root.querySelectorAll(".hero-slides img"));
+    if (slides.length < 2) return;
+    // Always cycle — reduced-motion only skips CSS transitions (instant swap)
+    slides.forEach(function (img) {
+      if (img.decode) img.decode().catch(function () {});
+    });
+    var i = 0;
+    var HOLD_MS = 4000;
+    function show(next) {
+      slides[i].classList.remove("is-active");
+      i = next;
+      slides[i].classList.add("is-active");
+    }
+    setTimeout(function () {
+      show((i + 1) % slides.length);
+      setInterval(function () {
+        show((i + 1) % slides.length);
+      }, HOLD_MS);
+    }, HOLD_MS);
+  })();
+  </script>
 
   <script>
   (function () {
