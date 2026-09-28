@@ -13,6 +13,17 @@ Soft-power / deserve / owed copy from `COPY-FAIR-DESERVE-DRAFT.md` is **APPLIED*
 
 Live ucspa.com WordPress was not edited.
 
+## City pages pass 2026-09-28
+
+Applied the same phrase map to all five city location mocks (Hackensack, Paramus, Englewood, White Plains, Tarrytown — both `locations/<city>/index.html` and flat `locations/<city>.html`):
+
+- `Get your maximum payout…` → `Get the settlement you deserve…`
+- `pursue the maximum payout for property damage` → `pursue the settlement you deserve for property damage`
+- `UCS gets you the biggest payout.` → `UCS fights for what you're actually owed.`
+- `A public adjuster can make a 700% difference…` → `A public adjuster can be the difference between an underpaid claim and the settlement you deserve.`
+
+Local `_hero-preview/*.html` under Hackensack/Paramus cleaned the H2 line only (untracked WIP). Marketing mirrors under `ucs-content/marketing/city-pages-mockup/` updated the same way (not this Pages repo). Live HubSpot/WordPress untouched. Paramus hero rotator CSS/JS not modified.
+
 ## Earlier notes (still open)
 
 These were light notes from before the soft-power pass. They are not a second rewrite.
