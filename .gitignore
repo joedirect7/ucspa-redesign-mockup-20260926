@@ -1,0 +1,3 @@
+
+# Local WIP hero chrome previews (absolute symlinks break GitHub Pages)
+locations/**/_hero-preview/
