@@ -24,6 +24,17 @@ Applied the same phrase map to all five city location mocks (Hackensack, Paramus
 
 Local `_hero-preview/*.html` under Hackensack/Paramus cleaned the H2 line only (untracked WIP). Marketing mirrors under `ucs-content/marketing/city-pages-mockup/` updated the same way (not this Pages repo). Live HubSpot/WordPress untouched. Paramus hero rotator CSS/JS not modified.
 
+## City H2 Recover lock 2026-09-28
+
+Joe: lock the loud city/section band H2 to **Recover** (not Get).
+
+- Pattern: `Recover the settlement you deserve with our {City} public adjusters!`
+- Replaced `Get the settlement you deserve with our` on all city mocks (Hackensack, Paramus, Englewood, White Plains, Tarrytown — flat + folder `index.html`).
+- Local untracked `_hero-preview/*.html` under Hackensack/Paramus updated the same way (WIP, not committed).
+- Marketing mirrors: `ucs-content/marketing/city-pages-mockup/{hackensack,paramus}.html` updated the same way (filesystem only; not this Pages repo).
+- Re-scanned sitewide HTML for leftover phrase-map sources (`maximum payout` / `maximum settlement` / `biggest payout`): **0** remaining. Other locked lines kept (settlement you deserve / fair settlement / actually owed).
+- HubSpot / live WordPress **not** touched.
+
 ## Earlier notes (still open)
 
 These were light notes from before the soft-power pass. They are not a second rewrite.
