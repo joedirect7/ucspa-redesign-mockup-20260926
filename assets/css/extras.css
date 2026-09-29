@@ -86,6 +86,7 @@
 
 /* Hero with full-bleed visual */
 .hero--visual {
+  width: 100%;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -153,6 +154,7 @@
 
 /* Page hero visual (inner pages) */
 .page-hero--visual {
+  width: 100%;
   position: relative;
   isolation: isolate;
   overflow: hidden;

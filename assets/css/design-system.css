@@ -644,6 +644,7 @@ strong { font-weight: 650; }
 
 /* Page hero (inner) */
 .page-hero {
+  width: 100%;
   background: var(--grad-soft);
   border-bottom: 1px solid var(--color-border);
   padding: clamp(2.5rem, 5vw, 4rem) 0;
