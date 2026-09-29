@@ -1,18 +1,22 @@
 # Copy Notes
 
+## Westchester URL lock 2026-09-29 (ET)
+
+Joe locked: repurpose White Plains city mock as **`/locations/westchester`** (county page, not a White Plains city page). Keep Tarrytown as the other NY page. Wave = Hackensack, Paramus, Englewood, Tarrytown, Westchester. Tarrytown office NAP stays `520 White Plains Road, Suite 500, Tarrytown, NY 10591` (street name only). Do **not** publish to HubSpot live from this mock.
+
 ## City hero soft establishing 2026-09-28 (ET)
 
 Joe: Hackensack courthouse was too zoomed in (same class of bug as home).
 
 - Rebaked courthouse to **1920×960 soft 0.85** establishing frame (edge-strip fill).
-- Soft-rebaked Paramus / Englewood / White Plains / Tarrytown heroes at soft **0.91**.
+- Soft-rebaked Paramus / Englewood / Westchester / Tarrytown heroes at soft **0.91**.
 - Softened city hero CSS band (2:1 aspect, shorter min-height) so cover does not re-zoom.
 - Process documented in `locations/HERO-BAKE.md` — use for all future city heroes.
 
 
 ## City mockups visual pass 2026-09-28 (ET)
 
-Applied the same treatment to Paramus, Hackensack, Englewood, White Plains, Tarrytown (folder `locations/<city>/index.html` + flat `locations/<city>.html`) and confirmed locations index:
+Applied the same treatment to Paramus, Hackensack, Englewood, Tarrytown, Westchester (folder `locations/<city>/index.html` + flat `locations/<city>.html`) and confirmed locations index:
 
 - Real keyed 3D UCS logo in header (`../../assets/img/ucs-logo-3d.png` / `../assets/img/…`) — replaces `refs/icons/logo.jpg`
 - More indented top gutters: wrap padding + extra inset on topbar / site-header / hero
@@ -46,7 +50,7 @@ Live ucspa.com WordPress was not edited.
 
 ## City pages pass 2026-09-28
 
-Applied the same phrase map to all five city location mocks (Hackensack, Paramus, Englewood, White Plains, Tarrytown — both `locations/<city>/index.html` and flat `locations/<city>.html`):
+Applied the same phrase map to all five city location mocks (Hackensack, Paramus, Englewood, Tarrytown, Westchester — both `locations/<city>/index.html` and flat `locations/<city>.html`):
 
 - `Get your maximum payout…` → `Get the settlement you deserve…`
 - `pursue the maximum payout for property damage` → `pursue the settlement you deserve for property damage`
@@ -60,7 +64,7 @@ Local `_hero-preview/*.html` under Hackensack/Paramus cleaned the H2 line only (
 Joe: lock the loud city/section band H2 to **Recover** (not Get).
 
 - Pattern: `Recover the settlement you deserve with our {City} public adjusters!`
-- Replaced `Get the settlement you deserve with our` on all city mocks (Hackensack, Paramus, Englewood, White Plains, Tarrytown — flat + folder `index.html`).
+- Replaced `Get the settlement you deserve with our` on all city mocks (Hackensack, Paramus, Englewood, Tarrytown, Westchester — flat + folder `index.html`).
 - Local untracked `_hero-preview/*.html` under Hackensack/Paramus updated the same way (WIP, not committed).
 - Marketing mirrors: `ucs-content/marketing/city-pages-mockup/{hackensack,paramus}.html` updated the same way (filesystem only; not this Pages repo).
 - Re-scanned sitewide HTML for leftover phrase-map sources (`maximum payout` / `maximum settlement` / `biggest payout`): **0** remaining. Other locked lines kept (settlement you deserve / fair settlement / actually owed).

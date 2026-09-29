@@ -3,9 +3,9 @@
 ## Problem
 Tall hero bands (`min-height: 520px+`) + `background-size: cover` / `object-fit: cover` on 4:3 (or even 2:1) photos **zoom into the center** and crop the establishing scene — same class of framing bug as the homepage hero before the z091 soft pass.
 
-## Rule (all city heroes: Hackensack, Paramus, Englewood, White Plains, Tarrytown, …)
+## Rule (all city heroes: Hackensack, Paramus, Englewood, Tarrytown, Westchester, …)
 1. **Bake soft establishing frames first** — do not rely on CSS alone.
-2. **Canvas:** `1920×960` (2:1). Matches the Paramus / Englewood / WP / Tarrytown lock size.
+2. **Canvas:** `1920×960` (2:1). Matches the Paramus / Englewood / Westchester / Tarrytown lock size.
 3. **Soft factor:** place the source at `cover_scale × soft` on that canvas, then **edge-strip extend** to fill letterboxing (no blur, no stretch of the subject).
    - Default soft ≈ **0.91** (~9% more scene than tight cover) — same intent as homepage `ucs-hero-20260928-z091`.
    - Use **0.85** when Joe flags a frame as “too zoomed in” (Hackensack courthouse).
