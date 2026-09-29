@@ -234,7 +234,7 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
   }
 </style>
   <meta name="generator" content="HubSpot">
-<!-- NY hero: keep Liberty clear of headline -->
+<!-- NY hero: Liberty left of headline + pan so torch tip stays in frame -->
 <style>
   .Hero-Section .Hero-Row {
     text-align: left !important;
@@ -250,6 +250,19 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
   .Hero-Section .Hero-Inner {
     text-align: left;
   }
+  /* Pan down (anchor top): torch/sky enter top of cover crop — theme img uses height:100%/min-width without object-position */
+  .Hero-Section.fullwidth {
+    background-position: left top !important;
+    overflow: hidden;
+  }
+  .Hero-Section .heroSlide img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    object-fit: cover !important;
+    object-position: left top !important;
+  }
   @media (max-width: 767px) {
     .Hero-Section .Hero-Row {
       text-align: center !important;
@@ -258,6 +271,9 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
       padding-right: 16px;
     }
     .Hero-Section .Hero-CTA { justify-content: center !important; }
+    .Hero-Section .heroSlide img {
+      object-position: center top !important;
+    }
   }
 </style>
 <!-- HUBSPOT STATE PAGE PREVIEW BANNER (mockup only — not published) -->
@@ -589,7 +605,7 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
 <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
 <div class="row-fluid ">
 <div class="span12 widget-span widget-type-custom_widget  dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
-<div id="hs_cos_wrapper_dnd-modulemodule_16276850048141112" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="Hero-Section fullwidth hideSlider overlay" style="background:url(../assets/img/locations/ny-hero-liberty-reframed-textsafe.jpg) no-repeat left center / cover;">
+<div id="hs_cos_wrapper_dnd-modulemodule_16276850048141112" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="Hero-Section fullwidth hideSlider overlay" style="background:url(../assets/img/locations/ny-hero-liberty-reframed-textsafe.jpg) no-repeat left top / cover;">
   <div class="heroSlider">
     
     <div class="heroSlide 1">
