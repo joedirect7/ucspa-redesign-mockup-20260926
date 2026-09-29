@@ -339,12 +339,50 @@
       display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
     }
 
+
+    /* Settlement board crossfade rotator */
+    .settlement-rotator {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1280 / 720;
+      height: auto;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #0c0c0e;
+    }
+    .settlement-rotator img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      opacity: 0;
+      transform: translateX(12px);
+      transition: opacity 1.4s ease-in-out, transform 1.4s ease-in-out;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .settlement-rotator img.is-active {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 1;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .settlement-rotator img {
+        transition: none;
+        transform: none;
+      }
+      .settlement-rotator img.is-active { transform: none; }
+    }
+
     @media (max-width: 900px) {
       .zig-row, .zig-row.reverse, .inspect-grid, .three-cols, .footer-grid {
         grid-template-columns: 1fr;
       }
       .zig-row.reverse .zig-media, .zig-row.reverse .zig-copy { order: initial; }
       .zig-media img { height: 240px; }
+      .settlement-rotator img { height: 100%; object-fit: contain; }
       nav.main { display: none; }
       .pct-bar { justify-content: center; text-align: center; }
       .pct-bar h3, .pct-bar h4 { text-align: center; }
@@ -509,8 +547,10 @@
   <section class="zig light">
     <div class="wrap">
       <div class="zig-row">
-        <div class="zig-media">
-          <img src="refs/settlement-mocks/approved-v03-fire-198k.png" alt="UCS settlement board — approved format, $198K fire damage" />
+        <div class="zig-media settlement-rotator" id="settlementRotator" role="img" aria-live="polite" aria-label="UCS settlement board examples rotating">
+          <img class="is-active" src="hackensack/refs/settlement-mocks/approved-v09-wind-exterior-165k.png?v=3" alt="UCS settlement board — $165K wind damage, exterior house with uprooted tree" data-alt="UCS settlement board — $165K wind damage, exterior house with uprooted tree" />
+          <img src="hackensack/refs/settlement-mocks/approved-v03-fire-198k.png?v=3" alt="" data-alt="UCS settlement board — approved format, $198K fire damage" />
+          <img src="hackensack/refs/settlement-mocks/approved-v01-water-245k.png?v=3" alt="" data-alt="UCS settlement board — $245K water damage claim" />
         </div>
         <div class="zig-copy">
           <h3>Get a bigger payout with a UCS public adjuster!</h3>
@@ -734,5 +774,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    var root = document.getElementById("settlementRotator");
+    if (!root) return;
+    var slides = Array.prototype.slice.call(root.querySelectorAll("img"));
+    if (slides.length < 2) return;
+    // Always cycle — reduced-motion only skips CSS transitions (instant swap)
+    slides.forEach(function (img) {
+      if (img.decode) img.decode().catch(function () {});
+    });
+    var i = 0;
+    var HOLD_MS = 3500;
+    function show(next) {
+      slides[i].classList.remove("is-active");
+      slides[i].alt = "";
+      i = next;
+      slides[i].classList.add("is-active");
+      slides[i].alt = slides[i].getAttribute("data-alt") || "";
+      root.setAttribute("aria-label", slides[i].alt);
+    }
+    // Hold first board, then advance on interval
+    setTimeout(function () {
+      show((i + 1) % slides.length);
+      setInterval(function () {
+        show((i + 1) % slides.length);
+      }, HOLD_MS);
+    }, HOLD_MS);
+  })();
+  </script>
 </body>
 </html>

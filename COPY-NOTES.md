@@ -1,5 +1,18 @@
 # Copy Notes
 
+## Settlement rotator only (no static $425K zig) 2026-09-29 (ET)
+
+Joe: NY Liberty good. Static `$425K` fire zig board (POLICY OWED / $425K / FIRE DAMAGE SETTLEMENT) must **not** be the settlement visual on state/city pages. Use only the approved damage/check image **rotator** (wind/fire/water — approved-v09 / v03 / v01). Not orig-style hail; not single static $425K zig as a substitute.
+
+**Inventory + fix**
+- **Wrong:** `hubspot-state-city-preview/new-jersey.html` + `new-york.html` used static `assets/img/settlement/zig-fire-425k.png`.
+- **Wrong:** flat `locations/hackensack.html` used a single static `approved-v03-fire-198k.png` (no rotator).
+- **Already OK:** city folder + flat pages (paramus/englewood/tarrytown/westchester + hackensack/index) already had wind/fire/water rotator. Locations hub + `hubspot-locations-city-preview` have no settlement board slot.
+- **Fix:** NJ/NY state previews + flat Hackensack now use the same approved rotator. Copied approved-v09/v03/v01 into `assets/img/settlement/`; archived `zig-fire-425k.png` under `assets/img/settlement/_archive/`.
+- HubSpot **live** untouched.
+
+Preview (GitHub Pages): `/hubspot-state-city-preview/new-jersey.html`, `/hubspot-state-city-preview/new-york.html`, `/locations/hackensack.html`, city pages under `/locations/{city}/`.
+
 
 ## Remove $1.4M hail boards + Liberty fixes 2026-09-29 (ET)
 
@@ -7,7 +20,7 @@ Joe: remove ALL $1.4M hail settlement graphics from state + city mock pages; fix
 
 1. **Hail boards**
    - City settlement rotators already wind / fire / water only (prior commit).
-   - HubSpot state previews (`hubspot-state-city-preview/new-jersey.html`, `new-york.html`): replaced live CDN hail check board (`206595696_…_n.png`) with local `$425K fire` zig board (`assets/img/settlement/zig-fire-425k.png`).
+   - HubSpot state previews (`hubspot-state-city-preview/new-jersey.html`, `new-york.html`): hail CDN board removed (interim `$425K` zig later replaced by approved wind/fire/water rotator — see note above).
    - Archived `orig-style-hail-1.4m.png` under `locations/**/settlement-mocks/_archive/` (no longer referenced).
    - HubSpot **live** not touched — local clones only.
 
