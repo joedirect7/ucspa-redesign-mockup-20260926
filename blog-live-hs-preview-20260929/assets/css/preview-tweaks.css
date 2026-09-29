@@ -1,0 +1,20 @@
+/* Local-only tweaks for live HubSpot chrome preview. Does NOT replace production CSS. */
+.preview-banner {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: #0b3d2e;
+  color: #fff;
+  font: 600 12px/1.4 system-ui, sans-serif;
+  letter-spacing: .02em;
+  text-align: center;
+  padding: 6px 12px;
+}
+/* Ensure featured hero shows when local relative URL is used as background */
+.row-fluid .mainblogSection .featuredImage {
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+}
+/* Soften HS forms that won't submit locally */
+.Footer-Row-Form iframe { max-width: 100%; }
