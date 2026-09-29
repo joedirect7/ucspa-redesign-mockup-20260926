@@ -159,7 +159,7 @@ def footer_html(prefix: str) -> str:
         <li><a href="tel:{PHONE_TEL}">{PHONE_DISPLAY} (5677)</a></li>
         <li>Mon–Fri: 9:00am–5:00pm</li>
       </ul>
-      <p style="margin-top:1rem"><a class="btn btn--primary btn--sm" href="{prefix}insurance-claim-help/">Start your claim evaluation</a></p>
+      <p style="margin-top:1rem"><a class="btn btn--primary btn--sm" href="{prefix}insurance-claim-help/">Schedule damage assessment</a></p>
       <div class="footer-social" style="margin-top:1.25rem">
         <a href="https://www.facebook.com/UnitedClaimsSpecialistsFL" aria-label="Facebook" rel="noopener" target="_blank">f</a>
         <a href="https://twitter.com/ucs_pa" aria-label="X / Twitter" rel="noopener" target="_blank">𝕏</a>
@@ -177,7 +177,7 @@ def footer_html(prefix: str) -> str:
 </footer>
 <div class="mobile-cta-bar" aria-label="Quick actions">
   <a class="btn btn--outline btn--sm" style="flex:1" href="tel:{PHONE_TEL}">Call</a>
-  <a class="btn btn--primary btn--sm" style="flex:1" href="{prefix}insurance-claim-help/">Start your claim evaluation</a>
+  <a class="btn btn--primary btn--sm" style="flex:1" href="{prefix}insurance-claim-help/">Schedule damage assessment</a>
 </div>
 <script src="{prefix}assets/js/nav.js" defer></script>
 <script src="{prefix}assets/js/motion.js" defer></script>'''
