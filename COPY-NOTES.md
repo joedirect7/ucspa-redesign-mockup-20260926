@@ -1,8 +1,23 @@
 # Copy Notes
 
+
+## Westchester wording 2026-09-29 (ET)
+
+Joe: say **Westchester**, not Westchester County — title/H1/meta/body/FAQ/banners.
+Applied across `locations/westchester/index.html` + flat `locations/westchester.html` (+ locations index alt).
+HubSpot live **not** published. GitHub Pages push for preview.
+
+## State-page city icon placement preview 2026-09-29 (ET)
+
+Cloned live HubSpot NJ + NY state pages into `hubspot-state-city-preview/`:
+- NJ → Hackensack / Paramus / Englewood icon cards
+- NY → Tarrytown / Westchester icon cards
+Placement: after Zig-Zag pitch, before Free Inspection form (yellow callout on page).
+Not published to HubSpot.
+
 ## Westchester URL lock 2026-09-29 (ET)
 
-Joe locked: repurpose White Plains city mock as **`/locations/westchester`** (county page, not a White Plains city page). Keep Tarrytown as the other NY page. Wave = Hackensack, Paramus, Englewood, Tarrytown, Westchester. Tarrytown office NAP stays `520 White Plains Road, Suite 500, Tarrytown, NY 10591` (street name only). Do **not** publish to HubSpot live from this mock.
+Joe locked: repurpose White Plains city mock as **`/locations/westchester`** (Westchester page, not a White Plains city page). Keep Tarrytown as the other NY page. Wave = Hackensack, Paramus, Englewood, Tarrytown, Westchester. Tarrytown office NAP stays `520 White Plains Road, Suite 500, Tarrytown, NY 10591` (street name only). Do **not** publish to HubSpot live from this mock.
 
 ## City hero soft establishing 2026-09-28 (ET)
 
