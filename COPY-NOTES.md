@@ -1,3 +1,11 @@
+## City hero blur kill + hail sitewide audit 2026-09-29 (ET)
+
+Joe screenshots ~8:14 AM: blurry pillarbox heroes (CH/Philly/TT/WC) + wrong Cherry Hill municipal office + $1.4M hail board still on live PA (sitewide).
+
+1. **Heroes:** removed blur-fill bake; pure cover 1920×960; Cherry Hill → suburb residential; all wave cities `?v=cover1`.
+2. **Hail mock:** re-audited — zero HTML/JS refs to $1.4M hail / CDN `206595696…`; rotators approved-v09/v03/v01 only; archived leftover orig-style-fire-1.4m assets.
+3. **Live HubSpot:** 8 state pages still serve hail CDN image; CMS cookie **401** — scrub script ready at `../live-copy-port-20260928/scrub_hail_boards_live.py` + STATUS-HAIL-HERO-20260929.md.
+
 ## Cherry Hill (South NJ) + Philadelphia (PA) city pages 2026-09-29 (ET)
 
 Joe locked: add **Cherry Hill** as South NJ city page + **Philadelphia** as PA city page this wave (alongside Hackensack/Paramus/Englewood; NY Tarrytown/Westchester unchanged).
@@ -141,3 +149,13 @@ These were light notes from before the soft-power pass. They are not a second re
 | SMS / legal | Privacy & Terms kept; keep SMS consent language aligned with counsel |
 
 Do **not** invent new legal claims, fake stats, or new service promises in production.
+
+## NY Liberty torch pan 2026-09-29 (ET)
+
+Joe: Statue of Liberty torch still cut off at top of NY state hero — pan down so torch tip is visible at top of screen.
+
+1. **Mock image rebake:** Prior hail-liberty scrub `ny-hero-liberty-reframed-textsafe.jpg` had torch cropped out of the *source* file (arm hit top edge). Rebaked from live HubSpot Liberty master (`Public Adjuster New York (1).webp` / 6000×4000) with sky headroom above flame; wrote `ny-hero-liberty-reframed*.jpg` + `locations/new-york.jpg`.
+2. **Mock CSS** (`hubspot-state-city-preview/new-york.html`):
+   - Inline hero `background-position`: `left center` → **`left top`**
+   - Added `.Hero-Section .heroSlide img { object-fit:cover; object-position:left top }` (theme height/min-width cover hack was center-cropping the torch)
+3. **Live HubSpot** (portal 20198825, page `52019329150`): same `object-position: center top` via page `head_html` — **blocked this pass** (HubSpot session timed out / Okta). Draft CSS ready under live-copy-port STATUS.
