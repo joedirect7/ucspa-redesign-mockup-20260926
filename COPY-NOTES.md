@@ -1,6 +1,23 @@
 # Copy Notes
 
 
+## Remove $1.4M hail boards + Liberty fixes 2026-09-29 (ET)
+
+Joe: remove ALL $1.4M hail settlement graphics from state + city mock pages; fix Statue of Liberty treatment.
+
+1. **Hail boards**
+   - City settlement rotators already wind / fire / water only (prior commit).
+   - HubSpot state previews (`hubspot-state-city-preview/new-jersey.html`, `new-york.html`): replaced live CDN hail check board (`206595696_…_n.png`) with local `$425K fire` zig board (`assets/img/settlement/zig-fire-425k.png`).
+   - Archived `orig-style-hail-1.4m.png` under `locations/**/settlement-mocks/_archive/` (no longer referenced).
+   - HubSpot **live** not touched — local clones only.
+
+2. **Statue of Liberty**
+   - NY state preview hero: local reframed text-safe crop (`assets/img/locations/ny-hero-liberty-reframed-textsafe.jpg`) with left-aligned headline CSS so Liberty/torch are not crushed under centered type.
+   - Locations hub (`hubspot-locations-city-preview`): NJ + NY Location-Area icons swapped to white-on-green-circle Liberty marks (`assets/img/locations/icons/*-liberty-green-circle.png`).
+   - Redesign `/locations/` NY featured tile photo updated to Liberty frame.
+
+Preview: GitHub Pages after push.
+
 ## Westchester wording 2026-09-29 (ET)
 
 Joe: say **Westchester**, not Westchester County — title/H1/meta/body/FAQ/banners.
