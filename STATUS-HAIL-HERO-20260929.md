@@ -1,7 +1,7 @@
 # Hail scrub + city hero blur fix — 2026-09-29 ~8:30 AM ET
 
 ## Mock (GH Pages) — DONE this pass
-Repo: `joedirect7/ucspa-redesign-mockup-20260926` (commit pending push)
+Repo: `joedirect7/ucspa-redesign-mockup-20260926` `65fafa0` on `main`
 
 ### Heroes — kill blur-fill pillarbox
 - Bake script `scripts/bake_city_hero_establishing.py` rewritten: **true cover crop only** (no Gaussian blur letterbox).
