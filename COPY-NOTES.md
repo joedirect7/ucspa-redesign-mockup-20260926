@@ -1,3 +1,14 @@
+## Cherry Hill (South NJ) + Philadelphia (PA) city pages 2026-09-29 (ET)
+
+Joe locked: add **Cherry Hill** as South NJ city page + **Philadelphia** as PA city page this wave (alongside Hackensack/Paramus/Englewood; NY Tarrytown/Westchester unchanged).
+
+- `/locations/cherry-hill/` (+ flat `cherry-hill.html`): NAP/FAQ/nearby South Jersey chips (Camden, Voorhees, Marlton, Haddonfield, Mount Laurel); approved wind/fire/water zig rotator only; CTA **Start your claim evaluation**; hero = soft-baked Cherry Hill municipal building; NJ office NAP (Hackensack). Reviews = same NJ GBP pool pattern as other NJ pages (no separate city review slider — state NJ keeps pool).
+- `/locations/philadelphia/` (+ flat `philadelphia.html`): same city pattern; Greater Philadelphia nearby chips; PA parent `/public-adjuster-pennsylvania`; hero = soft-baked existing PA Philly skyline (`assets/img/locations/pennsylvania.jpg`).
+- Wired into `locations/` hub city cards, `hubspot-locations-city-preview`, NJ state city cards (+ Cherry Hill), lightweight `hubspot-state-city-preview/pennsylvania.html` city cards (Philly). HubSpot **live** not published.
+- State preview CTAs already **START YOUR CLAIM EVALUATION** (no GET YOUR FREE INSPECTION H2 left).
+
+Preview (GitHub Pages): `/locations/cherry-hill/`, `/locations/philadelphia/`.
+
 # Copy Notes
 
 ## Settlement rotator only (no static $425K zig) 2026-09-29 (ET)

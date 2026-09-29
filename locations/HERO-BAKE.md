@@ -3,7 +3,7 @@
 ## Problem
 Tall hero bands (`min-height: 520px+`) + `background-size: cover` / `object-fit: cover` on 4:3 (or even 2:1) photos **zoom into the center** and crop the establishing scene — same class of framing bug as the homepage hero before the z091 soft pass.
 
-## Rule (all city heroes: Hackensack, Paramus, Englewood, Tarrytown, Westchester, …)
+## Rule (all city heroes: Hackensack, Paramus, Englewood, Cherry Hill, Philadelphia, Tarrytown, Westchester, …)
 1. **Bake soft establishing frames first** — do not rely on CSS alone.
 2. **Canvas:** `1920×960` (2:1). Matches the Paramus / Englewood / Westchester / Tarrytown lock size.
 3. **Soft factor:** place the source at `cover_scale × soft` on that canvas, then **edge-strip extend** to fill letterboxing (no blur, no stretch of the subject).
@@ -18,6 +18,10 @@ Tall hero bands (`min-height: 520px+`) + `background-size: cover` / `object-fit:
 
 ## Script sketch
 See bake used 2026-09-28 (edge-extend soft cover → JPEG q88). Backups: `assets/img/city-hero-bak/`.
+
+## Cherry Hill / Philadelphia note
+- **Cherry Hill:** soft-baked municipal building → `locations/cherry-hill/hero-temp-municipal.jpg` (soft **0.91**).
+- **Philadelphia:** soft-baked PA Philly skyline from `assets/img/locations/pennsylvania.jpg` → `locations/philadelphia/hero-temp-philly-skyline.jpg` (soft **0.91**).
 
 ## Hackensack note
 Locked subject remains **Bergen County courthouse**. Rebaked from `02-bergen-county-courthouse-wide.jpg` at soft **0.85** → `locations/hackensack/refs/hero-hackensack-courthouse.jpg` (and `locations/refs/` mirror).

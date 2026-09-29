@@ -583,6 +583,15 @@ strong { font-weight: 650; }
   margin-bottom: var(--space-5);
   max-width: 18ch;
 }
+
+.hero__subline {
+  color: var(--ucs-lime, #99cc02);
+  font-size: clamp(1rem, 1.55vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
 .hero__lead {
   font-size: var(--text-lg);
   line-height: var(--leading-relaxed);
@@ -1392,6 +1401,11 @@ strong { font-weight: 650; }
   background: rgba(120, 170, 255, 0.22);
   border-color: rgba(120, 170, 255, 0.55);
   color: #b8d4ff;
+}
+.loc-city-badge--pa {
+  background: rgba(180, 140, 255, 0.22);
+  border-color: rgba(180, 140, 255, 0.55);
+  color: #d4c0ff;
 }
 
 .claim-help-layout {
