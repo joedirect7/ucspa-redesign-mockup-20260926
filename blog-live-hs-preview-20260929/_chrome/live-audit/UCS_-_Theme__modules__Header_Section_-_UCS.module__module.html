@@ -1,0 +1,105 @@
+<div class="Header-Section fullwidth">
+	<div class="Header-Top-Section fullwidth" style="background-color: rgba(152, 204, 0 , 100% );">
+		<div class="wrapper">
+			<div class="Header-Top-Inner flexwrap alignCenter">
+				<div class="Header-Top-Left">
+				  {{ module.left_text }}
+				</div>
+				<div class="Header-Top-Right">
+					<ul>
+            {% for item in module.icon_group %}
+            <li>
+            {% set href = item.icon_link.url.href %}
+            {% if item.icon_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% set rel = [] %}
+            {% if item.icon_link.no_follow %}
+            {% do rel.append("nofollow") %}
+            {% endif %}
+            {% if item.icon_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+            {% endif %}
+            <a href="{{ href }}"
+              {% if item.icon_link.open_in_new_tab %}target="_blank"{% endif %}
+              {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+              >
+              {% if item.social_media_icon.src %}
+              {% set sizeAttrs = 'width="{{ item.social_media_icon.width }}" height="{{ item.social_media_icon.height }}"' %}
+              {% if item.social_media_icon.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif item.social_media_icon.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.social_media_icon.max_width }}" height="{{ item.social_media_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = item.social_media_icon.loading != 'disabled' ? 'loading="{{ item.social_media_icon.loading }}"' : '' %}
+              <img src="{{ item.social_media_icon.src }}" alt="{{ item.social_media_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </a>
+            </li>
+            {% endfor %}
+          </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Header-Main-Section fullwidth">
+		<div class="wrapper">
+			<div class="Header-Main-Inner flexwrap alignCenter">
+				<div class="Header-Main-Logo">
+					{% set href = module.logo_link.url.href %}
+          {% if module.logo_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.logo_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.logo_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a href="{{ href }}"
+            {% if module.logo_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+            >
+            {% if module.logo.src %}
+            {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}"' %}
+            {% if module.logo.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.logo.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.logo.max_width }}" height="{{ module.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.logo.loading != 'disabled' ? 'loading="{{ module.logo.loading }}"' : '' %}
+            <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </a>
+				</div>
+				<div class="Header-Main-Menu custom-menu-primary">
+          <div class="Header-Main-Menu-inner fullwidth">
+            <div class="Header-Menu">
+              {% menu id="{{ module.menu_field }}" %}
+            </div>
+            <div class="Header-main-CTA">
+							{% set href = module.cta_link.url.href %}
+              {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% set rel = [] %}
+              {% if module.cta_link.no_follow %}
+              {% do rel.append("nofollow") %}
+              {% endif %}
+              {% if module.cta_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+              {% endif %}
+              <a href="{{ href }}"
+                {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+                {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                >
+                {{ module.cta_text }}
+              </a>
+					</div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

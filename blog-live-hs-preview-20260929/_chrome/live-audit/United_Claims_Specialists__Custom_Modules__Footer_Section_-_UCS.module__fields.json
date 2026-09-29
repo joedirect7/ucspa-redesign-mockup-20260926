@@ -1,0 +1,199 @@
+[ {
+  "id" : "094a5c84-31c5-25d9-18aa-0b688c938650",
+  "name" : "logo",
+  "label" : "Logo",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/UCS-Logo.png",
+    "alt" : "UCS-Logo",
+    "loading" : "lazy",
+    "width" : 338,
+    "height" : 32,
+    "max_width" : 338,
+    "max_height" : 32
+  }
+}, {
+  "id" : "f1f91794-57b8-85bd-8c81-d01ee4c86241",
+  "name" : "logo_link",
+  "label" : "Logo Link",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "138f0009-87e0-390f-1218-94a2357377dc",
+  "name" : "text",
+  "label" : "Text",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p><span>We are helping homeowners, property managers and contractors file property damage claims, get higher settlements and eliminate the headaches of dealing with insurance claims.&nbsp;</span></p>"
+}, {
+  "id" : "fe1297c2-60ca-5fcc-d374-a5efdd51f64f",
+  "name" : "menu_group",
+  "label" : "Menu Group",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "8f7fbf42-83b5-4614-0d9f-b52e23015b3e",
+    "name" : "menu_title",
+    "label" : "Menu  Title",
+    "required" : false,
+    "locked" : false,
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  }, {
+    "id" : "f161b67b-e675-dacb-acfa-01390aa42ccc",
+    "name" : "menu_text",
+    "label" : "Menu Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<ul>\n<li><a> Book Your Sleep Study </a></li>\n<li><a> Self Assessment </a></li>\n<li><a> Patient Feedback </a></li>\n<li><a> About Us </a></li>\n</ul>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "menu_text" : "<ul>\n<li><a> Book Your Sleep Study </a></li>\n<li><a> Self Assessment </a></li>\n<li><a> Patient Feedback </a></li>\n<li><a> About Us </a></li>\n</ul>"
+  }
+}, {
+  "id" : "9154965c-54dc-771b-1020-0de1b088e91a",
+  "name" : "form_title",
+  "label" : "Form Title",
+  "required" : false,
+  "locked" : true,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Schedule damage assessment"
+}, {
+  "id" : "86b4562b-dec2-90c8-4f2b-63b5ea1e00e3",
+  "name" : "footer_form",
+  "label" : "Footer Form",
+  "required" : false,
+  "locked" : true,
+  "type" : "form",
+  "display_width" : null,
+  "default" : {
+    "form_id" : "a7842cf4-7a68-4360-80aa-23a50295c8d6",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "807c244e-e982-2de5-b780-ec0cc120a8d8",
+  "name" : "social_icon_group",
+  "label" : "Social Icon Group",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "45e33d37-9341-6cf3-fdb4-c75ddd8b7e05",
+    "name" : "icon_link",
+    "label" : "Icon Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "2d8f0656-01b3-a09a-9bb2-5b1efb8f593f",
+    "name" : "icon_field",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "display_width" : null,
+    "default" : {
+      "name" : "Facebook F",
+      "unicode" : "f39e",
+      "type" : "REGULAR"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "icon_field" : {
+      "name" : "Facebook F",
+      "unicode" : "f39e",
+      "type" : "REGULAR"
+    }
+  }
+}, {
+  "id" : "b42bf206-2e29-0150-e99f-2b40c619b1a0",
+  "name" : "copyright_list",
+  "label" : "CopyRight List",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<ul>\n<li><a> Privacy policy. </a></li>\n<li><a> Terms of use. </a></li>\n</ul>"
+}, {
+  "id" : "7588d1ce-5260-f154-36c2-74a4c5756145",
+  "name" : "copyright_text",
+  "label" : "CopyRight Text",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<p>© 2013-2021 United Claims Specialists. All Rights Reserved</p>"
+} ]

@@ -1,0 +1,273 @@
+{
+  "assetSource": "MYSQL",
+  "authorAt": 1701456058337,
+  "breakpointFitFillConfig": {},
+  "breakpointSpanningConfig": {},
+  "categories": [],
+  "containsOverridableHublTags": true,
+  "contentTags": [],
+  "contentTypes": [
+    "QUOTE_TEMPLATE",
+    "LANDING_PAGE",
+    "SITE_PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "created": 1625839481933,
+  "createdById": 8912875,
+  "css": "@media (min-width:1221px){\n  .row-fluid .Header-Main-Logo {\n      width: 25%;\n  }\n  .row-fluid .Header-Main-Menu {\n      width: 75%;\n  }\n  .Header-Section .wrapper{\n    max-width:1340px !important;\n  }\n  .row-fluid .Header-main-CTA a{\n    font-size:14px !important;\n    min-width:initial !important;\n  }\n  .row-fluid .Header-main-CTA {\n    max-width: 85px !important;\n    width: 85px !important;\n  }\n  .row-fluid .Header-main-CTA {\n    max-width: 85px !important;\n  }\n  .row-fluid .Header-Menu {\n    width: calc(100% - 85px) !important;\n  }\n}\n\n@media (min-width:1025px) and (max-width:1220px){\n  .row-fluid .Header-Main-Logo {\n      width: 22%;\n  }\n  .row-fluid .Header-Main-Menu {\n      width: 78%;\n  }\n}\n\n@media (max-width:767px){\n  .row-fluid .Hero-Row h1>span{\n    display:block;\n  }\n}",
+  "cssAssets": [],
+  "cssCdnUri": "https://20198825.fs1.hubspotusercontent-na1.net/hubfs/20198825/hub_generated/module_assets/1/50485963365/1742011852794/module_Header_Section_-_UCS.css",
+  "cssRenderOptions": null,
+  "default": false,
+  "deleted": false,
+  "deletedAt": 0,
+  "deployId": 1,
+  "displayName": "Header Section - UCS",
+  "editableContexts": [],
+  "externalJs": [],
+  "extraClasses": "",
+  "fields": [
+    {
+      "default": "<ul>\n<li><a href=\"tel:855-917-2449\"> <img src=\"https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/Phone-WhiteIcon.png\" alt=\"Phone Image\"> 855-917-2449 </a></li>\n<li><a href=\"mailto:claims@ucspa.com\"> <img src=\"https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/Mail-WhiteICon.png\" alt=\"Mail Image\"> claims@ucspa.com </a></li>\n</ul>",
+      "display_width": null,
+      "id": "0ba7ec1e-31eb-6ea2-17c3-4b55cf893603",
+      "label": "Left Text",
+      "locked": true,
+      "name": "left_text",
+      "required": false,
+      "type": "richtext"
+    },
+    {
+      "children": [
+        {
+          "default": {
+            "size_type": "auto",
+            "src": "https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/facebook-Green.png",
+            "alt": "facebook-Green",
+            "loading": "lazy",
+            "width": 12,
+            "height": 20,
+            "max_width": 12,
+            "max_height": 20
+          },
+          "display_width": null,
+          "id": "bc4b93a1-7ae1-3a7d-3a2f-d2586feb2a17",
+          "label": "Social Media Icon",
+          "locked": false,
+          "name": "social_media_icon",
+          "required": false,
+          "resizable": true,
+          "responsive": true,
+          "show_loading": false,
+          "type": "image"
+        },
+        {
+          "default": {
+            "url": {
+              "content_id": null,
+              "type": "EXTERNAL",
+              "href": ""
+            },
+            "open_in_new_tab": false,
+            "no_follow": false
+          },
+          "display_width": null,
+          "id": "fa187b36-4547-ed91-b2ee-396fde98b18e",
+          "label": "Icon Link",
+          "locked": false,
+          "name": "icon_link",
+          "required": false,
+          "show_advanced_rel_options": false,
+          "supported_types": [
+            "EXTERNAL",
+            "CONTENT",
+            "FILE",
+            "EMAIL_ADDRESS",
+            "BLOG"
+          ],
+          "type": "link"
+        }
+      ],
+      "default": {
+        "social_media_icon": {
+          "size_type": "auto",
+          "src": "https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/facebook-Green.png",
+          "alt": "facebook-Green",
+          "loading": "lazy",
+          "width": 12,
+          "height": 20,
+          "max_width": 12,
+          "max_height": 20
+        },
+        "icon_link": {
+          "url": {
+            "content_id": null,
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      "display_width": null,
+      "expanded": false,
+      "group_occurrence_meta": null,
+      "id": "967ac8ff-40f6-9818-2715-8cddf5bc9fa1",
+      "label": "Icon group",
+      "locked": true,
+      "name": "icon_group",
+      "occurrence": {},
+      "required": false,
+      "tab": "CONTENT",
+      "type": "group"
+    },
+    {
+      "default": {
+        "url": {
+          "content_id": null,
+          "type": "EXTERNAL",
+          "href": ""
+        },
+        "open_in_new_tab": false,
+        "no_follow": false
+      },
+      "display_width": null,
+      "id": "57461669-5e41-98c8-ee79-867b108c38de",
+      "label": "Logo Link",
+      "locked": true,
+      "name": "logo_link",
+      "required": false,
+      "show_advanced_rel_options": false,
+      "supported_types": [
+        "EXTERNAL",
+        "CONTENT",
+        "FILE",
+        "EMAIL_ADDRESS",
+        "BLOG"
+      ],
+      "type": "link"
+    },
+    {
+      "default": {
+        "size_type": "auto",
+        "src": "https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/UCS-Logo.png",
+        "alt": "UCS-Logo",
+        "loading": "lazy",
+        "width": 338,
+        "height": 32,
+        "max_width": 338,
+        "max_height": 32
+      },
+      "display_width": null,
+      "id": "73c7725e-009a-9759-c368-79d20b655a88",
+      "label": "Logo",
+      "locked": true,
+      "name": "logo",
+      "required": false,
+      "resizable": true,
+      "responsive": true,
+      "show_loading": false,
+      "type": "image"
+    },
+    {
+      "display_width": null,
+      "id": "d5649066-6b45-b5ba-d8c9-45185b1d8ee2",
+      "label": "Menu",
+      "locked": true,
+      "name": "menu_field",
+      "required": false,
+      "type": "menu"
+    },
+    {
+      "default": {
+        "url": {
+          "content_id": null,
+          "type": "EXTERNAL",
+          "href": ""
+        },
+        "open_in_new_tab": false,
+        "no_follow": false
+      },
+      "display_width": null,
+      "id": "89061673-c8c5-1c82-9457-961ec80696aa",
+      "label": "CTA Link",
+      "locked": true,
+      "name": "cta_link",
+      "required": false,
+      "show_advanced_rel_options": false,
+      "supported_types": [
+        "EXTERNAL",
+        "CONTENT",
+        "FILE",
+        "EMAIL_ADDRESS",
+        "BLOG"
+      ],
+      "type": "link"
+    },
+    {
+      "allow_new_line": false,
+      "default": "Call Now",
+      "display_width": null,
+      "id": "b0194957-2270-c2a0-f685-e9f4a6416fb4",
+      "label": "CTA Text",
+      "locked": true,
+      "name": "cta_text",
+      "required": false,
+      "type": "text"
+    }
+  ],
+  "filename": "Header Section - UCS",
+  "folderId": 52794342810,
+  "folderPath": "UCS - Theme/modules",
+  "gates": [],
+  "global": true,
+  "hasAnyCss": true,
+  "hasAnyJs": false,
+  "hasGlobalContent": false,
+  "hostTemplateTypes": [
+    "PAGE",
+    "BLOG_POST",
+    "BLOG_LISTING",
+    "QUOTE"
+  ],
+  "id": 50485963365,
+  "inheritedAsset": false,
+  "inlineHelpText": "",
+  "isAvailableForNewContent": true,
+  "isBuffered": false,
+  "isEnabledForEmailV3Rendering": null,
+  "isJsModule": false,
+  "isReplicatorModule": null,
+  "isThemeAsset": true,
+  "jsAssets": [],
+  "jsRenderOptions": null,
+  "label": "Header Section - UCS",
+  "messages": {},
+  "minifiedCssCdnUri": "https://20198825.fs1.hubspotusercontent-na1.net/hubfs/20198825/hub_generated/module_assets/1/50485963365/1742011852794/module_Header_Section_-_UCS.min.css",
+  "moduleId": 50485963365,
+  "name": "Header Section - UCS",
+  "otherAssets": [],
+  "path": "/UCS - Theme/modules/Header Section - UCS",
+  "placeholder": null,
+  "portalId": 20198825,
+  "previewKey": "GI9r_7Jc6Jnrqgd-obemAQ",
+  "purchased": false,
+  "reactBuildMeta": null,
+  "replicatorWorkspaceId": null,
+  "requiresMarketplaceJQuery": false,
+  "schemaVersion": 2,
+  "scopes": [],
+  "searchTerms": [],
+  "skipValidationForContentSync": false,
+  "smartType": "NOT_SMART",
+  "source": "<div class=\"Header-Section fullwidth\">\n\t<div class=\"Header-Top-Section fullwidth\" style=\"background-color: rgba(152, 204, 0 , 100% );\">\n\t\t<div class=\"wrapper\">\n\t\t\t<div class=\"Header-Top-Inner flexwrap alignCenter\">\n\t\t\t\t<div class=\"Header-Top-Left\">\n\t\t\t\t  {{ module.left_text }}\n\t\t\t\t</div>\n\t\t\t\t<div class=\"Header-Top-Right\">\n\t\t\t\t\t<ul>\n            {% for item in module.icon_group %}\n            <li>\n            {% set href = item.icon_link.url.href %}\n            {% if item.icon_link.url.type is equalto \"EMAIL_ADDRESS\" %}\n            {% set href = \"mailto:\" + href %}\n            {% endif %}\n            {% set rel = [] %}\n            {% if item.icon_link.no_follow %}\n            {% do rel.append(\"nofollow\") %}\n            {% endif %}\n            {% if item.icon_link.open_in_new_tab %}\n            {% do rel.append(\"noopener\") %}\n            {% endif %}\n            <a href=\"{{ href }}\"\n              {% if item.icon_link.open_in_new_tab %}target=\"_blank\"{% endif %}\n              {% if rel %}rel=\"{{ rel|join(\" \") }}\"{% endif %}\n              >\n              {% if item.social_media_icon.src %}\n              {% set sizeAttrs = 'width=\"{{ item.social_media_icon.width }}\" height=\"{{ item.social_media_icon.height }}\"' %}\n              {% if item.social_media_icon.size_type == 'auto' %}\n              {% set sizeAttrs = 'style=\"max-width: 100%; height: auto;\"' %}\n              {% elif item.social_media_icon.size_type == 'auto_custom_max' %}\n              {% set sizeAttrs = 'width=\"{{ item.social_media_icon.max_width }}\" height=\"{{ item.social_media_icon.max_height }}\" style=\"max-width: 100%; height: auto;\"' %}\n              {% endif %}\n              {% set loadingAttr = item.social_media_icon.loading != 'disabled' ? 'loading=\"{{ item.social_media_icon.loading }}\"' : '' %}\n              <img src=\"{{ item.social_media_icon.src }}\" alt=\"{{ item.social_media_icon.alt }}\" {{ loadingAttr }} {{ sizeAttrs }}>\n              {% endif %}\n            </a>\n            </li>\n            {% endfor %}\n          </ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class=\"Header-Main-Section fullwidth\">\n\t\t<div class=\"wrapper\">\n\t\t\t<div class=\"Header-Main-Inner flexwrap alignCenter\">\n\t\t\t\t<div class=\"Header-Main-Logo\">\n\t\t\t\t\t{% set href = module.logo_link.url.href %}\n          {% if module.logo_link.url.type is equalto \"EMAIL_ADDRESS\" %}\n          {% set href = \"mailto:\" + href %}\n          {% endif %}\n          {% set rel = [] %}\n          {% if module.logo_link.no_follow %}\n          {% do rel.append(\"nofollow\") %}\n          {% endif %}\n          {% if module.logo_link.open_in_new_tab %}\n          {% do rel.append(\"noopener\") %}\n          {% endif %}\n          <a href=\"{{ href }}\"\n            {% if module.logo_link.open_in_new_tab %}target=\"_blank\"{% endif %}\n            {% if rel %}rel=\"{{ rel|join(\" \") }}\"{% endif %}\n            >\n            {% if module.logo.src %}\n            {% set sizeAttrs = 'width=\"{{ module.logo.width }}\" height=\"{{ module.logo.height }}\"' %}\n            {% if module.logo.size_type == 'auto' %}\n            {% set sizeAttrs = 'style=\"max-width: 100%; height: auto;\"' %}\n            {% elif module.logo.size_type == 'auto_custom_max' %}\n            {% set sizeAttrs = 'width=\"{{ module.logo.max_width }}\" height=\"{{ module.logo.max_height }}\" style=\"max-width: 100%; height: auto;\"' %}\n            {% endif %}\n            {% set loadingAttr = module.logo.loading != 'disabled' ? 'loading=\"{{ module.logo.loading }}\"' : '' %}\n            <img src=\"{{ module.logo.src }}\" alt=\"{{ module.logo.alt }}\" {{ loadingAttr }} {{ sizeAttrs }}>\n            {% endif %}\n          </a>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"Header-Main-Menu custom-menu-primary\">\n          <div class=\"Header-Main-Menu-inner fullwidth\">\n            <div class=\"Header-Menu\">\n              {% menu id=\"{{ module.menu_field }}\" %}\n            </div>\n            <div class=\"Header-main-CTA\">\n\t\t\t\t\t\t\t{% set href = module.cta_link.url.href %}\n              {% if module.cta_link.url.type is equalto \"EMAIL_ADDRESS\" %}\n              {% set href = \"mailto:\" + href %}\n              {% endif %}\n              {% set rel = [] %}\n              {% if module.cta_link.no_follow %}\n              {% do rel.append(\"nofollow\") %}\n              {% endif %}\n              {% if module.cta_link.open_in_new_tab %}\n              {% do rel.append(\"noopener\") %}\n              {% endif %}\n              <a href=\"{{ href }}\"\n                {% if module.cta_link.open_in_new_tab %}target=\"_blank\"{% endif %}\n                {% if rel %}rel=\"{{ rel|join(\" \") }}\"{% endif %}\n                >\n                {{ module.cta_text }}\n              </a>\n\t\t\t\t\t</div>\n          </div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>",
+  "sourceContainsPostBody": false,
+  "staged": false,
+  "tags": [],
+  "toolbarFields": {},
+  "updated": 1701456058337,
+  "updatedById": 8581278,
+  "widgetLabel": "",
+  "writeable": true
+}

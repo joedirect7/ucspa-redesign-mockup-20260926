@@ -1,0 +1,166 @@
+[ {
+  "id" : "0ba7ec1e-31eb-6ea2-17c3-4b55cf893603",
+  "name" : "left_text",
+  "label" : "Left Text",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : "<ul>\n<li><a href=\"tel:855-917-2449\"> <img src=\"https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/Phone-WhiteIcon.png\" alt=\"Phone Image\"> 855-917-2449 </a></li>\n<li><a href=\"mailto:claims@ucspa.com\"> <img src=\"https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/Mail-WhiteICon.png\" alt=\"Mail Image\"> claims@ucspa.com </a></li>\n</ul>"
+}, {
+  "id" : "967ac8ff-40f6-9818-2715-8cddf5bc9fa1",
+  "name" : "icon_group",
+  "label" : "Icon group",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "bc4b93a1-7ae1-3a7d-3a2f-d2586feb2a17",
+    "name" : "social_media_icon",
+    "label" : "Social Media Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/facebook-Green.png",
+      "alt" : "facebook-Green",
+      "loading" : "lazy",
+      "width" : 12,
+      "height" : 20,
+      "max_width" : 12,
+      "max_height" : 20
+    }
+  }, {
+    "id" : "fa187b36-4547-ed91-b2ee-396fde98b18e",
+    "name" : "icon_link",
+    "label" : "Icon Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "social_media_icon" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/facebook-Green.png",
+      "alt" : "facebook-Green",
+      "loading" : "lazy",
+      "width" : 12,
+      "height" : 20,
+      "max_width" : 12,
+      "max_height" : 20
+    },
+    "icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "57461669-5e41-98c8-ee79-867b108c38de",
+  "name" : "logo_link",
+  "label" : "Logo Link",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "73c7725e-009a-9759-c368-79d20b655a88",
+  "name" : "logo",
+  "label" : "Logo",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "display_width" : null,
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent20.net/hubfs/20198825/Home%20Page/UCS-Logo.png",
+    "alt" : "UCS-Logo",
+    "loading" : "lazy",
+    "width" : 338,
+    "height" : 32,
+    "max_width" : 338,
+    "max_height" : 32
+  }
+}, {
+  "id" : "d5649066-6b45-b5ba-d8c9-45185b1d8ee2",
+  "name" : "menu_field",
+  "label" : "Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "display_width" : null
+}, {
+  "id" : "89061673-c8c5-1c82-9457-961ec80696aa",
+  "name" : "cta_link",
+  "label" : "CTA Link",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "display_width" : null,
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "b0194957-2270-c2a0-f685-e9f4a6416fb4",
+  "name" : "cta_text",
+  "label" : "CTA Text",
+  "required" : false,
+  "locked" : true,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "Call Now"
+} ]
