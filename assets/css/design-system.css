@@ -952,6 +952,8 @@ strong { font-weight: 650; }
   gap: var(--space-10);
   align-items: center;
 }
+.split--top { align-items: start; }
+
 @media (min-width: 800px) {
   .split { grid-template-columns: 1fr 1fr; }
   .split--reverse > :first-child { order: 2; }

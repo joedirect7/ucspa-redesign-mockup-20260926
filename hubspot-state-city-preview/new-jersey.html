@@ -250,6 +250,16 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
   }
   .ucs-hs-preview-banner strong { color: #f0d878; }
   .ucs-hs-preview-banner a { color: #98CC00; }
+  /* Free-inspection module: top-align copy with form (was alignCenter → left H2 sat ~mid form) */
+  .row-fluid .alignStart,
+  .row-fluid .Home-Form-Row.flexwrap {
+    align-items: flex-start !important;
+    -webkit-align-items: flex-start !important;
+  }
+  .row-fluid .Home-Form-Left > h2:first-child {
+    margin-top: 0 !important;
+  }
+
   .ucs-placement-callout {
     background: #fff8e1;
     border: 2px dashed #c9a227;
@@ -790,7 +800,7 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
 <div id="hs_cos_wrapper_widget_1629105166188" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="Home-Form-Section   fullwidth" style=" background-color:#FFFFFF;">
 	<div class="wrapper">
 		<div class="Home-Form-Outer fullwidth">
-			<div class="Home-Form-Row flexwrap alignCenter fullwidth">
+			<div class="Home-Form-Row flexwrap alignStart fullwidth">
 				<div class="Home-Form-Left">
 					<h2 class=" aos-init" data-aos="fade-up" data-aos-delay="100" data-aos-once="true" style="color:#99cc02;"> GET YOUR FREE INSPECTION </h2>
 					<div class="Home-Form-Left-Text aos-init" data-aos="fade-up" data-aos-delay="150" data-aos-once="true" style="color:#2e2e2e;"> <a id="free-inspection-newjersey" data-hs-anchor="true"></a>
