@@ -106,7 +106,7 @@ def build_home():
       {hero_h1_markup()}
       <p class="hero__lead">We help homeowners, building owners, property managers and contractors file property damage claims, pursue a fair settlement and eliminate the headaches of dealing with insurance companies.</p>
       <div class="hero__actions">
-        <a class="btn btn--primary btn--lg" href="insurance-claim-help/">Claim Free Inspection</a>
+        <a class="btn btn--primary btn--lg" href="insurance-claim-help/">Start your claim evaluation</a>
         <a class="btn btn--secondary btn--lg" href="tel:{PHONE_TEL}">Call {PHONE_DISPLAY}</a>
       </div>
       <div class="hero__stat">
@@ -138,8 +138,8 @@ def build_home():
   <div class="container">
     <div class="split">
       <div>
-        <span class="section__eyebrow">Free inspection</span>
-        <h2>CLAIM YOUR FREE INSPECTION</h2>
+        <span class="section__eyebrow">Start your claim evaluation</span>
+        <h2>START YOUR CLAIM EVALUATION</h2>
         <p>United Claims Specialists has licensed adjusters in multiple states so that we can help as many people as possible get the settlements they deserve from their insurance providers.</p>
         <p>Insurance companies rely on the fact that most policyholders don't know what they're actually entitled to and most people accept whatever settlement is offered. Whether you are at the beginning of filing a claim, or if you have already filed your claim- WE CAN HELP!</p>
         {checklist([
@@ -148,7 +148,7 @@ def build_home():
           "You have already accepted a settlement, but you need more for repairs or don't believe you received everything you were entitled to.",
           "Your property damage claim has been denied by the insurance, but you believe it is their responsibility.",
         ])}
-        <a class="btn btn--primary" href="insurance-claim-help/">Schedule Free Inspection</a>
+        <a class="btn btn--primary" href="insurance-claim-help/">Start your claim evaluation</a>
       </div>
       <div class="img-placeholder" role="img" aria-label="Property inspection placeholder"></div>
     </div>
@@ -241,7 +241,7 @@ def build_claim_help():
       ])}
     </div>
     <div class="form-card glass-panel">
-      <h3>Request your free inspection</h3>
+      <h3>Start your claim evaluation</h3>
       <p>Mockup form — same fields as a typical UCS lead form. Does not submit to live systems.</p>
       <form action="#" method="get" onsubmit="event.preventDefault();alert('Mockup only — form does not submit. Call '+'{PHONE_ALT}'+' or '+'{PHONE_DISPLAY}.');">
         <div class="form-grid form-grid--2">
@@ -265,7 +265,7 @@ def build_claim_help():
           <input type="checkbox" id="sms" name="sms_consent" style="width:auto;margin-top:.2rem">
           <label for="sms" style="font-weight:500;font-size:var(--text-xs)">I consent to receive SMS messages from United Claims Specialists about my claim. Msg &amp; data rates may apply. Reply STOP to opt out. See Terms.</label>
         </div>
-        <button class="btn btn--primary btn--lg btn--block" style="margin-top:1.25rem" type="submit">Submit — Free Inspection</button>
+        <button class="btn btn--primary btn--lg btn--block" style="margin-top:1.25rem" type="submit">Start your claim evaluation</button>
         <p class="form-note">This is a design mockup. No data is sent. For real help call {PHONE_ALT}.</p>
       </form>
     </div>
@@ -299,7 +299,7 @@ def build_claim_help():
       </div>
     </div>
     <div class="form-card">
-      <h3>Request your free inspection</h3>
+      <h3>Start your claim evaluation</h3>
       <p>Tell us about your property damage and we'll be in touch the same day.</p>
       <form action="#" method="get" onsubmit="event.preventDefault();alert('Mockup only — does not submit to live UCS systems.');">
         <div class="form-grid form-grid--2">
@@ -389,7 +389,7 @@ def location_page(slug, state_name, city_line, address_lines, local_phone=None):
   </div>
   <div>
     <div class="form-card">
-      <h3>GET YOUR FREE INSPECTION</h3>
+      <h3>START YOUR CLAIM EVALUATION</h3>
       <p>United Claims Specialists has local, licensed public adjusters in {esc(state_name)} who understand the market, damage types, repair costs, and more. Our deep claim expertise combined with local knowledge us is how we make sure you get what you're actually owed from your insurance for property damage.</p>
       <p>Insurance companies rely on the fact that most policyholders don't know what they're actually entitled to and just accept whatever settlement is offered. Whether you are at the beginning of filing a claim, or if you have already filed your claim- WE CAN HELP!</p>
       {checklist([
@@ -398,7 +398,7 @@ def location_page(slug, state_name, city_line, address_lines, local_phone=None):
         "You have already accepted a settlement, but you need more for repairs or don't believe you received everything you were entitled to.",
         "Your property damage claim has been denied by the insurance, but you believe it is their responsibility.",
       ])}
-      <a class="btn btn--primary btn--block" href="../insurance-claim-help/">Claim Free Inspection</a>
+      <a class="btn btn--primary btn--block" href="../insurance-claim-help/">Start your claim evaluation</a>
     </div>
   </div>
 </div></section>
