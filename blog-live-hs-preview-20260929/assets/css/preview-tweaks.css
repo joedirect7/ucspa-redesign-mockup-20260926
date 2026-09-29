@@ -81,3 +81,33 @@
     width: 100% !important;
   }
 }
+
+/* Joe 2026-09-29: comparison tables need visible borders */
+.Post-Content table,
+.post-body table,
+.blog-post-wrapper table,
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25em 0;
+}
+.Post-Content table th,
+.Post-Content table td,
+.post-body table th,
+.post-body table td,
+.blog-post-wrapper table th,
+.blog-post-wrapper table td,
+article table th,
+article table td {
+  border: 1px solid #c5cdd8;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.Post-Content table th,
+.post-body table th,
+.blog-post-wrapper table th,
+article table th {
+  background: #f2f5f8;
+  font-weight: 600;
+}
