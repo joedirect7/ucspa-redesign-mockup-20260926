@@ -6,6 +6,8 @@
 
 **2026-09-30 PM Q4 restaurants:** Added restaurants to the commercial experience list (shopping plazas, restaurants, apartments, nursing homes, bowling alleys, industrial parks, 80+ buildings). Cache-bust v=20260930132603.
 
+**2026-09-30 PM Q8 UPPA:** Contractor negotiation answer now states it is actually illegal in most states and can be the unlicensed practice of public adjusting (UPPA). Soft-power; not legal advice; keeps good-contractor line. Cache-bust v=20260930132745.
+
 **2026-09-30 PM Q4 tighten:** Commercial answer now leads with vast commercial experience — shopping plazas, apartments, nursing homes, bowling alleys, industrial parks, and full 80+ building community claims. Soft-power; no misspeak/DIY/license #s/raw URLs/For Agents.
 
 **Not published** to HubSpot /faq.
