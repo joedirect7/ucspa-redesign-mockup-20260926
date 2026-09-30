@@ -9,6 +9,7 @@ body {
   background: #f4f5f7;
   -webkit-font-smoothing: antialiased;
 }
+main { display: block; margin: 0; padding: 0; }
 a { color: inherit; }
 img { max-width: 100%; display: block; }
 :focus-visible { outline: 2px solid #98cc00; outline-offset: 3px; }
@@ -65,20 +66,22 @@ img { max-width: 100%; display: block; }
 .header-main { background: #fff; border-bottom: 1px solid #e6e9ef; }
 .header-inner {
   max-width: 1180px; margin: 0 auto;
-  display: flex; align-items: center; gap: 18px;
-  padding: 12px 20px;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 20px;
 }
 .brand { display: flex; align-items: center; text-decoration: none; flex: 0 0 auto; }
 .brand-logo { height: 36px; width: auto; }
 .header-nav {
-  display: flex; gap: 4px; flex: 1; justify-content: center; flex-wrap: wrap;
+  display: flex; gap: 2px; flex: 1; justify-content: center; flex-wrap: wrap;
+  align-items: center;
 }
 .header-nav a {
   text-decoration: none; font-size: 13px; font-weight: 500;
-  padding: 8px 12px; border-radius: 999px; color: #2a3140;
+  padding: 8px 10px; border-radius: 6px; color: #2a3140;
+  white-space: nowrap;
 }
-.header-nav a:hover, .header-nav a.active {
-  color: #5a7a00; background: rgba(152,204,0,0.14);
+.header-nav a:hover {
+  color: #5a7a00; background: rgba(152,204,0,0.12);
 }
 .header-cta {
   text-decoration: none; font-size: 13px; font-weight: 600;
@@ -90,26 +93,32 @@ img { max-width: 100%; display: block; }
 }
 .header-cta:hover { filter: brightness(1.05); }
 
-/* ---- Hero: photo + A True frost glass panel ---- */
+/* ---- Hero: subtle claim photo + A True frost glass panel (flush under header) ---- */
 .hero {
   position: relative;
-  min-height: clamp(480px, 68vh, 700px);
+  min-height: clamp(420px, 58vh, 620px);
   display: grid; place-items: center;
-  padding: 48px 20px 56px;
+  padding: 36px 20px 44px;
   overflow: hidden;
+  margin: 0;
+  background: #1a1e26; /* never flash page grey if photo slow */
 }
 .hero-bg {
   position: absolute; inset: 0;
   background-image: var(--hero-url);
-  background-size: cover; background-position: center;
+  background-size: cover;
+  background-position: center 32%;
+  background-repeat: no-repeat;
   transform: scale(1.04);
-  filter: brightness(0.92) contrast(1.04) saturate(1.05);
+  /* Soft polish only — keep furnished claim scene readable behind frost */
+  filter: brightness(0.94) contrast(1.02) saturate(0.92);
 }
 .hero-veil {
   position: absolute; inset: 0;
   background:
-    radial-gradient(900px 480px at 18% 28%, rgba(152,204,0,0.12), transparent 55%),
-    linear-gradient(180deg, rgba(8,10,14,0.22) 0%, rgba(8,10,14,0.48) 100%);
+    radial-gradient(780px 460px at 50% 40%, rgba(8,10,14,0.12), transparent 64%),
+    linear-gradient(180deg, rgba(8,10,14,0.22) 0%, rgba(8,10,14,0.34) 52%, rgba(8,10,14,0.48) 100%);
+  pointer-events: none;
 }
 .hero-panel {
   position: relative; z-index: 2;
