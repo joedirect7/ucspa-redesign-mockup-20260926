@@ -1,6 +1,6 @@
 # FAQ HubSpot-chrome preview — 2026-09-30
 
-**Joe lock:** Live HubSpot chrome + modern frost FAQ. Title = clean H1 only; frost lede + 3 CTAs in separate intro section below. Q17 = “Where does UCS service policyholders?” (no near-me SEO; no license numbers in answer).
+**Joe lock:** Live HubSpot chrome + modern frost FAQ. Clean H1; frost lede + CTAs in separate intro below. 20 natural PA Q&As after ruthless scrub.
 
 **Not published** to HubSpot /faq.
 
@@ -14,5 +14,3 @@
 ## Explicitly NOT
 - HubSpot CMS /faq live
 - Redesign dark chrome paths
-
-<!-- deploy bump e604d8a scrub -->
