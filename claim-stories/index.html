@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="draft-banner" role="status">
-  <strong>DRAFT MOCK</strong> — Claim Stories hub · live chrome nav · A True frost hero · Not HubSpot
+  <strong>DRAFT MOCK</strong> — Claim Stories hub · live chrome nav · PA journey crossfade · A True frost · Not HubSpot
 </div>
 
 <header class="site-header">
@@ -60,7 +60,26 @@
 
 <main>
   <section class="hero">
-    <div class="hero-bg" style="background-image:url('assets/img/hero-claim-soft.jpg')"></div>
+    <div class="hero-media hero-media--dissolve" data-interval="7000" aria-hidden="true">
+      <div class="hero-slide is-active" data-label="Getting the call">
+        <img src="assets/img/hero-journey/01-getting-the-call.jpg" alt="" width="1920" height="1085" fetchpriority="high" />
+      </div>
+      <div class="hero-slide" data-label="Inspecting">
+        <img src="assets/img/hero-journey/02-inspecting.jpg" alt="" width="1920" height="1085" loading="lazy" />
+      </div>
+      <div class="hero-slide" data-label="Helping property owners">
+        <img src="assets/img/hero-journey/03-helping-owners.jpg" alt="" width="1920" height="1085" loading="lazy" />
+      </div>
+      <div class="hero-slide" data-label="Researching &amp; scoping">
+        <img src="assets/img/hero-journey/04-researching-scoping.jpg" alt="" width="1920" height="1085" loading="lazy" />
+      </div>
+      <div class="hero-slide" data-label="Estimating">
+        <img src="assets/img/hero-journey/05-estimating.jpg" alt="" width="1920" height="1085" loading="lazy" />
+      </div>
+      <div class="hero-slide" data-label="Negotiating for insureds">
+        <img src="assets/img/hero-journey/06-negotiating.jpg" alt="" width="1920" height="1085" loading="lazy" />
+      </div>
+    </div>
     <div class="hero-veil"></div>
     <div class="hero-panel ucs-glass-card">
       <h1>Claim Stories</h1>
@@ -241,5 +260,6 @@
   </div>
   <p class="fine">Mock only — draft glass hub for /claim-stories. Not published to HubSpot.</p>
 </footer>
+<script src="assets/js/hero-carousel.js" defer></script>
 </body>
 </html>

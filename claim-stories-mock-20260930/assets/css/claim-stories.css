@@ -93,7 +93,7 @@ img { max-width: 100%; display: block; }
 }
 .header-cta:hover { filter: brightness(1.05); }
 
-/* ---- Hero: subtle claim photo + A True frost glass panel (flush under header) ---- */
+/* ---- Hero: PA journey slow crossfade + A True frost (flush under header) ---- */
 .hero {
   position: relative;
   min-height: clamp(420px, 58vh, 620px);
@@ -103,21 +103,47 @@ img { max-width: 100%; display: block; }
   margin: 0;
   background: #1a1e26; /* never flash page grey if photo slow */
 }
-.hero-bg {
-  position: absolute; inset: 0;
-  background-image: var(--hero-url);
-  background-size: cover;
-  background-position: center 32%;
-  background-repeat: no-repeat;
-  transform: scale(1.04);
-  /* Soft polish only — keep furnished claim scene readable behind frost */
-  filter: brightness(0.94) contrast(1.02) saturate(0.92);
+.hero-media.hero-media--dissolve {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-media--dissolve .hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-media--dissolve .hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.hero-media--dissolve .hero-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  /* Keep stills SHARP — no blur filter on images */
+  filter: brightness(1.0) contrast(1.04) saturate(1.02);
+  transform: scale(1.02);
 }
 .hero-veil {
   position: absolute; inset: 0;
+  z-index: 1;
+  /* Lighter veil so journey stills stay crisp; frost panel still readable */
   background:
-    radial-gradient(780px 460px at 50% 40%, rgba(8,10,14,0.12), transparent 64%),
-    linear-gradient(180deg, rgba(8,10,14,0.22) 0%, rgba(8,10,14,0.34) 52%, rgba(8,10,14,0.48) 100%);
+    radial-gradient(820px 480px at 50% 38%, rgba(8,10,14,0.06), transparent 66%),
+    linear-gradient(180deg, rgba(8,10,14,0.14) 0%, rgba(8,10,14,0.22) 55%, rgba(8,10,14,0.36) 100%);
   pointer-events: none;
 }
 .hero-panel {
@@ -379,4 +405,7 @@ img { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .story-card, .story-media img { transition: none; }
+  .hero-media--dissolve .hero-slide {
+    transition: none;
+  }
 }
