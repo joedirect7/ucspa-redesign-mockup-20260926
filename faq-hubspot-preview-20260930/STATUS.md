@@ -1,6 +1,6 @@
-# FAQ HubSpot-chrome preview — 2026-09-30 (DIY lingo scrub)
+# FAQ HubSpot-chrome preview — 2026-09-30 (visitor lingo scrub v2)
 
-**Joe lock:** CURRENT live HubSpot chrome + modern frost FAQ. Visitor copy scrubbed of DIY / carrier-letter / reason-code / certified-mail throat-clearing (kept plain claim-story + PA + claim-help).
+**Joe lock:** Live HubSpot chrome + modern frost FAQ. Visitor copy: natural PA-firm Q&A only — no DIY/carrier-letter/reason-code/certified-mail; no on-this-page / this-FAQ / we-do-not-publish / one-size meta speak.
 
 **Not published** to HubSpot /faq.
 
@@ -11,15 +11,12 @@
 ## Local
 /workspace/ucs-seo/faq-hubspot-preview-20260930/
 
-## Scrub (this pass)
-- Removed visitor-facing DIY / carrier-letter homework / reason-code / certified-mail / DIY template throat-clearing from meta, lede, answers, JSON-LD, footer blurb
-- Kept intent: claims nuanced; hire licensed PA; UCS documents + talks to carrier; free consult at claim-help / (855) 321-5677
-- Internal FAQ-PAGE-DRAFT writer locks may still say "no DIY coaching"
-
-## FAQ module
-- 21 Qs · 6 sections · sticky TOC · one-open accordion
-- Frost glass cards · Poppins · lime accents · FAQPage JSON-LD
+## Scrub
+- DIY / carrier-letter / reason-code / certified-mail throat-clearing removed
+- Meta speak removed (one-size on this page, This FAQ is educational, Live site framing, denied-claims sales pitch)
+- Kept: claims nuanced; licensed PA; UCS documents + talks to carrier; free consult claim-help / (855) 321-5677
+- Internal FAQ-PAGE-DRAFT writer locks may still say no DIY coaching
 
 ## Explicitly NOT
-- HubSpot CMS publish / live /faq
-- Redesign dark chrome /faq/ or /faq-mock-20260930/
+- HubSpot CMS /faq live
+- Redesign dark chrome paths
