@@ -116,12 +116,6 @@ img { max-width: 100%; display: block; }
   width: min(720px, 100%);
   padding: 28px 28px 22px !important;
 }
-.eyebrow {
-  margin: 0 0 10px;
-  font-size: 11px; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: #98cc00;
-}
 .hero-panel h1 {
   margin: 0 0 12px;
   font-size: clamp(2rem, 4.5vw, 3.1rem);
