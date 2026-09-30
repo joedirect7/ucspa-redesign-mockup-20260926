@@ -1,6 +1,6 @@
 # Claim Stories mock — 2026-09-30
 
-**Status:** Draft mock only. Not HubSpot. Soft-power hub for `/claim-stories`.
+**Status:** Draft mock only. Not HubSpot. Claim Stories hub for `/claim-stories`.
 
 ## Title lock
 - H1 / theme: **Claim Stories** (Joe locked; not Claim Social)
@@ -20,7 +20,7 @@ Canonical cross-posts from Zernio / X `@UCS_PA` (also FB UCSPA19, IG @ucs.pa, Li
 3. 4 AM sump / pump utility flood
 4. NJ & NYC post-storm advocate
 5. Neighboring structure fire / soot
-6. Upstairs leak → ceiling collapse (field-style sample)
+6. Upstairs leak → ceiling collapse (water-loss sample)
 
 ## Preview
 ```bash

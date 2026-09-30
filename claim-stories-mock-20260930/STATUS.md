@@ -1,12 +1,12 @@
-# Claim Stories mock — STATUS 2026-09-30 ~09:15 EDT
+# Claim Stories mock — STATUS 2026-09-30 ~09:25 EDT
 
 ## Locked (Joe 2026-09-30 feedback)
 - H1/title: **Claim Stories** (not Claim Social)
 - Chrome: **HubSpot-current** (lime top bar + white header/footer + UCS logo) — NOT dark redesign aesthetic
 - Glass: **A True frost** on hero + CTA panels only
-- Location attribution on cards: kept (e.g. NJ · NY / Residential · From the field)
+- Location and peril attribution on cards: kept (e.g. NJ · NY / Residential · Water loss)
 - Social: **icon links only** (FB UCSPA19, IG @ucs.pa, X @UCS_PA, LinkedIn) — no spelled-out handles
-- Soft-power hub; **no HubSpot publish**; no Joe message from this pass
+- Messaging substance retained; internal strategy labels removed from visitor copy; **no HubSpot publish**; no Joe message from this pass
 
 ## Paths
 - Local box: `/workspace/ucs-seo/claim-stories-mock-20260930/`
