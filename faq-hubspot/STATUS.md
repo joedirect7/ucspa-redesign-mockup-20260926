@@ -10,9 +10,12 @@
 
 **2026-09-30 PM Q4 tighten:** Commercial answer now leads with vast commercial experience — shopping plazas, apartments, nursing homes, bowling alleys, industrial parks, and full 80+ building community claims. Soft-power; no misspeak/DIY/license #s/raw URLs/For Agents.
 
-**2026-09-30 PM chrome removal:** Removed the full HubSpot header wrapper and standalone faq-hero; moved the H1 into the intro tile above the existing lede and 3 CTAs. Cache-bust v=20260930140417.
+**2026-09-30 PM chrome removal:** Removed the full HubSpot header wrapper and standalone faq-hero; moved the H1 into the intro tile above the existing lede and 3 CTAs. Q17 now reads “Where Does UCS Serve Policyholders?” Cache-bust v=20260930140417.
 
 **2026-09-30 PM footer finish:** Related-resource row now uses inline icon chips; removed all visible license-number copy from the CTA/footer. Cache-bust v=20260930140417.
+
+**2026-09-30 PM More-from redesign:** Replaced cramped related-resource pill chips with a premium frost glass card grid — title “More from United Claims Specialists”, 5 clickable resource cards (Free Claim Help, Locations, Storm Damage, Reviews, Blog & Resources) plus a State hubs row with full names (New Jersey, New York, Pennsylvania, Florida). No license numbers. Cache-bust v=20260930152555.
+
 
 **Not published** to HubSpot /faq.
 
