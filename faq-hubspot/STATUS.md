@@ -1,6 +1,6 @@
-# FAQ HubSpot-chrome preview — 2026-09-30 (visitor lingo scrub v2)
+# FAQ HubSpot-chrome preview — 2026-09-30
 
-**Joe lock:** Live HubSpot chrome + modern frost FAQ. Visitor copy: natural PA-firm Q&A only — no DIY/carrier-letter/reason-code/certified-mail; no on-this-page / this-FAQ / we-do-not-publish / one-size meta speak.
+**Joe lock:** Live HubSpot chrome + modern frost FAQ. Title = clean H1 only; frost lede + 3 CTAs in separate intro section below. Q17 = “Where does UCS service policyholders?” (no near-me SEO; no license numbers in answer).
 
 **Not published** to HubSpot /faq.
 
@@ -10,12 +10,6 @@
 
 ## Local
 /workspace/ucs-seo/faq-hubspot-preview-20260930/
-
-## Scrub
-- DIY / carrier-letter / reason-code / certified-mail throat-clearing removed
-- Meta speak removed (one-size on this page, This FAQ is educational, Live site framing, denied-claims sales pitch)
-- Kept: claims nuanced; licensed PA; UCS documents + talks to carrier; free consult claim-help / (855) 321-5677
-- Internal FAQ-PAGE-DRAFT writer locks may still say no DIY coaching
 
 ## Explicitly NOT
 - HubSpot CMS /faq live
