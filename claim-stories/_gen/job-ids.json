@@ -1,0 +1,33 @@
+[
+  {
+    "index": 0,
+    "slug": "01-getting-the-call",
+    "job_id": "7731a5ec-8ed0-4c0e-903d-8c794df2103f"
+  },
+  {
+    "index": 1,
+    "slug": "02-inspecting",
+    "job_id": "ab578b25-82ce-4704-a21f-29e07549ea6d"
+  },
+  {
+    "index": 2,
+    "slug": "03-helping-owners",
+    "job_id": "1f7a8f91-b3b5-4dd5-a496-962ff47c6a79"
+  },
+  {
+    "index": 3,
+    "slug": "04-researching-scoping",
+    "job_id": "c59cb232-1125-44bd-8eca-991c7b4be9d3",
+    "note": "regen kitchen cabinet FRONT doors/faces (was unfinished back-as-front vanity)"
+  },
+  {
+    "index": 4,
+    "slug": "05-estimating",
+    "job_id": "ade88503-ae2a-448d-9cdd-0a6e5e4b9bc1"
+  },
+  {
+    "index": 5,
+    "slug": "06-negotiating",
+    "job_id": "749df640-1ced-43a7-8e1e-015ab5fb5f56"
+  }
+]

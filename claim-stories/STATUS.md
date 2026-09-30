@@ -1,4 +1,4 @@
-# Claim Stories mock — STATUS 2026-09-30 ~10:36 EDT
+# Claim Stories mock — STATUS 2026-09-30 ~10:52 EDT
 
 ## Locked (Joe 2026-09-30 feedback)
 - H1/title: **Claim Stories** (not Claim Social) — one H1 only
@@ -14,7 +14,14 @@
 - Higgsfield `gpt_image_2_5` · flare · high · 2k · 16:9
 - folder_id `50176a29-0dd5-4f20-a354-ec9cad7ce40a`
 - Masters PNG + web JPG: `assets/img/hero-journey/`
-- Job ids: `_gen/job-ids.json` (beat 4 regenerated for sudden vanity, not mold)
+- Job ids: `_gen/job-ids.json`
+
+## Fix this pass (Joe: PA plight contact sheet bottom-left)
+- **Beat fixed:** `04` Researching & scoping (contact-sheet bottom-left)
+- **Issue:** cabinet showed unfinished BACK panel as if FRONT
+- **Regen:** `c59cb232-1125-44bd-8eca-991c7b4be9d3` — furnished kitchen, sudden under-sink damage, finished grey shaker **FRONT** doors/faces + hardware, UCS navy polo PA scoping
+- Updated: hero-journey master PNG/JPG, preview, CONTACT-SHEET, carousel asset, shots (`desktop-hero.png`, `desktop-full-viewport.png` forced to beat 4)
+- BOX only — no HubSpot, no Joe message
 
 ## Paths
 - Local box: `/workspace/ucs-seo/claim-stories-mock-20260930/`
@@ -23,5 +30,5 @@
 - Dated mirror: https://joedirect7.github.io/ucspa-redesign-mockup-20260926/claim-stories-mock-20260930/
 
 ## Shots
-- `shots/desktop-hero.png` (reshot 2026-09-30 ~10:36 EDT — beat 1 Getting the call behind frost)
+- `shots/desktop-hero.png` (reshot 2026-09-30 ~10:52 EDT — beat 4 Researching & scoping behind frost)
 - Contact sheet: `_gen/previews/CONTACT-SHEET-pa-journey.jpg`
