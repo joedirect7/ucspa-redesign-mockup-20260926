@@ -1,0 +1,320 @@
+/* ============================================================================
+   UCS Glass System — Free claim consult / footer form
+   Folder: glass-system-20260930/
+   PREVIEW ONLY — not HubSpot live. Joe picks A/B/C then we lock recipe below.
+   ============================================================================ */
+
+:root {
+  /* Brand */
+  --ucs-lime: #98cc00;
+  --ucs-lime-soft: rgba(152, 204, 0, 0.55);
+  --ucs-ink: #181c24;
+  --ucs-ink-soft: #2a3140;
+
+  /* --------------------------------------------------------------------------
+     VARIANT A — True frost (candidate “super cool” glass)
+     Dark translucent panel over photo; heavy blur + saturate so scene reads
+     through; thin white rim + soft lime edge; soft inset highlight.
+     -------------------------------------------------------------------------- */
+  --glass-a-bg: rgba(24, 28, 36, 0.40);
+  --glass-a-bg-hi: rgba(24, 28, 36, 0.35);
+  --glass-a-bg-lo: rgba(24, 28, 36, 0.45);
+  --glass-a-blur: 32px;
+  --glass-a-saturate: 1.35;
+  --glass-a-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-a-lime-edge: 0 0 0 1px rgba(152, 204, 0, 0.45);
+  --glass-a-inset: inset 0 1px 0 rgba(255, 255, 255, 0.28),
+                   inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+  --glass-a-shadow: 0 18px 50px rgba(0, 0, 0, 0.35),
+                    0 2px 8px rgba(0, 0, 0, 0.18);
+  --glass-a-text: #ffffff;
+  --glass-a-muted: rgba(255, 255, 255, 0.72);
+  --glass-a-label: rgba(255, 255, 255, 0.92);
+  --glass-a-input-bg: rgba(255, 255, 255, 0.14);
+  --glass-a-input-border: 1px solid rgba(255, 255, 255, 0.28);
+  --glass-a-input-text: #ffffff;
+  --glass-a-input-ph: rgba(255, 255, 255, 0.55);
+  --glass-a-cta-bg: rgba(152, 204, 0, 0.88);
+  --glass-a-cta-text: #12151c;
+  --glass-a-cta-border: 1px solid rgba(255, 255, 255, 0.35);
+
+  /* --------------------------------------------------------------------------
+     VARIANT B — Lighter frost (alt: light glass, dark text)
+     -------------------------------------------------------------------------- */
+  --glass-b-bg: rgba(255, 255, 255, 0.22);
+  --glass-b-bg-hi: rgba(255, 255, 255, 0.18);
+  --glass-b-bg-lo: rgba(255, 255, 255, 0.28);
+  --glass-b-blur: 28px;
+  --glass-b-saturate: 1.4;
+  --glass-b-border: 1px solid rgba(255, 255, 255, 0.45);
+  --glass-b-lime-edge: 0 0 0 1px rgba(152, 204, 0, 0.40);
+  --glass-b-inset: inset 0 1px 0 rgba(255, 255, 255, 0.55),
+                   inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+  --glass-b-shadow: 0 18px 50px rgba(0, 0, 0, 0.28),
+                    0 2px 8px rgba(0, 0, 0, 0.12);
+  --glass-b-text: #181c24;
+  --glass-b-muted: rgba(24, 28, 36, 0.72);
+  --glass-b-label: #181c24;
+  --glass-b-input-bg: rgba(255, 255, 255, 0.82);
+  --glass-b-input-border: 1px solid rgba(24, 28, 36, 0.12);
+  --glass-b-input-text: #181c24;
+  --glass-b-input-ph: rgba(24, 28, 36, 0.45);
+  --glass-b-cta-bg: rgba(152, 204, 0, 0.92);
+  --glass-b-cta-text: #12151c;
+  --glass-b-cta-border: 1px solid rgba(152, 204, 0, 0.55);
+
+  /* --------------------------------------------------------------------------
+     VARIANT C — Darker frost (still see-through, stronger blur)
+     -------------------------------------------------------------------------- */
+  --glass-c-bg: rgba(10, 14, 20, 0.55);
+  --glass-c-blur: 36px;
+  --glass-c-saturate: 1.25;
+  --glass-c-border: 1px solid rgba(255, 255, 255, 0.22);
+  --glass-c-lime-edge: 0 0 0 1px rgba(152, 204, 0, 0.50);
+  --glass-c-inset: inset 0 1px 0 rgba(255, 255, 255, 0.22),
+                   inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  --glass-c-shadow: 0 20px 55px rgba(0, 0, 0, 0.42),
+                    0 2px 10px rgba(0, 0, 0, 0.22);
+  --glass-c-text: #ffffff;
+  --glass-c-muted: rgba(255, 255, 255, 0.68);
+  --glass-c-label: rgba(255, 255, 255, 0.92);
+  --glass-c-input-bg: rgba(255, 255, 255, 0.12);
+  --glass-c-input-border: 1px solid rgba(255, 255, 255, 0.24);
+  --glass-c-input-text: #ffffff;
+  --glass-c-input-ph: rgba(255, 255, 255, 0.50);
+  --glass-c-cta-bg: transparent;
+  --glass-c-cta-text: #ffffff;
+  --glass-c-cta-border: 1.5px solid rgba(255, 255, 255, 0.85);
+  /* glass pill CTA alt: soft lime fill */
+  --glass-c-cta-fill: rgba(152, 204, 0, 0.85);
+  --glass-c-cta-fill-text: #12151c;
+
+  /* --------------------------------------------------------------------------
+     VARIANT D — Current opaque (CONTROL — what Joe rejected)
+     Near-opaque charcoal + hard lime border + solid white inputs
+     -------------------------------------------------------------------------- */
+  --glass-d-bg: rgba(24, 28, 36, 0.88);
+  --glass-d-blur: 14px;
+  --glass-d-saturate: 1;
+  --glass-d-border: 1.5px solid #98cc00;
+  --glass-d-inset: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --glass-d-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+  --glass-d-text: #ffffff;
+  --glass-d-muted: rgba(255, 255, 255, 0.55);
+  --glass-d-label: rgba(255, 255, 255, 0.92);
+  --glass-d-input-bg: #ffffff;
+  --glass-d-input-border: 1px solid rgba(255, 255, 255, 0.35);
+  --glass-d-input-text: #181c24;
+  --glass-d-input-ph: #8a93a3;
+  --glass-d-cta-bg: transparent;
+  --glass-d-cta-text: #ffffff;
+  --glass-d-cta-border: 1.5px solid #ffffff;
+
+  /* --------------------------------------------------------------------------
+     LOCKED RECIPE — fill after Joe picks A / B / C (not D)
+     Until then, mirrors A (True frost) as the recommended default.
+     -------------------------------------------------------------------------- */
+  --glass-locked-variant: "A-true-frost-PENDING-JOE";
+  --glass-bg: var(--glass-a-bg);
+  --glass-blur: var(--glass-a-blur);
+  --glass-saturate: var(--glass-a-saturate);
+  --glass-border: var(--glass-a-border);
+  --glass-lime-edge: var(--glass-a-lime-edge);
+  --glass-inset: var(--glass-a-inset);
+  --glass-shadow: var(--glass-a-shadow);
+  --glass-text: var(--glass-a-text);
+  --glass-muted: var(--glass-a-muted);
+  --glass-label: var(--glass-a-label);
+  --glass-input-bg: var(--glass-a-input-bg);
+  --glass-input-border: var(--glass-a-input-border);
+  --glass-input-text: var(--glass-a-input-text);
+  --glass-input-ph: var(--glass-a-input-ph);
+  --glass-cta-bg: var(--glass-a-cta-bg);
+  --glass-cta-text: var(--glass-a-cta-text);
+  --glass-cta-border: var(--glass-a-cta-border);
+}
+
+/* Shared glass card mixin classes (used by variant pages) */
+.ucs-glass-card {
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  color: var(--glass-text);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-inset), var(--glass-lime-edge);
+}
+
+.ucs-glass-card .form-title {
+  margin: 0 0 2px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--glass-text);
+}
+.ucs-glass-card .form-sub {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ucs-lime);
+}
+.ucs-glass-card label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--glass-label);
+  margin: 0 0 5px;
+}
+.ucs-glass-card .field { margin-bottom: 8px; }
+.ucs-glass-card .row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.ucs-glass-card input,
+.ucs-glass-card textarea,
+.ucs-glass-card select {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--glass-input-bg);
+  color: var(--glass-input-text);
+  border: var(--glass-input-border);
+  border-radius: 10px;
+  padding: 9px 11px;
+  font-size: 13px;
+  font-family: inherit;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  outline: none;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.ucs-glass-card input::placeholder,
+.ucs-glass-card textarea::placeholder {
+  color: var(--glass-input-ph);
+  opacity: 1;
+}
+.ucs-glass-card input:focus,
+.ucs-glass-card textarea:focus {
+  border-color: rgba(152, 204, 0, 0.65);
+  box-shadow: 0 0 0 3px rgba(152, 204, 0, 0.18);
+}
+.ucs-glass-card textarea { min-height: 56px; resize: vertical; }
+
+.ucs-glass-card .cta {
+  margin-top: 10px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--glass-cta-bg);
+  color: var(--glass-cta-text);
+  border: var(--glass-cta-border);
+  border-radius: 999px;
+  padding: 11px 14px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: transform .12s, filter .12s, background .15s;
+}
+.ucs-glass-card .cta:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+.ucs-glass-card .hint {
+  margin: 8px 0 0;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--glass-muted);
+}
+
+/* Variant body classes remap --glass-* to that recipe */
+body.variant-a {
+  --glass-bg: linear-gradient(165deg, var(--glass-a-bg-hi), var(--glass-a-bg-lo));
+  --glass-blur: var(--glass-a-blur);
+  --glass-saturate: var(--glass-a-saturate);
+  --glass-border: var(--glass-a-border);
+  --glass-lime-edge: var(--glass-a-lime-edge);
+  --glass-inset: var(--glass-a-inset);
+  --glass-shadow: var(--glass-a-shadow);
+  --glass-text: var(--glass-a-text);
+  --glass-muted: var(--glass-a-muted);
+  --glass-label: var(--glass-a-label);
+  --glass-input-bg: var(--glass-a-input-bg);
+  --glass-input-border: var(--glass-a-input-border);
+  --glass-input-text: var(--glass-a-input-text);
+  --glass-input-ph: var(--glass-a-input-ph);
+  --glass-cta-bg: var(--glass-a-cta-bg);
+  --glass-cta-text: var(--glass-a-cta-text);
+  --glass-cta-border: var(--glass-a-cta-border);
+}
+body.variant-b {
+  --glass-bg: linear-gradient(165deg, var(--glass-b-bg-hi), var(--glass-b-bg-lo));
+  --glass-blur: var(--glass-b-blur);
+  --glass-saturate: var(--glass-b-saturate);
+  --glass-border: var(--glass-b-border);
+  --glass-lime-edge: var(--glass-b-lime-edge);
+  --glass-inset: var(--glass-b-inset);
+  --glass-shadow: var(--glass-b-shadow);
+  --glass-text: var(--glass-b-text);
+  --glass-muted: var(--glass-b-muted);
+  --glass-label: var(--glass-b-label);
+  --glass-input-bg: var(--glass-b-input-bg);
+  --glass-input-border: var(--glass-b-input-border);
+  --glass-input-text: var(--glass-b-input-text);
+  --glass-input-ph: var(--glass-b-input-ph);
+  --glass-cta-bg: var(--glass-b-cta-bg);
+  --glass-cta-text: var(--glass-b-cta-text);
+  --glass-cta-border: var(--glass-b-cta-border);
+}
+body.variant-c {
+  --glass-bg: var(--glass-c-bg);
+  --glass-blur: var(--glass-c-blur);
+  --glass-saturate: var(--glass-c-saturate);
+  --glass-border: var(--glass-c-border);
+  --glass-lime-edge: var(--glass-c-lime-edge);
+  --glass-inset: var(--glass-c-inset);
+  --glass-shadow: var(--glass-c-shadow);
+  --glass-text: var(--glass-c-text);
+  --glass-muted: var(--glass-c-muted);
+  --glass-label: var(--glass-c-label);
+  --glass-input-bg: var(--glass-c-input-bg);
+  --glass-input-border: var(--glass-c-input-border);
+  --glass-input-text: var(--glass-c-input-text);
+  --glass-input-ph: var(--glass-c-input-ph);
+  --glass-cta-bg: var(--glass-c-cta-fill);
+  --glass-cta-text: var(--glass-c-cta-fill-text);
+  --glass-cta-border: 1px solid rgba(255, 255, 255, 0.28);
+}
+body.variant-d {
+  --glass-bg: linear-gradient(160deg, rgba(28, 33, 42, 0.92), rgba(18, 22, 30, 0.86));
+  --glass-blur: var(--glass-d-blur);
+  --glass-saturate: var(--glass-d-saturate);
+  --glass-border: var(--glass-d-border);
+  --glass-lime-edge: 0 0 0 0 transparent;
+  --glass-inset: var(--glass-d-inset);
+  --glass-shadow: var(--glass-d-shadow);
+  --glass-text: var(--glass-d-text);
+  --glass-muted: var(--glass-d-muted);
+  --glass-label: var(--glass-d-label);
+  --glass-input-bg: var(--glass-d-input-bg);
+  --glass-input-border: var(--glass-d-input-border);
+  --glass-input-text: var(--glass-d-input-text);
+  --glass-input-ph: var(--glass-d-input-ph);
+  --glass-cta-bg: var(--glass-d-cta-bg);
+  --glass-cta-text: var(--glass-d-cta-text);
+  --glass-cta-border: var(--glass-d-cta-border);
+}
+/* Opaque control: kill backdrop so it reads as solid charcoal slab */
+body.variant-d .ucs-glass-card {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+body.variant-d .ucs-glass-card input,
+body.variant-d .ucs-glass-card textarea {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}

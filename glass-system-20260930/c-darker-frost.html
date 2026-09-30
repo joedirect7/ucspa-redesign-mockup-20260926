@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>C · Darker frost — UCS Glass System PREVIEW</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="tokens.css" />
+<style>
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    color: #fff;
+  }
+  .banner {
+    position: relative;
+    z-index: 5;
+    background: rgba(10, 14, 20, 0.72);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .banner strong { color: #98cc00; }
+  .banner .tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(152,204,0,0.5);
+    color: #98cc00;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .nav-variants {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 12px 16px;
+    background: rgba(10, 14, 20, 0.45);
+  }
+  .nav-variants a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.22);
+    background: rgba(255,255,255,0.08);
+  }
+  .nav-variants a:hover { border-color: #98cc00; color: #98cc00; }
+  .nav-variants a.active {
+    background: rgba(152,204,0,0.22);
+    border-color: #98cc00;
+    color: #98cc00;
+  }
+  .hero-stage {
+    position: relative;
+    min-height: calc(100vh - 88px);
+    display: grid;
+    place-items: center;
+    padding: 28px 20px 40px;
+    overflow: hidden;
+  }
+  .hero-stage .bg {
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-url);
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.04);
+    filter: brightness(0.92) contrast(1.05);
+  }
+  .hero-stage .bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(900px 500px at 20% 30%, rgba(0,0,0,0.15), transparent 60%),
+      linear-gradient(180deg, rgba(8,10,14,0.25) 0%, rgba(8,10,14,0.45) 100%);
+  }
+  .stage-inner {
+    position: relative;
+    z-index: 2;
+    width: min(440px, 100%);
+  }
+  .scene-label {
+    text-align: center;
+    margin: 0 0 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+  }
+  .recipe {
+    margin-top: 18px;
+    font-size: 11px;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.78);
+    text-align: center;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  }
+  .recipe code {
+    font-size: 10px;
+    background: rgba(0,0,0,0.35);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  body { --bg-url: url('bg-blog-hero.png'); }
+</style>
+</head>
+<body class="variant-c">
+  <div class="banner">
+    <strong>PREVIEW ONLY</strong> — Glass system for Free claim consult / footer form · over real photo so translucency is obvious
+    <span class="tag">GH Pages · not HubSpot</span>
+  </div>
+  <nav class="nav-variants" aria-label="Glass variants"><a href="index.html" class="">Hub</a>
+<a href="a-true-frost.html" class="">A · True frost</a>
+<a href="b-lighter-frost.html" class="">B · Lighter frost</a>
+<a href="c-darker-frost.html" class="active">C · Darker frost</a>
+<a href="d-current-opaque.html" class="">D · Opaque control</a></nav>
+  <section class="hero-stage" aria-label="C · Darker frost">
+    <div class="bg" role="img" aria-label="Storm-damaged house hero photo"></div>
+    <div class="stage-inner">
+      <p class="scene-label">C · Darker frost — deeper panel, stronger blur, still see-through</p>
+      <div class="ucs-glass-card" aria-label="Free claim consult — C · Darker frost">
+        <p class="form-title">Free claim consult</p>
+        <p class="form-sub">Inspect → Respond → Recover</p>
+
+            <form action="#" method="get" onsubmit="return false;">
+              <div class="field">
+                <label for="name">Your name*</label>
+                <input id="name" name="name" type="text" placeholder="Your name*" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email*</label>
+                <input id="email" name="email" type="email" placeholder="Email*" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone number*</label>
+                <input id="phone" name="phone" type="tel" placeholder="Phone number*" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label for="street">Street Address</label>
+                <input id="street" name="street" type="text" placeholder="Street address" autocomplete="street-address" />
+              </div>
+              <div class="row2">
+                <div class="field">
+                  <label for="city">City</label>
+                  <input id="city" name="city" type="text" placeholder="City" autocomplete="address-level2" />
+                </div>
+                <div class="field">
+                  <label for="state">State/Region</label>
+                  <input id="state" name="state" type="text" placeholder="State" autocomplete="address-level1" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="zip">Zip Code</label>
+                <input id="zip" name="zip" type="text" placeholder="Zip" autocomplete="postal-code" />
+              </div>
+              <div class="field">
+                <label for="desc">Please Describe Your Situation</label>
+                <textarea id="desc" name="desc" placeholder="Briefly describe the damage…"></textarea>
+              </div>
+              <button class="cta" type="submit">Start free claim consult</button>
+              <p class="hint">Preview only — form does not submit. Inspect → Respond → Recover</p>
+            </form>
+
+      </div>
+      <p class="recipe">Recipe: <code>rgba(10,14,20,0.55)</code> + <code>blur(36px)</code> · frosted inputs · soft lime fill CTA (glass pill)</p>
+    </div>
+  </section>
+</body>
+</html>

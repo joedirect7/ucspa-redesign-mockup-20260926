@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UCS Glass System 2026-09-30 — pick True frost look</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="tokens.css" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #0d1118;
+    color: #fff;
+    min-height: 100vh;
+  }
+  .banner {
+    background: rgba(10, 14, 20, 0.85);
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .banner strong { color: #98cc00; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 36px 20px 60px; }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+  }
+  .lede {
+    margin: 0 0 28px;
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 720px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: #151a22;
+    transition: transform .15s, border-color .15s, box-shadow .15s;
+  }
+  a.card:hover {
+    transform: translateY(-3px);
+    border-color: #98cc00;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  }
+  a.card .thumb {
+    height: 168px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  a.card .thumb::after {
+    content: attr(data-badge);
+    position: absolute;
+    left: 12px; top: 12px;
+    background: rgba(10,14,20,0.72);
+    border: 1px solid rgba(152,204,0,0.55);
+    color: #98cc00;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+  }
+  a.card.control .thumb::after {
+    border-color: rgba(255,255,255,0.35);
+    color: #fff;
+  }
+  a.card .body { padding: 16px 18px 20px; }
+  a.card h2 { margin: 0 0 6px; font-size: 18px; }
+  a.card p { margin: 0; font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.45; }
+  a.card code {
+    font-size: 11px;
+    background: rgba(255,255,255,0.08);
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: rgba(255,255,255,0.85);
+  }
+  .note {
+    margin-top: 28px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+  .note a { color: #98cc00; }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <strong>PREVIEW ONLY</strong> — Click a variant. All forms sit over real storm/blog hero photos so glass translucency is obvious. No HubSpot publish.
+  </div>
+  <div class="wrap">
+    <h1>Glass system — Free claim consult</h1>
+    <p class="lede">
+      Joe: current mock felt like opaque charcoal + lime border — not modern.
+      These four clickable previews lock the look/feel candidates. Pick A, B, or C;
+      then we freeze the recipe in <code>tokens.css</code> (<code>--glass-locked-*</code>).
+    </p>
+    <div class="grid">
+      <a class="card" href="a-true-frost.html">
+        <div class="thumb" style="background-image:url('bg-hero-storm-home.png')" data-badge="A · RECOMMENDED"></div>
+        <div class="body">
+          <h2>A · True frost</h2>
+          <p><code>rgba(24,28,36,0.35–0.45)</code> + <code>blur(28–36px) saturate</code> · white 1px rim + thin lime edge · soft inset · frosted inputs · soft lime CTA</p>
+        </div>
+      </a>
+      <a class="card" href="b-lighter-frost.html">
+        <div class="thumb" style="background-image:url('bg-hero-storm-home.png')" data-badge="B · ALT LIGHT"></div>
+        <div class="body">
+          <h2>B · Lighter frost</h2>
+          <p><code>rgba(255,255,255,0.18–0.28)</code> light glass + blur · dark text · soft white inputs · soft lime CTA</p>
+        </div>
+      </a>
+      <a class="card" href="c-darker-frost.html">
+        <div class="thumb" style="background-image:url('bg-blog-hero.png')" data-badge="C · DEEPER"></div>
+        <div class="body">
+          <h2>C · Darker frost</h2>
+          <p><code>rgba(10,14,20,0.55)</code> + stronger blur · still see-through over blog hero · frosted inputs · soft lime pill CTA</p>
+        </div>
+      </a>
+      <a class="card control" href="d-current-opaque.html">
+        <div class="thumb" style="background-image:url('bg-hero-storm-home.png')" data-badge="D · CONTROL (REJECTED)"></div>
+        <div class="body">
+          <h2>D · Current opaque</h2>
+          <p>What was rejected: near-opaque charcoal <code>0.88</code> + hard lime border + solid white input slabs — side-by-side control.</p>
+        </div>
+      </a>
+    </div>
+    <p class="note">
+      Tokens: <a href="tokens.css">tokens.css</a> · Shots land in <code>shots/</code> after capture ·
+      Repo: joedirect7/ucspa-redesign-mockup-20260926 · GH Pages only.
+    </p>
+  </div>
+</body>
+</html>
