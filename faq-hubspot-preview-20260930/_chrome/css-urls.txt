@@ -1,4 +1,3 @@
-https://www.ucspa.com/hubfs/hub_generated/module_assets/1/50485963365/1790780185890/module_Header_Section_-_UCS.min.css
 https://7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/template_assets/DEFAULT_ASSET/1790670504241/template_layout.min.css
 https://www.ucspa.com/hubfs/hub_generated/template_assets/1/52795929476/1790446814214/template_slick.min.css
 https://www.ucspa.com/hubfs/hub_generated/template_assets/1/52794869832/1790780431471/template_theme-overrides.min.css

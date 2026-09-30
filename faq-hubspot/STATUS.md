@@ -1,6 +1,6 @@
 # FAQ HubSpot-chrome preview — 2026-09-30
 
-**Joe lock:** Live HubSpot chrome + modern frost FAQ. Title = clean H1 only; frost lede + 3 CTAs in separate intro section below. Q17 = “Where does UCS service policyholders?” (no near-me SEO; no license numbers in answer).
+**Joe lock:** Header chrome removed. The page title is inside the intro tile above the frost lede and 3 CTAs. Q17 = “Where does UCS serve policyholders?” (no near-me SEO; no license numbers in answer).
 
 **2026-09-30 PM copy pass:** Removed misspeak / misspeaking-on-the-record language sitewide. Lede + Q1/Q5/Q11 emphasize decades of experience + thousands of losses successfully negotiated (someone in your corner). Stripped For Agents / for-agents / agent-friendly fact page from Q3 + Related. Soft-power; no DIY lingo; no raw URLs in answers.
 
@@ -9,6 +9,10 @@
 **2026-09-30 PM Q8 UPPA:** Contractor negotiation answer now states it is actually illegal in most states and can be the unlicensed practice of public adjusting (UPPA). Soft-power; not legal advice; keeps good-contractor line. Cache-bust v=20260930132745.
 
 **2026-09-30 PM Q4 tighten:** Commercial answer now leads with vast commercial experience — shopping plazas, apartments, nursing homes, bowling alleys, industrial parks, and full 80+ building community claims. Soft-power; no misspeak/DIY/license #s/raw URLs/For Agents.
+
+**2026-09-30 PM chrome removal:** Removed the full HubSpot header wrapper and standalone faq-hero; moved the H1 into the intro tile above the existing lede and 3 CTAs. Cache-bust v=20260930140417.
+
+**2026-09-30 PM footer finish:** Related-resource row now uses inline icon chips; removed all visible license-number copy from the CTA/footer. Cache-bust v=20260930140417.
 
 **Not published** to HubSpot /faq.
 

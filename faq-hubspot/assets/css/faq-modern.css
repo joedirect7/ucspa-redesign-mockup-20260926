@@ -1,4 +1,4 @@
-/* FAQ HubSpot-chrome preview — modern module inside LIVE HS header/footer */
+/* FAQ HubSpot preview — modern FAQ module with footer */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
@@ -39,12 +39,10 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
 }
 .preview-banner strong { color: var(--lime); }
 
-/* Keep live HS chrome intact; lightly stabilize wrappers */
-.faq-hs-preview .header-container-wrapper,
+/* Keep the remaining footer wrapper full width. */
 .faq-hs-preview .footer-container-wrapper { width: 100%; }
-.faq-hs-preview .Header-Main-Logo img { max-height: 56px; width: auto; }
 
-/* Top band: clean title + separate frost intro (not nested in H1) */
+/* Top band: frost intro tile */
 .faq-top {
   position: relative;
   overflow: hidden;
@@ -54,30 +52,18 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
     linear-gradient(180deg, #eef2f6 0%, #f3f5f8 100%);
   padding: clamp(36px, 6vw, 64px) 20px clamp(24px, 3.5vw, 40px);
 }
-.faq-hero {
-  padding: 0;
-  background: none;
-}
-.faq-hero-inner,
 .faq-intro-inner {
   max-width: 920px;
   margin: 0 auto;
 }
-.faq-eyebrow {
-  margin: 0 0 10px;
-  font-size: 11px; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: #6a9400;
-}
-.faq-hero h1 {
-  margin: 0;
+.faq-intro h1 {
+  margin: 0 0 14px;
   font-family: Poppins, sans-serif;
   font-size: clamp(1.65rem, 3.6vw, 2.55rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.15;
   color: var(--ink);
-  text-transform: none;
 }
 .faq-intro {
   margin-top: clamp(18px, 2.8vw, 28px);
@@ -92,8 +78,7 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
   color: var(--muted);
   max-width: 62ch;
 }
-.faq-intro-actions,
-.faq-hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.faq-intro-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .btn-lime {
   display: inline-flex; align-items: center; justify-content: center;
   text-decoration: none; font-weight: 600; font-size: 13px;
@@ -257,6 +242,63 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
 }
 .faq-cta:hover { text-decoration: underline; }
 
+/* Related-resource chips: compact HubSpot-style navigation with clear icons. */
+.related {
+  max-width: 920px;
+  margin: 0 auto 32px;
+  padding: clamp(22px, 3vw, 30px) !important;
+}
+.related h2 {
+  margin: 0 0 6px;
+  font-family: Poppins, sans-serif;
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.related > p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.related-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 13px;
+  border: 1px solid rgba(18,21,28,0.11);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.64);
+  box-shadow: 0 5px 14px rgba(18,21,28,0.06), inset 0 1px 0 rgba(255,255,255,0.82);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .15s, border-color .15s, background .15s, box-shadow .15s;
+}
+.related-links a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(152,204,0,0.55);
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 8px 18px rgba(18,21,28,0.09);
+}
+.related-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: none;
+  stroke: #6a9400;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Bottom CTA band */
 .cta-band {
   max-width: 920px;
@@ -279,7 +321,6 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
   color: var(--muted);
   font-size: 14.5px; line-height: 1.6;
 }
-.cta-band .faq-hero-actions { justify-content: center; }
 
 /* Footer frost form substitute (preview only — live HS form not loaded) */
 .faq-preview-frost-form {
@@ -318,6 +359,7 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
   .faq-main { padding: 24px 16px 20px; }
   .faq-top { padding: 28px 16px 22px; }
   .faq-intro { margin-top: 16px; }
+  .faq-intro h1 { margin-bottom: 12px; }
   .section-block { margin-bottom: 32px; }
 }
 @media (prefers-reduced-motion: reduce) {
