@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UCS Footer Mock — no Schedule CTA · glass form · socials (PREVIEW ONLY)</title>
+<style>
+  :root {
+    --lime: #98cc00;
+    --ink: #181818;
+    --muted: #555;
+    --glass-bg: rgba(24, 28, 36, 0.88);
+    --glass-border: rgba(152, 204, 0, 0.95);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #f3f4f6;
+    color: var(--ink);
+  }
+  .banner {
+    background: #1a1f28;
+    color: #fff;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+  .banner strong { color: var(--lime); }
+  .banner .tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(152,204,0,0.5);
+    color: var(--lime);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* Fake page content above footer so glass frosts over something */
+  .page-shim {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 24px 8px;
+    color: #888;
+    font-size: 13px;
+  }
+  .page-shim .lines {
+    height: 72px;
+    border-radius: 12px;
+    background:
+      linear-gradient(90deg, #e8eaee 0%, #f7f8fa 50%, #e8eaee 100%);
+    opacity: 0.7;
+  }
+
+  .Footer-Section {
+    /* replaced below */
+    background: #ffffff;
+    padding: 48px 0 0;
+    position: relative;
+  }
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  .Footer-Row {
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr 1.05fr 1.15fr;
+    gap: 28px 32px;
+    align-items: start;
+    padding-bottom: 36px;
+  }
+  .Footer-Logo img {
+    width: 168px;
+    height: auto;
+    display: block;
+    margin-bottom: 14px;
+  }
+  .Footer-Lft-text {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+  }
+  .Footer-Menu-Col h6 {
+    margin: 0 0 14px;
+    color: var(--lime);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .Footer-Menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .Footer-Menu li { margin: 0 0 10px; }
+  .Footer-Menu a {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .Footer-Menu a:hover { color: var(--lime); }
+  .lic {
+    margin: 14px 0 10px;
+    font-size: 12px;
+    color: #444;
+  }
+  .contact-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #333;
+    margin: 6px 0;
+  }
+  .contact-line svg { flex: 0 0 auto; opacity: 0.65; }
+  .hours { margin-top: 18px; }
+  .hours .row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #333;
+  }
+
+  /* RIGHT: glass form — NO schedule CTA */
+  .Footer-Row-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .glass-form {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border: 1.5px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 22px 18px 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    color: #fff;
+  }
+  .glass-form .form-title {
+    margin: 0 0 4px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .glass-form .form-sub {
+    margin: 0 0 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--lime);
+  }
+  .glass-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.92);
+    margin: 0 0 5px;
+  }
+  .glass-form .field { margin-bottom: 10px; }
+  .glass-form input,
+  .glass-form textarea,
+  .glass-form select {
+    width: 100%;
+    background: #fff;
+    color: #181c24;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 8px;
+    padding: 9px 11px;
+    font-size: 13px;
+    font-family: inherit;
+  }
+  .glass-form textarea { min-height: 64px; resize: vertical; }
+  .glass-form .row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .glass-form .submit {
+    margin-top: 8px;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid #fff;
+    border-radius: 999px;
+    padding: 11px 14px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .glass-form .submit:hover {
+    background: rgba(152, 204, 0, 0.15);
+    border-color: var(--lime);
+  }
+  .glass-form .hint {
+    margin: 10px 0 0;
+    font-size: 10px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.35;
+  }
+
+  .Footer-Row-Icons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .Footer-Row-Icons a {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    color: #181818;
+    border-radius: 50%;
+    transition: color .2s, background .2s;
+  }
+  .Footer-Row-Icons a:hover {
+    color: var(--lime);
+    background: rgba(152,204,0,0.1);
+  }
+  .Footer-Row-Icons svg { width: 20px; height: 20px; fill: currentColor; }
+
+  .Footer-copyright {
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 0 22px;
+    font-size: 12px;
+    color: #999;
+  }
+  .Footer-copyright a { color: #999; text-decoration: none; }
+  .Footer-copyright a:hover { color: var(--lime); }
+
+  .notes {
+    max-width: 1200px;
+    margin: 18px auto 40px;
+    padding: 0 28px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+  }
+  .notes code {
+    background: #eee;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+  }
+
+  @media (max-width: 960px) {
+    .Footer-Row { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .Footer-Row { grid-template-columns: 1fr; }
+  }
+
+  .Footer-Section {
+    background:
+      radial-gradient(1200px 400px at 85% 20%, rgba(152,204,0,0.08), transparent 55%),
+      linear-gradient(180deg, #f7f8fa 0%, #ffffff 40%, #ffffff 100%);
+  }
+  .glass-form {
+    background: linear-gradient(160deg, rgba(28,33,42,0.92), rgba(18,22,30,0.86));
+    box-shadow: 0 12px 40px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+</style>
+</head>
+<body>
+  <div class="banner">
+    <strong>PREVIEW ONLY</strong> — Footer mock for Joe · Schedule damage assessment CTA/heading removed · form restyled dark frosted glass · social icons kept
+    <span class="tag">not published</span>
+  </div>
+
+  </div>
+
+  <footer class="Footer-Section" id="footer-mock">
+    <div class="wrapper">
+      <div class="Footer-Row">
+        <div class="Footer-Row-Left">
+          <div class="Footer-Logo">
+            <img src="ucs-logo-3d.png" alt="UCS" width="168" height="78" />
+          </div>
+          <div class="Footer-Lft-text">
+            We help homeowners, building owners, property managers and contractors file property damage claims, get higher payouts, and eliminate the headaches of dealing with insurance claims. Don't file another claim without us!
+          </div>
+        </div>
+
+        <div class="Footer-Row-center">
+          <div class="Footer-Menu-Col">
+            <h6>Menu</h6>
+            <div class="Footer-Menu">
+              <ul>
+                <li><a href="#">Storm Damage</a></li>
+                <li><a href="#">Property Damage</a></li>
+                <li><a href="#">Residential Claims</a></li>
+                <li><a href="#">Commercial Claims</a></li>
+                <li><a href="#">Denied Claims</a></li>
+                <li><a href="#">Contractor Claim Services</a></li>
+                <li><a href="#">About Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="Footer-Row-menu">
+          <div class="Footer-Menu-Col">
+            <h6>Locations</h6>
+            <div class="Footer-Menu">
+              <ul>
+                <li><a href="#">Florida</a></li>
+                <li><a href="#">Los Angeles</a></li>
+                <li><a href="#">Texas</a></li>
+                <li><a href="#">Louisiana</a></li>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">New Jersey</a></li>
+                <li><a href="#">Georgia</a></li>
+                <li><a href="#">Pennsylvania</a></li>
+              </ul>
+            </div>
+            <div class="lic">FLORIDA LIC# W806268</div>
+            <div class="contact-line">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg>
+              claims@ucspa.com
+            </div>
+            <div class="contact-line">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+              855-321-LOSS(5677)
+            </div>
+            <div class="hours">
+              <h6>Business Hours</h6>
+              <div class="row">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                Mon-Fri: 9:00am–5:00pm
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Footer-Row-right">
+          <!-- Schedule damage assessment CTA intentionally omitted -->
+          <div class="glass-form" aria-label="Footer contact form — frosted glass mock">
+            <p class="form-title">Get claim help</p>
+            <p class="form-sub">Inspect → Respond → Recover</p>
+            <form action="#" method="get" onsubmit="return false;">
+              <div class="field">
+                <label for="name">Your name*</label>
+                <input id="name" name="name" type="text" placeholder="Your name*" />
+              </div>
+              <div class="field">
+                <label for="email">Email*</label>
+                <input id="email" name="email" type="email" placeholder="Email*" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone number*</label>
+                <input id="phone" name="phone" type="tel" placeholder="Phone number*" />
+              </div>
+              <div class="field">
+                <label for="street">Street Address</label>
+                <input id="street" name="street" type="text" />
+              </div>
+              <div class="row2">
+                <div class="field">
+                  <label for="city">City</label>
+                  <input id="city" name="city" type="text" />
+                </div>
+                <div class="field">
+                  <label for="state">State/Region</label>
+                  <input id="state" name="state" type="text" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="zip">Zip Code</label>
+                <input id="zip" name="zip" type="text" />
+              </div>
+              <div class="field">
+                <label for="desc">Please Describe Your Situation</label>
+                <textarea id="desc" name="desc"></textarea>
+              </div>
+              <button class="submit" type="submit">Submit</button>
+                          </form>
+          </div>
+
+          <div class="Footer-Row-Icons">
+            <ul>
+              <li><a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/></svg>
+              </a></li>
+              <li><a href="https://x.com/" aria-label="X" title="X">
+                <svg viewBox="0 0 24 24"><path d="M18.9 2H21l-6.6 7.5L22 22h-6.2l-4.9-6.4L5.3 22H3.2l7-8L2 2h6.3l4.4 5.8L18.9 2zm-1.1 18h1.7L6.3 3.9H4.5L17.8 20z"/></svg>
+              </a></li>
+              <li><a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.5 6.2a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/></svg>
+              </a></li>
+              <li><a href="https://www.linkedin.com/" aria-label="LinkedIn" title="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M6.5 9.5H3.7V21h2.8V9.5zM5.1 3.5A1.65 1.65 0 1 0 5.1 6.8 1.65 1.65 0 0 0 5.1 3.5zM20.3 21h-2.8v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H10.8V9.5h2.7v1.6h.1c.4-.7 1.3-1.8 3.2-1.8 3.4 0 4 2.2 4 5.1V21z"/></svg>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="Footer-copyright">
+        <div class="Footer-copyright-left">
+          <a href="#">Privacy policy</a>. <a href="#">Terms &amp; conditions</a>.
+        </div>
+        <div class="Footer-copyright-right">
+          © 2009–2026 United Claims Specialists. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="notes">
+    Local mock only. Matches blog dark consult / homepage glass language
+    (<code>rgba(24,28,36,.88)</code> + <code>backdrop-filter: blur(14px)</code> + lime soft border).
+    Live HubSpot footer not modified.
+  </div>
+</body>
+</html>
