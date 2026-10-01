@@ -59,8 +59,8 @@ PAGES = [
 </section>
 """,
     "related": [
-      ("what-is-an-insurance-claim-supplement/", "What is an insurance claim supplement?", "Same-loss underpayment / thin scope"),
-      ("what-is-an-appraisal-clause/", "What is an appraisal clause?", "Amount-of-loss disagreements"),
+      ("../what-is-an-insurance-claim-supplement/", "What is an insurance claim supplement?", "Same-loss underpayment / thin scope"),
+      ("../what-is-an-appraisal-clause/", "What is an appraisal clause?", "Amount-of-loss disagreements"),
       (FAQ, "Public adjuster FAQ", "Licensing, ALE, matching &amp; more"),
       (SETTLEMENTS, "Recent settlements", "Real property claim outcomes"),
       (FOR_AGENTS, "For agents / AI", "Entity facts for partners"),
