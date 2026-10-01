@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>United Claims Specialists — Arché-style Homepage Mockup (PREVIEW)</title>
+  <meta name="description" content="PREVIEW ONLY. UCS homepage mockup mirroring Arché Studio structure. Soft-power public adjusting for property insurance claims." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #141210;
+      --ink-soft: #3a3530;
+      --muted: #6b645c;
+      --cream: #f6f1ea;
+      --cream-2: #efe8df;
+      --paper: #fbf8f4;
+      --line: rgba(20,18,16,.12);
+      --line-strong: rgba(20,18,16,.22);
+      --lime: #99cc02;
+      --lime-deep: #7aa300;
+      --frost: rgba(255,255,255,.55);
+      --frost-dark: rgba(20,18,16,.42);
+      --dark: #0c0b0a;
+      --dark-2: #161412;
+      --max: 1240px;
+      --ease: cubic-bezier(.22,1,.36,1);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: 0; background: none; }
+    .wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+    .wrap-wide { width: min(100% - 2.5rem, 1400px); margin-inline: auto; }
+    .eyebrow {
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .display {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      letter-spacing: -.02em;
+      line-height: 1.05;
+      margin: 0;
+    }
+    .num {
+      font-family: "DM Sans", sans-serif;
+      font-weight: 400;
+      letter-spacing: .08em;
+      font-size: .85rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* Preview banner */
+    .preview-banner {
+      position: sticky; top: 0; z-index: 100;
+      background: #1a1a1a; color: #cfcfcf;
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      text-align: center; padding: .55rem 1rem;
+    }
+    .preview-banner strong { color: var(--lime); font-weight: 600; }
+
+    /* Nav */
+    .nav {
+      position: absolute; inset: 0 0 auto; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.35rem 0; color: #fff;
+    }
+    .nav__brand { display: flex; align-items: center; gap: .75rem; }
+    .nav__brand img { height: 36px; width: auto; }
+    .nav__brand span {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem; font-weight: 500; letter-spacing: .02em;
+    }
+    .nav__links { display: flex; gap: 1.75rem; align-items: center; }
+    .nav__links a {
+      font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
+      opacity: .78; transition: opacity .25s var(--ease);
+    }
+    .nav__links a:hover { opacity: 1; }
+    .nav__cta {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .7rem 1.15rem; border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      transition: background .25s var(--ease), border-color .25s;
+    }
+    .nav__cta:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.4); }
+    .nav-toggle { display: none; color: #fff; padding: .4rem; }
+    @media (max-width: 860px) {
+      .nav__links { display: none; }
+      .nav-toggle { display: block; }
+    }
+
+    /* 1. Hero */
+    .hero {
+      position: relative; min-height: 100vh; min-height: 100svh;
+      display: grid; align-items: end;
+      color: #fff; overflow: hidden;
+      background: var(--dark);
+    }
+    .hero__media {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8,7,6,.35) 0%, rgba(8,7,6,.15) 35%, rgba(8,7,6,.72) 72%, rgba(8,7,6,.94) 100%),
+        url("assets/hero-filmic.jpg") center/cover no-repeat;
+      transform: scale(1.02);
+    }
+    .hero__content { position: relative; z-index: 2; padding: 0 0 5.5rem; }
+    .hero__cats {
+      display: flex; flex-wrap: wrap; gap: .65rem 1.25rem;
+      margin-bottom: 1.75rem; opacity: .85;
+    }
+    .hero__cats span {
+      font-size: .7rem; letter-spacing: .24em; text-transform: uppercase;
+    }
+    .hero__cats span + span::before {
+      content: "·"; margin-right: 1.25rem; opacity: .5;
+    }
+    .hero h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500; font-size: clamp(3.1rem, 8.2vw, 6.6rem);
+      line-height: .98; letter-spacing: -.03em; max-width: 14ch;
+      margin: 0 0 1.5rem;
+    }
+    .hero__lede {
+      max-width: 36rem; font-size: 1.05rem; line-height: 1.65;
+      color: rgba(255,255,255,.78); font-weight: 300; margin: 0 0 2.25rem;
+    }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: .85rem; align-items: center; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: .55rem; padding: 1rem 1.55rem; border-radius: 999px;
+      font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+      font-weight: 500; transition: transform .25s var(--ease), background .25s, color .25s, border-color .25s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn--lime {
+      background: var(--lime); color: var(--ink);
+      box-shadow: 0 10px 30px rgba(153,204,2,.18);
+    }
+    .btn--lime:hover { background: #a8db12; }
+    .btn--ghost {
+      background: transparent; color: #fff;
+      border: 1px solid rgba(255,255,255,.35);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    }
+    .btn--ghost:hover { border-color: rgba(255,255,255,.7); background: rgba(255,255,255,.06); }
+    .btn--ink {
+      background: var(--ink); color: #fff;
+    }
+    .btn--ink:hover { background: #000; }
+    .btn--outline {
+      border: 1px solid var(--line-strong); color: var(--ink); background: transparent;
+    }
+    .btn--outline:hover { border-color: var(--ink); }
+    .hero__meta {
+      position: absolute; right: max(1.25rem, calc((100% - var(--max)) / 2));
+      bottom: 5.5rem; text-align: right; opacity: .7;
+      font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+    }
+    @media (max-width: 720px) {
+      .hero__meta { display: none; }
+      .hero__content { padding-bottom: 3.5rem; }
+      .hero h1 { max-width: none; }
+    }
+
+    /* 2. Who we are */
+    .who {
+      padding: clamp(4.5rem, 10vw, 7.5rem) 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+    .who__grid {
+      display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2rem, 6vw, 5rem);
+      align-items: end;
+    }
+    .who h2 {
+      font-size: clamp(2.1rem, 4.5vw, 3.35rem);
+      max-width: 16ch;
+    }
+    .who__copy p {
+      margin: 0 0 1.1rem; color: var(--ink-soft); font-size: 1.05rem; max-width: 38rem;
+    }
+    .who__stats {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+      margin-top: 2.25rem; padding-top: 1.75rem; border-top: 1px solid var(--line);
+    }
+    .who__stats strong {
+      display: block; font-family: "Cormorant Garamond", serif;
+      font-size: 2.35rem; font-weight: 500; line-height: 1; margin-bottom: .35rem;
+    }
+    .who__stats span { font-size: .78rem; color: var(--muted); letter-spacing: .04em; }
+    @media (max-width: 860px) {
+      .who__grid { grid-template-columns: 1fr; }
+      .who__stats { grid-template-columns: 1fr; gap: 1.25rem; }
+    }
+
+    /* 3. Pillars */
+    .pillars {
+      padding: clamp(4.5rem, 10vw, 7rem) 0;
+      background: var(--paper);
+    }
+    .pillars__head {
+      display: flex; justify-content: space-between; align-items: end;
+      gap: 2rem; margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .pillars__head h2 { font-size: clamp(2rem, 4vw, 3rem); max-width: 12ch; }
+    .pillars__list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); }
+    .pillar {
+      padding: 2rem 1.5rem 2.25rem 0;
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      padding-right: 1.5rem; padding-left: 1.5rem;
+      transition: background .3s var(--ease);
+    }
+    .pillar:first-child { padding-left: 0; }
+    .pillar:last-child { border-right: 0; padding-right: 0; }
+    .pillar:hover { background: rgba(153,204,2,.04); }
+    .pillar .num { display: block; margin-bottom: 1.5rem; }
+    .pillar h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.55rem, 2.4vw, 1.9rem);
+      font-weight: 500; margin: 0 0 .85rem; letter-spacing: -.01em;
+    }
+    .pillar p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.65; }
+    @media (max-width: 980px) {
+      .pillars__list { grid-template-columns: 1fr 1fr; }
+      .pillar:nth-child(2n) { border-right: 0; padding-right: 0; }
+      .pillar:nth-child(odd) { padding-left: 0; }
+      .pillar:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    }
+    @media (max-width: 560px) {
+      .pillars__list { grid-template-columns: 1fr; }
+      .pillar { padding-left: 0 !important; padding-right: 0 !important; border-right: 0 !important; }
+      .pillars__head { flex-direction: column; align-items: start; }
+    }
+
+    /* 4. Selected works / settlements */
+    .works {
+      padding: clamp(4.5rem, 10vw, 7rem) 0;
+      background: var(--dark);
+      color: #fff;
+    }
+    .works__head {
+      display: flex; justify-content: space-between; align-items: end;
+      gap: 2rem; margin-bottom: clamp(2rem, 4vw, 3.25rem);
+    }
+    .works__head .eyebrow { color: rgba(255,255,255,.55); }
+    .works__head h2 {
+      font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+      max-width: 14ch; color: #fff;
+    }
+    .works__head p { max-width: 26rem; color: rgba(255,255,255,.62); margin: 0; font-weight: 300; }
+    .works__grid {
+      display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem;
+    }
+    .work {
+      position: relative; overflow: hidden; border-radius: 18px;
+      min-height: 320px; isolation: isolate;
+      background: #1a1816;
+    }
+    .work:nth-child(1) { grid-column: span 7; min-height: 420px; }
+    .work:nth-child(2) { grid-column: span 5; min-height: 420px; }
+    .work:nth-child(3),
+    .work:nth-child(4),
+    .work:nth-child(5) { grid-column: span 4; }
+    .work__img {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 1.1s var(--ease);
+      filter: saturate(.9) contrast(1.05);
+    }
+    .work:hover .work__img { transform: scale(1.05); }
+    .work__veil {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(8,7,6,.15) 10%, rgba(8,7,6,.78) 70%, rgba(8,7,6,.92) 100%);
+    }
+    .work__body {
+      position: absolute; inset: auto 0 0; padding: 1.5rem 1.5rem 1.65rem;
+      z-index: 2;
+    }
+    .work__label {
+      font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); margin-bottom: .55rem;
+    }
+    .work h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+      font-weight: 500; margin: 0 0 .85rem; line-height: 1.15;
+    }
+    .work__facts {
+      display: flex; flex-wrap: wrap; gap: .5rem .85rem;
+      font-size: .88rem; color: rgba(255,255,255,.82);
+    }
+    .work__facts b { color: var(--lime); font-weight: 500; }
+    .work__chip {
+      display: inline-flex; align-items: center;
+      padding: .35rem .7rem; border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      font-size: .72rem; letter-spacing: .04em;
+    }
+    @media (max-width: 900px) {
+      .work:nth-child(n) { grid-column: span 6; min-height: 300px !important; }
+    }
+    @media (max-width: 560px) {
+      .works__head { flex-direction: column; align-items: start; }
+      .work:nth-child(n) { grid-column: span 12; }
+    }
+
+    /* 5. Process */
+    .process {
+      padding: clamp(4.5rem, 10vw, 7.5rem) 0;
+      background: var(--cream);
+      position: relative; overflow: hidden;
+    }
+    .process__head { margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: 36rem; }
+    .process__head h2 { font-size: clamp(2.1rem, 4.5vw, 3.3rem); margin: .6rem 0 1rem; }
+    .process__head p { margin: 0; color: var(--ink-soft); }
+    .process__steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    }
+    .step {
+      position: relative;
+      padding: 2rem 1.75rem 2.15rem;
+      border-radius: 22px;
+      background: rgba(255,255,255,.52);
+      border: 1px solid rgba(255,255,255,.65);
+      box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 18px 40px rgba(20,18,16,.04);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    }
+    .step .num { margin-bottom: 2rem; color: var(--lime-deep); }
+    .step__arche {
+      font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: .45rem;
+    }
+    .step h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2rem; font-weight: 500; margin: 0 0 .9rem;
+    }
+    .step p { margin: 0; color: var(--ink-soft); font-size: .98rem; }
+    @media (max-width: 800px) {
+      .process__steps { grid-template-columns: 1fr; }
+    }
+
+    /* 6. Testimonials */
+    .quotes {
+      padding: clamp(4.5rem, 10vw, 7.5rem) 0;
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+    }
+    .quotes__head { margin-bottom: 2.75rem; }
+    .quotes__head h2 { font-size: clamp(2rem, 4vw, 3rem); max-width: 14ch; margin: .55rem 0 0; }
+    .quote-elite {
+      max-width: 880px;
+      padding: clamp(2rem, 4vw, 3rem);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.7), rgba(246,241,234,.55));
+      border: 1px solid rgba(255,255,255,.8);
+      box-shadow: 0 30px 60px rgba(20,18,16,.05);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    }
+    .quote-elite blockquote {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      font-weight: 400; font-style: italic;
+      line-height: 1.35; letter-spacing: -.01em;
+      color: var(--ink);
+    }
+    .quote-elite cite {
+      display: block; margin-top: 1.75rem;
+      font-style: normal; font-size: .85rem;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .quote-rail {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .quote-mini {
+      padding: 1.35rem 1.25rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .quote-mini p {
+      margin: 0 0 1rem; font-size: .92rem; color: var(--ink-soft); line-height: 1.55;
+    }
+    .quote-mini span {
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+    }
+    @media (max-width: 800px) {
+      .quote-rail { grid-template-columns: 1fr; }
+    }
+
+    /* 7. FAQ */
+    .faq {
+      padding: clamp(4.5rem, 10vw, 7rem) 0;
+      background: var(--cream-2);
+    }
+    .faq__grid {
+      display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+    }
+    .faq__grid h2 { font-size: clamp(2rem, 4vw, 3rem); margin: .5rem 0 1.25rem; max-width: 10ch; }
+    .faq__side p { color: var(--ink-soft); margin: 0 0 1.75rem; max-width: 28rem; }
+    .faq-list { border-top: 1px solid var(--line-strong); }
+    .faq-item { border-bottom: 1px solid var(--line-strong); }
+    .faq-item summary {
+      list-style: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      padding: 1.25rem 0; font-weight: 500; font-size: 1.02rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+"; font-weight: 300; font-size: 1.35rem; color: var(--muted);
+      transition: transform .25s var(--ease);
+    }
+    .faq-item[open] summary::after { content: "–"; }
+    .faq-item .ans {
+      padding: 0 0 1.35rem; color: var(--ink-soft); max-width: 46rem;
+      font-size: .98rem; line-height: 1.65;
+    }
+    @media (max-width: 800px) {
+      .faq__grid { grid-template-columns: 1fr; }
+    }
+
+    /* 8. Contact CTA */
+    .connect {
+      position: relative; overflow: hidden;
+      padding: clamp(5rem, 12vw, 8.5rem) 0;
+      color: #fff; background: var(--dark);
+    }
+    .connect__media {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(90deg, rgba(8,7,6,.92) 0%, rgba(8,7,6,.72) 45%, rgba(8,7,6,.55) 100%),
+        url("assets/process-bg.jpg") center/cover no-repeat;
+    }
+    .connect__inner { position: relative; z-index: 2; max-width: 40rem; }
+    .connect .eyebrow { color: rgba(255,255,255,.55); }
+    .connect h2 {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      margin: .7rem 0 1.15rem; max-width: 12ch;
+    }
+    .connect p { color: rgba(255,255,255,.72); margin: 0 0 2rem; font-weight: 300; font-size: 1.05rem; }
+    .connect__phone {
+      display: block; margin-top: 1.5rem;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      letter-spacing: -.01em;
+    }
+    .connect__phone a { border-bottom: 1px solid rgba(255,255,255,.25); padding-bottom: .15rem; }
+    .connect__phone a:hover { border-color: var(--lime); color: var(--lime); }
+    .connect__note { margin-top: .85rem; font-size: .85rem; color: rgba(255,255,255,.5); }
+
+    /* Footer */
+    footer {
+      background: #080706; color: rgba(255,255,255,.55);
+      padding: 2rem 0; font-size: .78rem; letter-spacing: .06em;
+    }
+    footer .wrap {
+      display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+      align-items: center;
+    }
+    footer strong { color: rgba(255,255,255,.8); font-weight: 500; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .work__img, .btn, .nav__cta, .pillar { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-banner">Preview only · Arché Studio structure mock · <strong>not</strong> live ucspa.com · not HubSpot</div>
+
+  <!-- 1. Hero -->
+  <header class="hero" id="top">
+    <div class="hero__media" role="img" aria-label="Residential property after storm damage — filmic establishing frame"></div>
+    <div class="wrap" style="position:relative; width:min(100% - 2.5rem, var(--max)); margin-inline:auto; align-self:stretch; display:flex; flex-direction:column; justify-content:space-between; min-height:100vh; min-height:100svh;">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__brand" href="#top">
+          <img src="assets/ucs-logo.png" alt="United Claims Specialists" />
+          <span>UCS</span>
+        </a>
+        <div class="nav__links">
+          <a href="#who">About</a>
+          <a href="#pillars">Approach</a>
+          <a href="#works">Settlements</a>
+          <a href="#process">Process</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav__cta" href="#connect">Consult</a>
+        </div>
+        <a class="nav-toggle nav__cta" href="#connect">Consult</a>
+      </nav>
+
+      <div class="hero__content">
+        <div class="hero__cats" aria-label="Categories">
+          <span>Property claims</span>
+          <span>Public adjusting</span>
+          <span>Policyholder advocacy</span>
+        </div>
+        <h1>Your insurance has an adjuster, so should you.</h1>
+        <p class="hero__lede">United Claims Specialists is a public adjusting practice that documents loss, presents the claim, and negotiates toward a fair settlement — with the same seriousness the carrier brings to their side of the table.</p>
+        <div class="hero__actions">
+          <a class="btn btn--lime" href="https://www.ucspa.com/contact-us">Free Claim Consult</a>
+          <a class="btn btn--ghost" href="tel:8553215677">Call 855-321-5677</a>
+        </div>
+      </div>
+      <div class="hero__meta">Est. practice · Multi-state · No upfront fee</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. Who we are -->
+    <section class="who" id="who">
+      <div class="wrap who__grid">
+        <div>
+          <p class="eyebrow">Who we are</p>
+          <h2 class="display">A claims practice shaped by documentation, advocacy, and restraint.</h2>
+        </div>
+        <div class="who__copy">
+          <p>United Claims Specialists (UCS) represents policyholders on property insurance claims. We work the file the way a serious practice should: measure what was damaged, support what the policy covers, and negotiate without theatrics.</p>
+          <p>When something hits your home or building — fire, water, wind, hail, storm — the carrier already has an adjuster. UCS exists so you do too.</p>
+          <div class="who__stats">
+            <div><strong>8+</strong><span>States served</span></div>
+            <div><strong>0</strong><span>Upfront fees</span></div>
+            <div><strong>PA</strong><span>Licensed public adjusters</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Four pillars -->
+    <section class="pillars" id="pillars">
+      <div class="wrap">
+        <div class="pillars__head">
+          <div>
+            <p class="eyebrow">How we work</p>
+            <h2 class="display">Four steady principles.</h2>
+          </div>
+          <p class="eyebrow" style="max-width:18rem; text-align:right;">Soft power. Straight facts. No hype.</p>
+        </div>
+        <div class="pillars__list">
+          <article class="pillar">
+            <span class="num">01 —</span>
+            <h3>Document First</h3>
+            <p>Scope, photos, estimates, and policy language before advocacy. The file has to carry the claim.</p>
+          </article>
+          <article class="pillar">
+            <span class="num">02 —</span>
+            <h3>Advocate Hard</h3>
+            <p>Your carrier has representation. UCS stands for the policyholder — calmly, completely, on the record.</p>
+          </article>
+          <article class="pillar">
+            <span class="num">03 —</span>
+            <h3>Negotiate Fair</h3>
+            <p>Initial payments are often a starting point. We compare offers to supported loss and negotiate from there.</p>
+          </article>
+          <article class="pillar">
+            <span class="num">04 —</span>
+            <h3>Settle Right</h3>
+            <p>A settlement should track the covered damage and the policy — not the shortest path to close the file.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Selected works = settlement cards -->
+    <section class="works" id="works">
+      <div class="wrap">
+        <div class="works__head">
+          <div>
+            <p class="eyebrow">Selected works</p>
+            <h2 class="display">Settlements with a clear before and after.</h2>
+          </div>
+          <p>Straight-fact cards from known UCS examples — place, damage type, initial payment → final recovery.</p>
+        </div>
+        <div class="works__grid">
+          <article class="work">
+            <div class="work__img" style="background-image:url('assets/work-fire.jpg')"></div>
+            <div class="work__veil"></div>
+            <div class="work__body">
+              <div class="work__label">Selected works · Commercial</div>
+              <h3>Westchester doctor’s office</h3>
+              <div class="work__facts">
+                <span class="work__chip">Commercial</span>
+                <span>Initial <b>$200,000</b> → Final <b>$2,000,000</b></span>
+              </div>
+            </div>
+          </article>
+          <article class="work">
+            <div class="work__img" style="background-image:url('assets/work-paramus.jpg')"></div>
+            <div class="work__veil"></div>
+            <div class="work__body">
+              <div class="work__label">Selected works · Fire</div>
+              <h3>Paramus fire</h3>
+              <div class="work__facts">
+                <span class="work__chip">Fire</span>
+                <span>Initial <b>$62,000</b> → Final <b>$390,000</b></span>
+              </div>
+            </div>
+          </article>
+          <article class="work">
+            <div class="work__img" style="background-image:url('assets/work-hail.jpg')"></div>
+            <div class="work__veil"></div>
+            <div class="work__body">
+              <div class="work__label">Selected works · Hail</div>
+              <h3>Dallas commercial hail</h3>
+              <div class="work__facts">
+                <span class="work__chip">Hail</span>
+                <span>Initial <b>$0</b> → Final <b>$1,338,854.76</b></span>
+              </div>
+            </div>
+          </article>
+          <article class="work">
+            <div class="work__img" style="background-image:url('assets/work-water.jpg')"></div>
+            <div class="work__veil"></div>
+            <div class="work__body">
+              <div class="work__label">Selected works · Water</div>
+              <h3>Miami shower pan</h3>
+              <div class="work__facts">
+                <span class="work__chip">Water</span>
+                <span>Initial <b>$7,000</b> → Final <b>$63,000</b></span>
+              </div>
+            </div>
+          </article>
+          <article class="work">
+            <div class="work__img" style="background-image:url('assets/work-hurricane.jpg')"></div>
+            <div class="work__veil"></div>
+            <div class="work__body">
+              <div class="work__label">Selected works · Storm</div>
+              <h3>Hurricane Michael</h3>
+              <div class="work__facts">
+                <span class="work__chip">Hurricane</span>
+                <span>Initial <b>$26,000</b> → Final <b>$422,304.37</b></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Process: Discover/Develop/Deliver → Intake/Investigate/Negotiate -->
+    <section class="process" id="process">
+      <div class="wrap">
+        <div class="process__head">
+          <p class="eyebrow">Our process</p>
+          <h2 class="display">From first call to resolved claim.</h2>
+          <p>Arché’s Discover → Develop → Deliver, mapped to how UCS actually works a file.</p>
+        </div>
+        <div class="process__steps">
+          <article class="step">
+            <span class="num">01 —</span>
+            <div class="step__arche">Discover →</div>
+            <h3>Intake</h3>
+            <p>We listen to what happened, review the policy posture, and decide whether a public adjuster is the right fit for your loss.</p>
+          </article>
+          <article class="step">
+            <span class="num">02 —</span>
+            <div class="step__arche">Develop →</div>
+            <h3>Investigate</h3>
+            <p>On-site documentation, estimates, and a supported claim package — so the carrier sees the full scope, not a partial glance.</p>
+          </article>
+          <article class="step">
+            <span class="num">03 —</span>
+            <div class="step__arche">Deliver →</div>
+            <h3>Negotiate</h3>
+            <p>We present the claim, respond to the carrier, and negotiate toward a settlement that tracks the covered damage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Testimonials -->
+    <section class="quotes" id="quotes">
+      <div class="wrap">
+        <div class="quotes__head">
+          <p class="eyebrow">Client perspective</p>
+          <h2 class="display">Trusted when the claim gets hard.</h2>
+        </div>
+        <div class="quote-elite">
+          <blockquote>“I highly recommend United Claims Specialists. Everyone we have had the pleasure of dealing with have been highly knowledgeable and extremely nice. They made sure we were comfortable with every step of the process, and kept us informed along the way.”</blockquote>
+          <cite>Google review · Policyholder</cite>
+        </div>
+        <div class="quote-rail">
+          <article class="quote-mini">
+            <p>“UCS is great. Matt and Nicole communicated well, were responsive, and knew exactly how to guide me through my Hurricane Milton claim.”</p>
+            <span>St. Petersburg, FL</span>
+          </article>
+          <article class="quote-mini">
+            <p>“United Claims helped me get extra money to fix my house from water damage — way more than what the insurance had originally paid.”</p>
+            <span>Water damage · ~3 months</span>
+          </article>
+          <article class="quote-mini">
+            <p>“When two floors of our house flooded, UCS turned a nightmare around. Matthew and Nicole were awesome from the start.”</p>
+            <span>Flood loss · Homeowner</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__grid">
+        <div class="faq__side">
+          <p class="eyebrow">Good to know</p>
+          <h2 class="display">Your questions, answered.</h2>
+          <p>Short answers for the moments after a loss — before you sign anything or accept an early number as final.</p>
+          <a class="btn btn--ink" href="https://www.ucspa.com/contact-us">Free Claim Consult</a>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>What does a public adjuster do?</summary>
+            <div class="ans">A licensed public adjuster represents the policyholder — not the insurance company. UCS documents the loss, prepares and presents the claim, and negotiates with the carrier on your behalf.</div>
+          </details>
+          <details class="faq-item">
+            <summary>When should I call UCS?</summary>
+            <div class="ans">As early as you can after a covered loss — ideally before you accept an initial payment as final, and before incomplete scope or cause statements get locked into the file.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How does UCS get paid?</summary>
+            <div class="ans">United Claims Specialists gets paid when you get paid — contingency aligned with recovery, with fees disclosed under applicable state rules. Fee percentages vary by state. No outcome is guaranteed.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is the first offer usually final?</summary>
+            <div class="ans">Often, a first offer is a starting scope after a short inspection — not a complete repair budget. Missed damage and depreciation gaps are common. A second look against a supported estimate can matter.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What is the first step?</summary>
+            <div class="ans">A free claim consult. Tell us what happened; we’ll tell you whether a public adjuster fits your situation. Call 855-321-5677 or start online.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contact / consult CTA -->
+    <section class="connect" id="connect">
+      <div class="connect__media" aria-hidden="true"></div>
+      <div class="wrap connect__inner">
+        <p class="eyebrow">Let’s connect</p>
+        <h2 class="display">Let’s look at your claim.</h2>
+        <p>Speak with the UCS team about what happened, what the carrier has offered so far, and whether a public adjuster belongs on your side of the table.</p>
+        <div class="hero__actions">
+          <a class="btn btn--lime" href="https://www.ucspa.com/contact-us">Free Claim Consult</a>
+          <a class="btn btn--ghost" href="tel:8553215677">Call 855-321-5677</a>
+        </div>
+        <div class="connect__phone"><a href="tel:8553215677">855-321-5677</a></div>
+        <p class="connect__note">No Directions Map · Soft-power consult · Preview mockup only</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><strong>United Claims Specialists</strong> · ucspa.com mockup</div>
+      <div>Arché Studio structure mirror · 2026-10-01 · Preview only</div>
+    </div>
+  </footer>
+</body>
+</html>
