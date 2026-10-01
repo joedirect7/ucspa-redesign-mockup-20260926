@@ -20,7 +20,7 @@ No Settlements strip on home (killed). This is `/recent-settlements` page previe
 `/workspace/ucs-seo/recent-settlements-clean-20261001/`
 
 ## GH Pages
-https://joedirect7.github.io/ucspa-redesign-mockup-20260926/recent-settlements-clean-20261001/?v=20261001c
+https://joedirect7.github.io/ucspa-redesign-mockup-20260926/recent-settlements-clean-20261001/?v=20261001d
 
 ## Cards (straight facts)
 | Place / damage | Initial | Final |
@@ -38,12 +38,17 @@ https://joedirect7.github.io/ucspa-redesign-mockup-20260926/recent-settlements-c
 Sally narrative scrubbed (not included).
 
 ## Cache-bust
-`?v=20261001c`
+`?v=20261001d`
 
 ## Joe 2026-10-01 ~8:10 AM ET
 - Removed draft H2 “Place · damage type · numbers” from settle-intro (kept kicker + sub).
-- Cache-bust: `?v=20261001c`
+- Cache-bust: `?v=20261001d`
 
 ## Joe 2026-10-01 ~8:11 AM ET
 - Added bottom **A True frost Free Claim Consult** form (after cards, before footer) — glass-system destination pattern over storm photo.
-- Cache-bust: `?v=20261001c`
+- Cache-bust: `?v=20261001d`
+
+## Joe 2026-10-01 ~8:14 AM ET
+- Settlement cards → **A True frost Amp** (helping-cards: translucent fill + blur 44px + lime edge) — not flat opaque.
+- Soft flood scene + light veil behind cards so glass reads (calm, not busy kitchen-fire).
+- Cache-bust: `?v=20261001d`
