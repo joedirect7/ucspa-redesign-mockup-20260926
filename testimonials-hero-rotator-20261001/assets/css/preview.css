@@ -1,0 +1,289 @@
+/* Testimonials soft rotating hero PREVIEW — Claim Stories dissolve + A True frost + GBP glass cards
+   PREVIEW ONLY — not HubSpot live. Soft-power. No license #s. No invented map CTAs. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #181c24;
+  background: #0f1610;
+  -webkit-font-smoothing: antialiased;
+}
+main { display: block; margin: 0; padding: 0; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 2px solid #98cc00; outline-offset: 3px; }
+
+:root {
+  --lime: #98cc00;
+  --ink: #181c24;
+  --muted: #5b6472;
+  --frost-bg: linear-gradient(165deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.16) 48%, rgba(220,245,170,.18) 100%);
+  --radius: 18px;
+  --glass-a-bg: rgba(24, 28, 36, 0.40);
+  --glass-a-blur: 32px;
+  --glass-a-saturate: 1.35;
+  --glass-a-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-a-lime-edge: 0 0 0 1px rgba(152, 204, 0, 0.45);
+  --glass-a-inset: inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+  --glass-a-shadow: 0 18px 50px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.18);
+  --glass-a-muted: rgba(255, 255, 255, 0.72);
+}
+
+.draft-banner {
+  position: sticky; top: 0; z-index: 60;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 12px; font-weight: 600;
+  color: #2a3140;
+  background: #fff8d6;
+  border-bottom: 1px solid rgba(152,204,0,0.35);
+  letter-spacing: .02em;
+}
+
+/* ---- HubSpot-current header: lime top + white main ---- */
+.site-header {
+  position: sticky; top: 33px; z-index: 50;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(24,28,36,0.08);
+}
+.header-top { background: #98cc00; color: #fff; }
+.header-top-inner {
+  max-width: 1180px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 8px 20px; flex-wrap: wrap;
+}
+.header-top-left {
+  display: flex; flex-wrap: wrap; gap: 16px 22px;
+  font-size: 13px; font-weight: 600;
+}
+.header-top-left a { text-decoration: none; color: #fff; }
+.header-top-left a:hover { text-decoration: underline; }
+.header-top-social { display: flex; align-items: center; gap: 10px; }
+.header-top-social a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 999px;
+  color: #fff; background: rgba(255,255,255,0.18); text-decoration: none;
+}
+.header-main { background: #fff; border-bottom: 1px solid #e6e9ef; }
+.header-inner {
+  max-width: 1180px; margin: 0 auto;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 20px;
+}
+.brand { display: flex; align-items: center; text-decoration: none; flex: 0 0 auto; }
+.brand-logo { height: 36px; width: auto; }
+.header-nav {
+  display: flex; gap: 2px; flex: 1; justify-content: center; flex-wrap: wrap; align-items: center;
+}
+.header-nav a {
+  text-decoration: none; font-size: 13px; font-weight: 500;
+  padding: 8px 10px; border-radius: 6px; color: #2a3140; white-space: nowrap;
+}
+.header-nav a:hover { color: #5a7a00; background: rgba(152,204,0,0.12); }
+.header-cta {
+  text-decoration: none; font-size: 13px; font-weight: 600;
+  padding: 10px 18px; border-radius: 999px;
+  background: #98cc00; color: #12151c;
+  border: 1px solid rgba(90,122,0,0.25); white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(152,204,0,0.28);
+}
+.header-cta:hover { filter: brightness(1.05); }
+
+/* ---- Soft rotating hero (Claim Stories dissolve) ---- */
+.hero {
+  position: relative;
+  min-height: clamp(400px, 52vh, 560px);
+  display: grid; place-items: center;
+  padding: 36px 20px 48px;
+  overflow: hidden;
+  margin: 0;
+  background: #1a1e26;
+}
+.hero-media.hero-media--dissolve {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+}
+.hero-media--dissolve .hero-slide {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;
+  opacity: 0; visibility: hidden;
+  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+  z-index: 0; overflow: hidden;
+}
+.hero-media--dissolve .hero-slide.is-active {
+  opacity: 1; visibility: visible; z-index: 1;
+}
+.hero-media--dissolve .hero-slide img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 35%;
+  filter: brightness(1.0) contrast(1.04) saturate(1.05);
+  transform: scale(1.02);
+}
+.hero-veil {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(820px 480px at 50% 38%, rgba(8,10,14,0.08), transparent 66%),
+    linear-gradient(180deg, rgba(8,10,14,0.18) 0%, rgba(8,10,14,0.28) 55%, rgba(8,10,14,0.48) 100%);
+}
+.hero-panel {
+  position: relative; z-index: 2;
+  width: min(680px, 100%);
+  padding: 28px 28px 22px;
+  border-radius: 16px;
+  color: #fff;
+  background: var(--glass-a-bg);
+  -webkit-backdrop-filter: blur(var(--glass-a-blur)) saturate(var(--glass-a-saturate));
+  backdrop-filter: blur(var(--glass-a-blur)) saturate(var(--glass-a-saturate));
+  border: var(--glass-a-border);
+  box-shadow: var(--glass-a-shadow), var(--glass-a-inset), var(--glass-a-lime-edge);
+}
+.hero-kicker {
+  margin: 0 0 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--lime);
+}
+.hero-panel h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 700; letter-spacing: -0.03em; line-height: 1.12;
+  color: #fff;
+}
+.hero-lede {
+  margin: 0 0 18px;
+  font-size: 15px; line-height: 1.65;
+  color: var(--glass-a-muted);
+  max-width: 48ch;
+}
+.hero-loc-row {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.hero-loc-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  font-size: 13px; font-weight: 600; color: #fff;
+}
+.hero-loc-dot {
+  width: 8px; height: 8px; border-radius: 999px;
+  background: var(--lime);
+  box-shadow: 0 0 0 3px rgba(152,204,0,0.25);
+}
+.hero-loc-label { letter-spacing: .01em; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.btn-lime {
+  display: inline-flex; align-items: center; justify-content: center;
+  text-decoration: none; font-weight: 600; font-size: 13px;
+  padding: 12px 20px; border-radius: 999px;
+  background: rgba(152,204,0,0.92); color: #12151c;
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+.btn-lime:hover { filter: brightness(1.05); }
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center;
+  text-decoration: none; font-weight: 600; font-size: 13px;
+  padding: 12px 20px; border-radius: 999px;
+  background: transparent; color: #fff;
+  border: 1px solid rgba(255,255,255,0.45);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.08); }
+.hero-dots {
+  display: flex; gap: 8px; align-items: center; justify-content: flex-start;
+}
+.hero-dots button {
+  width: 8px; height: 8px; border-radius: 999px; padding: 0;
+  border: none; cursor: pointer;
+  background: rgba(255,255,255,0.35);
+  transition: background .35s ease, width .35s ease, box-shadow .35s ease;
+}
+.hero-dots button.is-active {
+  width: 22px;
+  background: var(--lime);
+  box-shadow: 0 0 0 2px rgba(152,204,0,0.28);
+}
+.hero-dots button:hover { background: rgba(255,255,255,0.55); }
+.hero-dots button.is-active:hover { background: var(--lime); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-media--dissolve .hero-slide { transition: none; }
+}
+
+/* ---- GBP reviews band (mirrors shipped live cards) ---- */
+.gbp-band {
+  position: relative;
+  padding: 48px 20px 64px;
+  background:
+    linear-gradient(180deg, rgba(15,22,16,.72), rgba(15,22,16,.82)),
+    url("https://www.ucspa.com/hubfs/Atlantic%20City%2c%20New%20Jersey%2c%20USA%20resort%20casinos%20cityscape%20on%20the%20shore%20at%20night..jpeg") center/cover fixed;
+}
+.gbp-wrap { max-width: 1180px; margin: 0 auto; }
+.gbp-intro { text-align: center; margin-bottom: 28px; color: #fff; }
+.gbp-kicker {
+  color: var(--lime); text-transform: uppercase; font-size: 13px; font-weight: 700;
+  letter-spacing: .08em; margin: 0 0 8px;
+}
+.gbp-intro h2 {
+  margin: 0 0 10px; font-size: clamp(1.5rem, 3vw, 2.05rem); font-weight: 700;
+}
+.gbp-sub {
+  margin: 0 auto; max-width: 640px; color: rgba(255,255,255,.86);
+  font-size: 15px; line-height: 1.55;
+}
+.gbp-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;
+}
+@media (max-width: 960px) {
+  .gbp-grid { grid-template-columns: 1fr; }
+  .header-nav { display: none; }
+  .site-header { top: 40px; }
+}
+.gbp-col {
+  background: var(--frost-bg);
+  backdrop-filter: blur(28px) saturate(1.6);
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  border: 1px solid rgba(255,255,255,.78);
+  border-radius: var(--radius);
+  box-shadow:
+    0 0 0 1px rgba(152,204,0,.35),
+    0 18px 40px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.9);
+  padding: 20px 18px 22px;
+  display: flex; flex-direction: column; gap: 14px;
+  min-height: 100%;
+}
+.gbp-col-head h3 { margin: 0 0 4px; font-size: 1.15rem; color: var(--ink); }
+.gbp-rating { margin: 0; color: var(--ink); font-size: 13px; }
+.gbp-rating strong { color: #5a7a00; }
+.gbp-nap { margin: 6px 0 0; font-size: 12px; color: var(--muted); line-height: 1.4; }
+.gbp-cards { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.gbp-card {
+  background: rgba(255,255,255,.55);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.75);
+  padding: 14px 14px 12px;
+}
+.gbp-stars { color: #e6a700; letter-spacing: 1px; font-size: 14px; margin-bottom: 6px; }
+.gbp-quote { margin: 0; font-size: 13.5px; line-height: 1.55; color: #222; }
+.gbp-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 10px; font-size: 11px; color: var(--muted);
+}
+.gbp-src {
+  background: #fff; border-radius: 999px; padding: 2px 8px;
+  font-weight: 600; color: #444;
+}
+.gbp-seeall {
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-top: 4px; text-decoration: none; font-weight: 700; font-size: 13px;
+  color: #fff; background: var(--lime); border: 2px solid var(--lime);
+  border-radius: 35px; padding: 10px 18px; text-transform: uppercase; letter-spacing: .03em;
+}
+.gbp-seeall:hover { filter: brightness(.95); }
+
+.preview-foot {
+  text-align: center; color: rgba(255,255,255,.65); font-size: 11px;
+  padding: 0 16px 28px; background: #0f1610;
+}
