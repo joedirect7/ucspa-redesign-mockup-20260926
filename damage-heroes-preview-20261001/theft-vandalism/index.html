@@ -374,6 +374,107 @@ _hsp.push(['addPrivacyConsentListener', function(consent){
 					<span id="hs_cos_wrapper_dnd-module16276885048843070_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_dnd-module16276885048843070__title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"></h3>
 
 <div id="hs_form_target_dnd-module16276885048843070_"></div>
+<form id="ucs-theft-vandalism-preview-form" class="ucs-preview-form" aria-label="Free inspection form" onsubmit="return false;">
+  <div class="ucs-preview-form-grid">
+    <div class="ucs-preview-form-field ucs-preview-form-field-full">
+      <label for="ucs-theft-vandalism-name">Name</label>
+      <input id="ucs-theft-vandalism-name" name="name" type="text" placeholder="Your name" autocomplete="name">
+    </div>
+    <div class="ucs-preview-form-field">
+      <label for="ucs-theft-vandalism-phone">Phone</label>
+      <input id="ucs-theft-vandalism-phone" name="phone" type="tel" placeholder="(555) 555-5555" autocomplete="tel">
+    </div>
+    <div class="ucs-preview-form-field">
+      <label for="ucs-theft-vandalism-email">Email</label>
+      <input id="ucs-theft-vandalism-email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+    </div>
+    <div class="ucs-preview-form-field ucs-preview-form-field-full">
+      <label for="ucs-theft-vandalism-address">Property Address</label>
+      <input id="ucs-theft-vandalism-address" name="property_address" type="text" placeholder="Street, city, state" autocomplete="street-address">
+    </div>
+  </div>
+  <button type="submit">GET MY FREE INSPECTION</button>
+  <p class="ucs-preview-form-note">Preview-only form replica · not connected to HubSpot</p>
+</form>
+<script>
+(function () {
+  var target = document.getElementById('hs_form_target_dnd-module16276885048843070_');
+  var mock = document.getElementById('ucs-theft-vandalism-preview-form');
+  function syncPreviewForm() {
+    if (target && mock && target.querySelector('form')) mock.style.display = 'none';
+  }
+  syncPreviewForm();
+  if (target && window.MutationObserver) new MutationObserver(syncPreviewForm).observe(target, { childList: true, subtree: true });
+}());
+</script>
+
+<style data-ucs-preview-static-form="true">
+  .Hero-form-wrp-inner .ucs-preview-form {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 14px 18px 16px;
+    border: 1px solid rgba(255,255,255,.24);
+    border-radius: 2px;
+    background: rgba(15,17,18,.42);
+    color: #fff;
+    text-align: left;
+  }
+  .Hero-form-wrp-inner .ucs-preview-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 12px;
+  }
+  .Hero-form-wrp-inner .ucs-preview-form-field { min-width: 0; }
+  .Hero-form-wrp-inner .ucs-preview-form-field-full { grid-column: 1 / -1; }
+  .Hero-form-wrp-inner .ucs-preview-form label {
+    display: block;
+    margin: 0 0 4px;
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .Hero-form-wrp-inner .ucs-preview-form input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 38px;
+    padding: 9px 10px;
+    border: 1px solid rgba(0,0,0,.24);
+    border-radius: 2px;
+    background: #fff !important;
+    color: #17202a !important;
+    font: 14px/1.2 Arial, sans-serif;
+  }
+  .Hero-form-wrp-inner .ucs-preview-form input::placeholder { color: #65717d !important; opacity: 1; }
+  .Hero-form-wrp-inner .ucs-preview-form button {
+    display: block;
+    width: 100%;
+    margin-top: 13px;
+    padding: 11px 14px;
+    border: 0;
+    border-radius: 2px;
+    background: #99cc02;
+    color: #17202a !important;
+    cursor: default;
+    font: 700 13px/1.2 Arial, sans-serif;
+    letter-spacing: .02em;
+  }
+  .Hero-form-wrp-inner .ucs-preview-form-note {
+    margin: 9px 0 0;
+    color: rgba(255,255,255,.78) !important;
+    font-size: 10px;
+    line-height: 1.35;
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    .Hero-form-wrp-inner .ucs-preview-form-grid { grid-template-columns: 1fr; }
+    .Hero-form-wrp-inner .ucs-preview-form-field-full { grid-column: auto; }
+  }
+</style>
+
 
 
 
