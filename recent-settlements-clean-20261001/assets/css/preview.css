@@ -29,7 +29,34 @@ img { max-width: 100%; display: block; }
   --glass-a-inset: inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(0, 0, 0, 0.18);
   --glass-a-shadow: 0 18px 50px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.18);
   --glass-a-muted: rgba(255, 255, 255, 0.72);
+  --glass-a-text: #ffffff;
+  --glass-a-label: rgba(255, 255, 255, 0.92);
+  --glass-a-input-bg: rgba(255, 255, 255, 0.14);
+  --glass-a-input-border: 1px solid rgba(255, 255, 255, 0.28);
+  --glass-a-input-text: #ffffff;
+  --glass-a-input-ph: rgba(255, 255, 255, 0.55);
+  --glass-a-cta-bg: rgba(152, 204, 0, 0.88);
+  --glass-a-cta-text: #12151c;
+  --glass-a-cta-border: 1px solid rgba(255, 255, 255, 0.35);
+  --glass-bg: linear-gradient(165deg, rgba(24,28,36,0.35), rgba(24,28,36,0.45));
+  --glass-blur: 32px;
+  --glass-saturate: 1.35;
+  --glass-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-lime-edge: 0 0 0 1px rgba(152, 204, 0, 0.45);
+  --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+  --glass-shadow: 0 18px 50px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.18);
+  --glass-text: #ffffff;
+  --glass-muted: rgba(255, 255, 255, 0.72);
+  --glass-label: rgba(255, 255, 255, 0.92);
+  --glass-input-bg: rgba(255, 255, 255, 0.14);
+  --glass-input-border: 1px solid rgba(255, 255, 255, 0.28);
+  --glass-input-text: #ffffff;
+  --glass-input-ph: rgba(255, 255, 255, 0.55);
+  --glass-cta-bg: rgba(152, 204, 0, 0.88);
+  --glass-cta-text: #12151c;
+  --glass-cta-border: 1px solid rgba(255, 255, 255, 0.35);
 }
+
 
 .draft-banner {
   position: sticky; top: 0; z-index: 60;
@@ -265,4 +292,98 @@ a.settle-cta-ghost:hover { background: #fff; }
 .preview-foot {
   text-align: center; color: var(--muted); font-size: 11px;
   padding: 8px 16px 28px; background: #e8ecf0;
+}
+
+/* ---- Bottom Free Claim Consult — A True frost over photo (destination-page pattern) ---- */
+.form-band {
+  position: relative;
+  padding: 64px 20px 72px;
+  overflow: hidden;
+  background: #1a1e26;
+}
+.form-band-media {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+}
+.form-band-media img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 40%;
+  filter: brightness(0.9) contrast(1.04);
+  transform: scale(1.03);
+}
+.form-band-veil {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(900px 480px at 50% 30%, rgba(8,10,14,0.12), transparent 65%),
+    linear-gradient(180deg, rgba(8,10,14,0.35) 0%, rgba(8,10,14,0.48) 100%);
+}
+.form-band-inner {
+  position: relative; z-index: 2;
+  max-width: 440px; margin: 0 auto;
+}
+.form-band-kicker {
+  text-align: center; margin: 0 0 14px;
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.88);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+}
+
+.ucs-glass-card {
+  border-radius: 16px;
+  padding: 20px 18px 16px;
+  color: var(--glass-text);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-inset), var(--glass-lime-edge);
+}
+.ucs-glass-card .form-title {
+  margin: 0 0 2px; font-size: 20px; font-weight: 700;
+  letter-spacing: -0.02em; color: var(--glass-text);
+}
+.ucs-glass-card .form-sub {
+  margin: 0 0 12px; font-size: 12px; font-weight: 600; color: var(--lime);
+}
+.ucs-glass-card label {
+  display: block; font-size: 12px; font-weight: 600;
+  color: var(--glass-label); margin: 0 0 5px;
+}
+.ucs-glass-card .field { margin-bottom: 8px; }
+.ucs-glass-card .row2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.ucs-glass-card input,
+.ucs-glass-card textarea {
+  width: 100%; box-sizing: border-box;
+  background: var(--glass-input-bg); color: var(--glass-input-text);
+  border: var(--glass-input-border); border-radius: 10px;
+  padding: 9px 11px; font-size: 13px; font-family: inherit;
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  outline: none;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.ucs-glass-card input::placeholder,
+.ucs-glass-card textarea::placeholder {
+  color: var(--glass-input-ph); opacity: 1;
+}
+.ucs-glass-card input:focus,
+.ucs-glass-card textarea:focus {
+  border-color: rgba(152, 204, 0, 0.65);
+  box-shadow: 0 0 0 3px rgba(152, 204, 0, 0.18);
+}
+.ucs-glass-card textarea { min-height: 56px; resize: vertical; }
+.ucs-glass-card .cta {
+  margin-top: 10px; width: 100%;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--glass-cta-bg); color: var(--glass-cta-text);
+  border: var(--glass-cta-border); border-radius: 999px;
+  padding: 11px 14px; font-weight: 700; font-size: 14px; font-family: inherit;
+  cursor: pointer; letter-spacing: 0.01em;
+  transition: transform .12s, filter .12s;
+}
+.ucs-glass-card .cta:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.ucs-glass-card .hint {
+  margin: 8px 0 0; font-size: 10px; line-height: 1.4; color: var(--glass-muted);
+}
+@media (max-width: 520px) {
+  .ucs-glass-card .row2 { grid-template-columns: 1fr; }
 }
