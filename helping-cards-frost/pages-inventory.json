@@ -1,0 +1,108 @@
+[
+  {
+    "path": "flood-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "fire-damage-insurance-claims",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "water-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "storm-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "accidental-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "wind-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "hurricane-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "smoke-damage",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "mold-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "roof-damage",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "freeze-damage",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "lightning-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "tornado-damage",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "guide-to-hail-damage-insurance-claims",
+    "http": 200,
+    "helping_cols": 0,
+    "has": false
+  },
+  {
+    "path": "commercial-public-adjuster",
+    "http": 200,
+    "helping_cols": 0,
+    "has": false
+  },
+  {
+    "path": "denied-claims",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "contractor-claim-services",
+    "http": 200,
+    "helping_cols": 6,
+    "has": true
+  },
+  {
+    "path": "(home)",
+    "http": 200,
+    "helping_cols": 0,
+    "has": false
+  },
+  {
+    "path": "about-us",
+    "http": 200,
+    "helping_cols": 0,
+    "has": false
+  }
+]

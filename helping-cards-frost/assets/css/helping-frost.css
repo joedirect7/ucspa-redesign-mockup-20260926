@@ -1,46 +1,131 @@
 /* ============================================================================
-   Helping cards — A True frost (light glass on damage pages)
+   Helping cards — A True frost Amp (unmistakable glass)
    PREVIEW ONLY — not published to HubSpot theme-overrides.
-   Target: .cHelping-Col dashed coupon → soft white/green glass.
-   Marker: UCS-HELPING-CARDS-TRUE-FROST-PREVIEW-20261001
+   Target: .cHelping-Col dashed coupon → translucent glass over photo.
+   Marker: UCS-HELPING-CARDS-TRUE-FROST-PREVIEW-20261001-amp-glass
+   Joe: "more glass looking" / "does not look like glass" → photo behind +
+   low-opacity fill + strong blur so backdrop-filter reads as glass.
    ============================================================================ */
 
 :root {
-  --helping-frost-bg: linear-gradient(165deg, rgba(255,255,255,.58), rgba(152,204,0,.14));
-  --helping-frost-blur: 28px;
-  --helping-frost-saturate: 1.55;
+  /* Clear glass — NOT opaque lime wash. Slight green tint only. */
+  --helping-frost-bg: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.14) 48%,
+    rgba(220, 245, 170, 0.16) 100%
+  );
+  --helping-frost-fill: rgba(255, 255, 255, 0.18);
+  --helping-frost-blur: 44px;
+  --helping-frost-saturate: 1.8;
   --helping-frost-radius: 18px;
-  --helping-frost-border: 1px solid rgba(255,255,255,.72);
+  --helping-frost-border: 1px solid rgba(255, 255, 255, 0.85);
   --helping-frost-shadow:
-    0 0 0 1px rgba(152, 204, 0, 0.28),
-    0 14px 36px rgba(24, 28, 36, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    0 0 0 1px rgba(152, 204, 0, 0.38),
+    0 20px 48px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.28),
+    inset 1px 0 0 rgba(255, 255, 255, 0.35),
+    inset -1px 0 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 36px rgba(255, 255, 255, 0.10);
   --helping-frost-text: #181c24;
 }
 
-/* Soft scene behind glass so frost reads (damage pages are pale) */
+/* Photo / textured scene behind glass so blur-through is unmistakable */
 .cHelping-Sctn.is-frost,
 .preview-panel.after .cHelping-Sctn {
-  background:
-    radial-gradient(1200px 400px at 50% 0%, rgba(152,204,0,.10), transparent 70%),
-    linear-gradient(180deg, #f7faf2 0%, #ffffff 55%, #f4f7ee 100%) !important;
+  position: relative !important;
+  isolation: isolate;
+  background-color: #142010 !important;
+  background-image:
+    linear-gradient(180deg, rgba(20, 28, 16, 0.18) 0%, rgba(20, 28, 16, 0.05) 45%, rgba(20, 28, 16, 0.22) 100%),
+    url("../img/frost-scene-flood.jpg") !important;
+  background-size: cover !important;
+  background-position: center 45% !important;
+  background-repeat: no-repeat !important;
+  padding-top: 52px !important;
+  padding-bottom: 60px !important;
+  overflow: hidden !important;
 }
 
+/* Kill theme white curve / clip decorations that flatten the glass scene */
+.cHelping-Sctn.is-frost.top-right-curv::before,
+.cHelping-Sctn.is-frost.top-right-curv::after,
+.cHelping-Sctn.is-frost::before,
+.cHelping-Sctn.is-frost::after,
+.preview-panel.after .cHelping-Sctn.top-right-curv::before,
+.preview-panel.after .cHelping-Sctn.top-right-curv::after,
+.preview-panel.after .cHelping-Sctn::before,
+.preview-panel.after .cHelping-Sctn::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  border: 0 !important;
+}
+
+/* Keep wrappers transparent so photo shows through to cards */
+.cHelping-Sctn.is-frost .wrapper,
+.cHelping-Sctn.is-frost .cHelping-Outer,
+.cHelping-Sctn.is-frost .cHelping-Row,
+.preview-panel.after .cHelping-Sctn .wrapper,
+.preview-panel.after .cHelping-Sctn .cHelping-Outer,
+.preview-panel.after .cHelping-Sctn .cHelping-Row {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Header on frost section stays readable over photo */
+.cHelping-Sctn.is-frost .cHelping-Header h2,
+.preview-panel.after .cHelping-Sctn .cHelping-Header h2 {
+  color: #fff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+}
+
+/* True glass cards */
 html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col,
 html body .preview-panel.after .row-fluid .cHelping-Col,
 html body .row-fluid .preview-panel.after .cHelping-Col {
-  background: rgba(255, 255, 255, 0.42) !important;
-  background-color: rgba(255, 255, 255, 0.42) !important;
+  position: relative !important;
+  background: var(--helping-frost-fill) !important;
+  background-color: var(--helping-frost-fill) !important;
   background-image: var(--helping-frost-bg) !important;
   -webkit-backdrop-filter: blur(var(--helping-frost-blur)) saturate(var(--helping-frost-saturate)) !important;
   backdrop-filter: blur(var(--helping-frost-blur)) saturate(var(--helping-frost-saturate)) !important;
   border: var(--helping-frost-border) !important;
-  border-style: solid !important; /* kill dashed coupon */
+  border-style: solid !important; /* kill dashed coupon — no dashed borders */
   border-width: 1px !important;
-  border-color: rgba(255, 255, 255, 0.72) !important;
+  border-color: rgba(255, 255, 255, 0.85) !important;
   border-radius: var(--helping-frost-radius) !important;
   box-shadow: var(--helping-frost-shadow) !important;
   color: var(--helping-frost-text) !important;
+  overflow: hidden !important;
+}
+
+/* Strong top reflection sheen (glass highlight) */
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col::before,
+html body .preview-panel.after .row-fluid .cHelping-Col::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 1px !important;
+  right: 1px !important;
+  top: 1px !important;
+  height: 46% !important;
+  pointer-events: none !important;
+  border-radius: calc(var(--helping-frost-radius) - 2px) calc(var(--helping-frost-radius) - 2px) 40% 40% !important;
+  background: linear-gradient(
+    185deg,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.18) 42%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+  z-index: 0 !important;
+}
+
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col > *,
+html body .preview-panel.after .row-fluid .cHelping-Col > * {
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col h3,
