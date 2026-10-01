@@ -20,7 +20,7 @@ No Settlements strip on home (killed). This is `/recent-settlements` page previe
 `/workspace/ucs-seo/recent-settlements-clean-20261001/`
 
 ## GH Pages
-https://joedirect7.github.io/ucspa-redesign-mockup-20260926/recent-settlements-clean-20261001/?v=20261001a
+https://joedirect7.github.io/ucspa-redesign-mockup-20260926/recent-settlements-clean-20261001/?v=20261001b
 
 ## Cards (straight facts)
 | Place / damage | Initial | Final |
@@ -38,4 +38,8 @@ https://joedirect7.github.io/ucspa-redesign-mockup-20260926/recent-settlements-c
 Sally narrative scrubbed (not included).
 
 ## Cache-bust
-`?v=20261001a`
+`?v=20261001b`
+
+## Joe 2026-10-01 ~8:10 AM ET
+- Removed draft H2 “Place · damage type · numbers” from settle-intro (kept kicker + sub).
+- Cache-bust: `?v=20261001b`
