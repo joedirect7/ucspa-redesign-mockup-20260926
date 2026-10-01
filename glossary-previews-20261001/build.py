@@ -174,7 +174,7 @@ CHROME_NAV = f"""
 
 
 def css_href(depth: int) -> str:
-    return ("../" * depth) + f"assets/css/glossary-frost.css?v={V}"
+    return f"https://cdn.jsdelivr.net/gh/joedirect7/ucspa-redesign-mockup-20260926@main/glossary-previews-20261001/assets/css/glossary-frost.css?v={V}"
 
 
 def page_html(p: dict, depth: int = 1) -> str:
@@ -356,7 +356,7 @@ def hub_html() -> str:
 <meta name="robots" content="noindex,nofollow" />
 <meta name="generator" content="glossary-previews-20261001" />
 <link rel="shortcut icon" href="https://www.ucspa.com/hubfs/new%20logo%20(5)-1.jpg" />
-<link rel="stylesheet" href="assets/css/glossary-frost.css?v={V}" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/joedirect7/ucspa-redesign-mockup-20260926@main/glossary-previews-20261001/assets/css/glossary-frost.css?v={V}" />
 </head>
 <body class="glossary-preview">
 <div class="preview-banner"><strong>PREVIEW ONLY</strong> — three soft-power glossary spokes · no HubSpot publish · no live site edits</div>
