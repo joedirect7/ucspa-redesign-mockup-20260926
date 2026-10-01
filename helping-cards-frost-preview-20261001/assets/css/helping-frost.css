@@ -1,0 +1,88 @@
+/* ============================================================================
+   Helping cards — A True frost (light glass on damage pages)
+   PREVIEW ONLY — not published to HubSpot theme-overrides.
+   Target: .cHelping-Col dashed coupon → soft white/green glass.
+   Marker: UCS-HELPING-CARDS-TRUE-FROST-PREVIEW-20261001
+   ============================================================================ */
+
+:root {
+  --helping-frost-bg: linear-gradient(165deg, rgba(255,255,255,.58), rgba(152,204,0,.14));
+  --helping-frost-blur: 28px;
+  --helping-frost-saturate: 1.55;
+  --helping-frost-radius: 18px;
+  --helping-frost-border: 1px solid rgba(255,255,255,.72);
+  --helping-frost-shadow:
+    0 0 0 1px rgba(152, 204, 0, 0.28),
+    0 14px 36px rgba(24, 28, 36, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  --helping-frost-text: #181c24;
+}
+
+/* Soft scene behind glass so frost reads (damage pages are pale) */
+.cHelping-Sctn.is-frost,
+.preview-panel.after .cHelping-Sctn {
+  background:
+    radial-gradient(1200px 400px at 50% 0%, rgba(152,204,0,.10), transparent 70%),
+    linear-gradient(180deg, #f7faf2 0%, #ffffff 55%, #f4f7ee 100%) !important;
+}
+
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col,
+html body .preview-panel.after .row-fluid .cHelping-Col,
+html body .row-fluid .preview-panel.after .cHelping-Col {
+  background: rgba(255, 255, 255, 0.42) !important;
+  background-color: rgba(255, 255, 255, 0.42) !important;
+  background-image: var(--helping-frost-bg) !important;
+  -webkit-backdrop-filter: blur(var(--helping-frost-blur)) saturate(var(--helping-frost-saturate)) !important;
+  backdrop-filter: blur(var(--helping-frost-blur)) saturate(var(--helping-frost-saturate)) !important;
+  border: var(--helping-frost-border) !important;
+  border-style: solid !important; /* kill dashed coupon */
+  border-width: 1px !important;
+  border-color: rgba(255, 255, 255, 0.72) !important;
+  border-radius: var(--helping-frost-radius) !important;
+  box-shadow: var(--helping-frost-shadow) !important;
+  color: var(--helping-frost-text) !important;
+}
+
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col h3,
+html body .preview-panel.after .row-fluid .cHelping-Col h3,
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col-Text,
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col-Text p,
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col-Text span,
+html body .row-fluid .cHelping-Sctn.is-frost .cHelping-Col-Text strong,
+html body .preview-panel.after .row-fluid .cHelping-Col-Text,
+html body .preview-panel.after .row-fluid .cHelping-Col-Text p,
+html body .preview-panel.after .row-fluid .cHelping-Col-Text span,
+html body .preview-panel.after .row-fluid .cHelping-Col-Text strong {
+  color: #181c24 !important;
+}
+
+/* Preview chrome (not for live theme) */
+.preview-banner {
+  background: #181c24;
+  color: #fff;
+  padding: 14px 20px;
+  font-family: Poppins, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.preview-banner strong { color: #98cc00; }
+.preview-banner a { color: #c8f06a; }
+.preview-wrap { max-width: 1180px; margin: 0 auto; padding: 24px 16px 60px; font-family: Poppins, system-ui, sans-serif; }
+.preview-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  padding: 6px 12px; border-radius: 999px; margin: 8px 0 16px;
+}
+.preview-label.before { background: #ffe8e8; color: #8a1f1f; }
+.preview-label.after { background: #eaf7c8; color: #3a5600; }
+.preview-panel {
+  border: 1px solid rgba(24,28,36,.08);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 36px;
+  box-shadow: 0 8px 28px rgba(24,28,36,.06);
+}
+.preview-note { color: #2a3140; font-size: 14px; line-height: 1.55; margin: 0 0 20px; max-width: 820px; }
+.preview-note code { background: #f1f3f0; padding: 1px 6px; border-radius: 4px; font-size: 12px; }
+.pages-list { font-size: 13px; color: #2a3140; columns: 2; gap: 24px; margin: 0 0 28px; padding-left: 18px; }
+@media (max-width: 700px) { .pages-list { columns: 1; } }
