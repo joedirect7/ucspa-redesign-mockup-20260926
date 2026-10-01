@@ -32,3 +32,6 @@
 **2026-09-30 PM intro trim:** Removed the “Browse 20 answers” intro action; the tile now keeps only “Free Claim Help” and the phone CTA. Cache-bust v=20260930203253.
 
 **2026-09-30 PM More-from cleanup:** Renamed the first card to “Free Claim Consult”, removed the Reviews card from the More-from grid, and updated the intro tile primary button. Cache-bust v=20260930203756.
+
+
+**2026-09-30 PM publish-ready polish:** Synced FAQPage JSON-LD to visible Q titles + answers; CTA band “Free Claim Consult”; removed orphan div; CSS intro/TOC spacing + 2×2 More-from grid; chrome snippets refreshed; wrote PUBLISH-READY.md. Cache-bust v=20260930204457. Still NOT published to HubSpot /faq.

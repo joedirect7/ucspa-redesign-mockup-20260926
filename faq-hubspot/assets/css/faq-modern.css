@@ -16,7 +16,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 160px; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 body.faq-hs-preview {
   margin: 0;
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -50,7 +50,7 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
     radial-gradient(900px 420px at 12% 0%, rgba(152,204,0,0.18), transparent 55%),
     radial-gradient(700px 380px at 92% 20%, rgba(60,90,140,0.10), transparent 50%),
     linear-gradient(180deg, #eef2f6 0%, #f3f5f8 100%);
-  padding: clamp(36px, 6vw, 64px) 20px clamp(24px, 3.5vw, 40px);
+  padding: clamp(28px, 4.5vw, 48px) 20px clamp(20px, 3vw, 32px);
 }
 .faq-intro-inner {
   max-width: 920px;
@@ -66,7 +66,7 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
   color: var(--ink);
 }
 .faq-intro {
-  margin-top: clamp(18px, 2.8vw, 28px);
+  margin-top: 0;
 }
 .faq-intro-panel.ucs-glass-card {
   padding: clamp(20px, 3vw, 30px) !important;
@@ -126,7 +126,7 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
   margin: 0 auto;
   padding: 32px 20px 28px;
 }
-.section-block { margin-bottom: 40px; scroll-margin-top: 170px; }
+.section-block { margin-bottom: 40px; scroll-margin-top: 100px; }
 .section-head {
   display: flex; align-items: baseline; gap: 12px;
   margin-bottom: 16px; flex-wrap: wrap;
@@ -262,10 +262,8 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
   gap: 12px;
 }
 @media (min-width: 640px) {
+  /* 4 resource cards → clean 2×2 (no orphan under 3-col) */
   .related-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-}
-@media (min-width: 900px) {
-  .related-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
 }
 .related-card {
   display: flex;
@@ -449,7 +447,7 @@ body.faq-hs-preview img { max-width: 100%; height: auto; }
   .toc-wrap { top: 34px; }
   .faq-main { padding: 24px 16px 20px; }
   .faq-top { padding: 28px 16px 22px; }
-  .faq-intro { margin-top: 16px; }
+  .faq-intro { margin-top: 0; }
   .faq-intro h1 { margin-bottom: 12px; }
   .section-block { margin-bottom: 32px; }
 }
