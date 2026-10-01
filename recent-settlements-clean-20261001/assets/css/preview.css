@@ -185,36 +185,28 @@ img { max-width: 100%; display: block; }
   color: #fff;
 }
 
-/* ---- Settlements band: storm scene visible so glass blur-through reads ---- */
+/* ---- Settlements band: clean light only (hero photo stays TOP — no scene behind cards) ---- */
 .settle-band {
   position: relative;
   isolation: isolate;
   overflow: hidden;
   padding: 52px 20px 64px;
-  /* Light veil only — heavy wash flattened the glass (Joe: more glass like) */
-  background-color: #142010;
-  background-image:
-    linear-gradient(180deg, rgba(20, 28, 16, 0.22) 0%, rgba(20, 28, 16, 0.08) 42%, rgba(20, 28, 16, 0.28) 100%),
-    url("../img/settle-frost-scene.jpg");
-  background-size: cover;
-  background-position: center 42%;
-  background-repeat: no-repeat;
+  background-color: #f3f5f7;
+  background-image: none;
 }
 .settle-wrap { max-width: 1120px; margin: 0 auto; }
-.settle-intro { text-align: center; margin-bottom: 28px; color: #fff; }
-.settle-intro h2, .settle-kicker, .settle-sub {
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
-}
+.settle-intro { text-align: center; margin-bottom: 28px; color: var(--ink); }
+.settle-intro h2, .settle-kicker, .settle-sub { text-shadow: none; }
 .settle-kicker {
-  color: #c8ef4a; text-transform: uppercase; font-size: 13px; font-weight: 700;
+  color: #5a7a00; text-transform: uppercase; font-size: 13px; font-weight: 700;
   letter-spacing: .08em; margin: 0 0 8px;
 }
 .settle-intro h2 {
   margin: 0 0 10px; font-size: clamp(1.5rem, 3vw, 2.05rem); font-weight: 700;
-  color: #fff;
+  color: var(--ink);
 }
 .settle-sub {
-  margin: 0 auto; max-width: 640px; color: rgba(255, 255, 255, 0.82);
+  margin: 0 auto; max-width: 640px; color: var(--muted);
   font-size: 15px; line-height: 1.55;
 }
 .settle-grid {
@@ -233,15 +225,15 @@ img { max-width: 100%; display: block; }
   position: relative; overflow: hidden;
   padding: 22px 22px 18px;
   border-radius: 22px;
-  background-color: rgba(255, 255, 255, 0.14);
+  background-color: rgba(255, 255, 255, 0.55);
   background-image: linear-gradient(
     165deg,
-    rgba(255, 255, 255, 0.42) 0%,
-    rgba(255, 255, 255, 0.10) 48%,
-    rgba(220, 245, 170, 0.14) 100%
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 255, 255, 0.42) 48%,
+    rgba(220, 245, 170, 0.18) 100%
   );
-  -webkit-backdrop-filter: blur(48px) saturate(1.9);
-  backdrop-filter: blur(48px) saturate(1.9);
+  -webkit-backdrop-filter: blur(28px) saturate(1.5);
+  backdrop-filter: blur(28px) saturate(1.5);
   border: 1px solid rgba(255, 255, 255, 0.88);
   box-shadow:
     0 0 0 1px rgba(152, 204, 0, 0.42),
@@ -302,11 +294,9 @@ a.settle-cta:hover { filter: brightness(1.05); }
 a.settle-cta-ghost {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 13px 20px; border-radius: 999px;
-  background: rgba(255,255,255,0.22);
-  -webkit-backdrop-filter: blur(18px) saturate(1.5);
-  backdrop-filter: blur(18px) saturate(1.5);
-  border: 1px solid rgba(255,255,255,0.55);
-  color: #fff !important;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(24,28,36,0.12);
+  color: var(--ink) !important;
   font-weight: 600; font-size: 14px; text-decoration: none !important;
   border: 1px solid rgba(255,255,255,0.75);
   -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
