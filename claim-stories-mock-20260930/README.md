@@ -8,7 +8,7 @@
 - Chrome: live HubSpot-current (lime top + white header)
 - Nav: live labels (Storm Damage, Property Damage, Appraisal, Contact, Resources, Locations) — **no Denied**, **no Claim Stories nav pill**
 - **A True frost** glass on hero + CTA panels only (`assets/css/tokens.css`)
-- Hero: **PA plight journey** slow 2s crossfade (6 sharp stills in `assets/img/hero-journey/`) behind A True frost; veil lightened for crisp stills
+- Hero: **insured POV / plight journey** slow 2s crossfade (6 sharp stills in `assets/img/hero-journey/`) behind A True frost; veil lightened for crisp stills
 
 ## Preview
 ```bash
