@@ -9,11 +9,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/preview.css?v=20261001f" />
+<link rel="stylesheet" href="assets/css/preview.css?v=20261001g" />
 </head>
 <body>
 <div class="draft-banner" role="status">
-  PREVIEW · portal 20198825 · /testimonials soft rotating hero · FL → NJ → NY · not published to HubSpot
+  PREVIEW · portal 20198825 · Header-Top live frost · soft rotating hero FL→NJ→NY · HubSpot ship pending
 </div>
 
 <header class="site-header">
@@ -44,7 +44,10 @@
       <a class="brand" href="https://www.ucspa.com/" aria-label="United Claims Specialists">
         <img class="brand-logo" src="assets/img/ucs-logo.png" alt="United Claims Specialists" width="220" height="37" />
       </a>
-      <nav class="header-nav" aria-label="Primary">
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="preview-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header-nav" id="preview-nav" aria-label="Primary">
         <a href="https://www.ucspa.com/storm-damage/">Storm Damage</a>
         <a href="https://www.ucspa.com/property-damage-insurance-claims/">Property Damage</a>
         <a href="https://www.ucspa.com/appraisal-services/">Appraisal</a>
@@ -178,6 +181,18 @@
 <footer class="preview-foot">
   PREVIEW ONLY · soft auto-rotate 5.5s · title-only frost · FL · NJ · NY · no HubSpot publish
 </footer>
-<script src="assets/js/hero-carousel.js?v=20261001f"></script>
+<script src="assets/js/hero-carousel.js?v=20261001g"></script>
+<script>
+(function(){
+  var btn=document.querySelector('.nav-toggle');
+  var nav=document.getElementById('preview-nav');
+  if(!btn||!nav) return;
+  btn.addEventListener('click', function(){
+    var open=nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open?'true':'false');
+    btn.setAttribute('aria-label', open?'Close menu':'Open menu');
+  });
+})();
+</script>
 </body>
 </html>

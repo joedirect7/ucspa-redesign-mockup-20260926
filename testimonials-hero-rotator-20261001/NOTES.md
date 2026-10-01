@@ -7,10 +7,15 @@
 - **No** click-to-select · **No** Next button · decorative dots only (`pointer-events: none`)
 - Autoplay **not** gated on `prefers-reduced-motion` (Joe override)
 - Dual timer: `setInterval` + rAF watchdog for GH Pages reliability
-- Cache-bust: `?v=20261001f`
+- Cache-bust: `?v=20261001g`
 
 ## Kept
 - State heroes (live UCS HubFS) · calm cards bg · title-only frost · state card titles
 
 ## URL
 https://joedirect7.github.io/ucspa-redesign-mockup-20260926/testimonials-hero-rotator-20261001/
+
+## Header-Top frost fix (2026-10-01)
+- Was solid `#98cc00` lime slab (old).
+- Now mirrors live: `rgba(110,160,0,0.48)` + `blur(36px) saturate(1.7)` + lime edge ring; ink text; frosted social pills; mobile menu frost panel.
+- Cache-bust: `?v=20261001g`
