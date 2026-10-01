@@ -313,26 +313,13 @@ a.settle-cta-ghost:hover { background: rgba(255,255,255,0.72); }
   padding: 8px 16px 28px; background: #e8ecf0;
 }
 
-/* ---- Bottom Free Claim Consult — A True frost over photo (destination-page pattern) ---- */
+/* ---- Bottom Free Claim Consult — clean solid (no photo BG; hero is the only image) ---- */
 .form-band {
   position: relative;
   padding: 64px 20px 72px;
   overflow: hidden;
-  background: #1a1e26;
-}
-.form-band-media {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
-}
-.form-band-media img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center 40%;
-  filter: brightness(0.9) contrast(1.04);
-  transform: scale(1.03);
-}
-.form-band-veil {
-  position: absolute; inset: 0; z-index: 1; pointer-events: none;
-  background:
-    radial-gradient(900px 480px at 50% 30%, rgba(8,10,14,0.12), transparent 65%),
-    linear-gradient(180deg, rgba(8,10,14,0.35) 0%, rgba(8,10,14,0.48) 100%);
+  background: #eef1f4;
+  border-top: 1px solid #e0e4ea;
 }
 .form-band-inner {
   position: relative; z-index: 2;
@@ -341,19 +328,22 @@ a.settle-cta-ghost:hover { background: rgba(255,255,255,0.72); }
 .form-band-kicker {
   text-align: center; margin: 0 0 14px;
   font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: rgba(255,255,255,0.88);
-  text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+  color: #5a7a00;
+  text-shadow: none;
 }
 
 .ucs-glass-card {
   border-radius: 16px;
   padding: 20px 18px 16px;
   color: var(--glass-text);
-  background: var(--glass-bg);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  border: var(--glass-border);
-  box-shadow: var(--glass-shadow), var(--glass-inset), var(--glass-lime-edge);
+  background: linear-gradient(165deg, rgba(24,28,36,0.88), rgba(24,28,36,0.78));
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  backdrop-filter: blur(28px) saturate(1.4);
+  border: 1px solid rgba(255,255,255,0.28);
+  box-shadow:
+    0 0 0 1px rgba(152,204,0,0.40),
+    0 18px 44px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.22);
 }
 .ucs-glass-card .form-title {
   margin: 0 0 2px; font-size: 20px; font-weight: 700;
