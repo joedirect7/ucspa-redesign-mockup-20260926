@@ -29,3 +29,4 @@
 ## Explicitly NOT
 - HubSpot CMS /faq live
 - Redesign dark chrome paths
+**2026-09-30 PM intro trim:** Removed all prose from the intro tile; it now contains only “Frequently Asked Questions” and the three action buttons (Free Claim Help, phone, Browse 20 answers). Tightened tile spacing. Cache-bust v=20260930202429.
