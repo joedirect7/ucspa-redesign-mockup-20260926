@@ -93,3 +93,11 @@ HubSpot paste helpers (when unlocked): `_chrome/`
 - HubSpot CMS `/faq` live publish
 - Messaging Joe
 - Redesign dark-chrome FAQ paths
+
+
+## Box publish package (also ready)
+
+`/workspace/ucs-seo/faq-hubspot-publish-package-20260930/` — `faq-module-body.html` · `faq-jsonld.json` · `assets/css/faq-modern.css` · `HUBSPOT-PUBLISH-NOTES.md`  
+Mirror: `/workspace/ucs-seo/faq-hubspot-preview-20260930/publish-package/`
+
+Overnight memo: `/workspace/ucs-seo/seo-agency-scoreboard/OVERNIGHT-2026-09-30.md`

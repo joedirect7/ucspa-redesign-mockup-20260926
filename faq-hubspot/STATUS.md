@@ -35,3 +35,7 @@
 
 
 **2026-09-30 PM publish-ready polish:** Synced FAQPage JSON-LD to visible Q titles + answers; CTA band “Free Claim Consult”; removed orphan div; CSS intro/TOC spacing + 2×2 More-from grid; chrome snippets refreshed; wrote PUBLISH-READY.md. Cache-bust v=20260930204457. Still NOT published to HubSpot /faq.
+
+**2026-09-30 overnight polish:** Only Q1 accordion starts open; CTA band → Free Claim Consult; copyright → 2009–2026; preview footer Denied Claims → Underpaid Claims (reopen soft). Cache-bust v=20260930204457.
+
+**HubSpot publish package (locked):** `/workspace/ucs-seo/faq-hubspot-publish-package-20260930/` — module body + FAQPage schema + CSS + HUBSPOT-PUBLISH-NOTES.md. **Not published.**
