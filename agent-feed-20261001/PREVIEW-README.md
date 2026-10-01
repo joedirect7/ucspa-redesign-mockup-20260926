@@ -66,6 +66,10 @@ See deploy note at bottom of this file after GH Pages push (or use box path `fil
 
 ## Clickable preview
 
-- **GH Pages (after deploy):** https://joedirect7.github.io/ucspa-redesign-mockup-20260926/agent-feed-20261001/
+- **HTML preview (works now):** https://htmlpreview.github.io/?https://raw.githubusercontent.com/joedirect7/ucspa-redesign-mockup-20260926/main/agent-feed-20261001/index.html
+- **GH Pages (usual pattern; may lag while Pages rebuilds large repo):** https://joedirect7.github.io/ucspa-redesign-mockup-20260926/agent-feed-20261001/
+- **Raw files on GitHub:** https://github.com/joedirect7/ucspa-redesign-mockup-20260926/tree/main/agent-feed-20261001
 - **Box file:** `/workspace/ucs-seo/agent-feed-20261001/llms-full.html`
 - **Raw text:** `/workspace/ucs-seo/agent-feed-20261001/llms-full.txt`
+
+Commit on `main`: `17691d4` — live `https://www.ucspa.com/llms.txt` unchanged (still “Revised 2026-09-29”).
