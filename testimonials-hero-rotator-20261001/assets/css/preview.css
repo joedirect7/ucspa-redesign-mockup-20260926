@@ -106,12 +106,14 @@ img { max-width: 100%; display: block; }
 }
 .hero-media--dissolve .hero-slide {
   position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;
-  opacity: 0; visibility: hidden;
-  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+  opacity: 0;
+  transition: opacity 1.8s ease-in-out;
   z-index: 0; overflow: hidden;
+  pointer-events: none;
 }
 .hero-media--dissolve .hero-slide.is-active {
-  opacity: 1; visibility: visible; z-index: 1;
+  opacity: 1;
+  z-index: 1;
 }
 .hero-media--dissolve .hero-slide img {
   display: block; width: 100%; height: 100%;
@@ -209,6 +211,38 @@ img { max-width: 100%; display: block; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-media--dissolve .hero-slide { transition: none; }
+}
+
+
+.hero-panel--title-only {
+  padding: 26px 32px 24px;
+  text-align: center;
+}
+.hero-panel--title-only .hero-kicker { margin-bottom: 10px; }
+.hero-panel--title-only h1 { margin: 0; }
+.hero-panel--title-only .hero-lede,
+.hero-panel--title-only .hero-loc-row,
+.hero-panel--title-only .hero-actions { display: none; }
+
+/* Soft dots sit under frost card (not wordy chrome) */
+.hero .hero-dots {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex; gap: 8px; align-items: center; justify-content: center;
+}
+.hero .hero-dots button {
+  width: 8px; height: 8px; border-radius: 999px; padding: 0;
+  border: none; cursor: pointer;
+  background: rgba(255,255,255,0.45);
+  transition: background .35s ease, width .35s ease, box-shadow .35s ease;
+}
+.hero .hero-dots button.is-active {
+  width: 22px;
+  background: var(--lime);
+  box-shadow: 0 0 0 2px rgba(152,204,0,0.28);
 }
 
 /* ---- GBP reviews band (mirrors shipped live cards) ---- */
