@@ -7,7 +7,7 @@ body {
   min-height: 100%;
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: #181c24;
-  background: #0f1610;
+  background: #eef1f4;
   -webkit-font-smoothing: antialiased;
 }
 main { display: block; margin: 0; padding: 0; }
@@ -249,21 +249,21 @@ img { max-width: 100%; display: block; }
 .gbp-band {
   position: relative;
   padding: 48px 20px 64px;
-  background:
-    linear-gradient(180deg, rgba(15,22,16,.72), rgba(15,22,16,.82)),
-    url("https://www.ucspa.com/hubfs/Atlantic%20City%2c%20New%20Jersey%2c%20USA%20resort%20casinos%20cityscape%20on%20the%20shore%20at%20night..jpeg") center/cover fixed;
+  /* Calm solid/soft frost — no busy photo behind cards (Joe lock) */
+  background: linear-gradient(180deg, #f3f5f7 0%, #eef1f4 55%, #e8ecf0 100%);
 }
 .gbp-wrap { max-width: 1180px; margin: 0 auto; }
-.gbp-intro { text-align: center; margin-bottom: 28px; color: #fff; }
+.gbp-intro { text-align: center; margin-bottom: 28px; color: var(--ink); }
 .gbp-kicker {
-  color: var(--lime); text-transform: uppercase; font-size: 13px; font-weight: 700;
+  color: #5a7a00; text-transform: uppercase; font-size: 13px; font-weight: 700;
   letter-spacing: .08em; margin: 0 0 8px;
 }
 .gbp-intro h2 {
   margin: 0 0 10px; font-size: clamp(1.5rem, 3vw, 2.05rem); font-weight: 700;
+  color: var(--ink);
 }
 .gbp-sub {
-  margin: 0 auto; max-width: 640px; color: rgba(255,255,255,.86);
+  margin: 0 auto; max-width: 640px; color: var(--muted);
   font-size: 15px; line-height: 1.55;
 }
 .gbp-grid {
@@ -275,10 +275,10 @@ img { max-width: 100%; display: block; }
   .site-header { top: 40px; }
 }
 .gbp-col {
-  background: var(--frost-bg);
-  backdrop-filter: blur(28px) saturate(1.6);
-  -webkit-backdrop-filter: blur(28px) saturate(1.6);
-  border: 1px solid rgba(255,255,255,.78);
+  background: linear-gradient(165deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.78) 48%, rgba(240,250,220,.55) 100%);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid rgba(255,255,255,.95);
   border-radius: var(--radius);
   box-shadow:
     0 0 0 1px rgba(152,204,0,.35),
@@ -318,6 +318,6 @@ img { max-width: 100%; display: block; }
 .gbp-seeall:hover { filter: brightness(.95); }
 
 .preview-foot {
-  text-align: center; color: rgba(255,255,255,.65); font-size: 11px;
-  padding: 0 16px 28px; background: #0f1610;
+  text-align: center; color: var(--muted); font-size: 11px;
+  padding: 8px 16px 28px; background: #e8ecf0;
 }
