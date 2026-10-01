@@ -27,7 +27,16 @@ Hub: `index.html` · Scores: `SCORECARDS.md` (all overall ≥8) · Builder: `bui
 - Slogan: “Your insurance has an adjuster, so should you.” (no `!`)
 - Preview first — never ship without Joe OK
 
-## Clickable https URLs (after push)
+## Clickable https URLs
+
+**Primary clickable now (htmlpreview — CSS via jsDelivr absolute):** GH Pages for this large repo sometimes lags/errors; use these first.
+
+- Hub: https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/glossary-previews-20261001/index.html
+- PA: https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/glossary-previews-20261001/what-is-a-public-adjuster/index.html
+- Supplement: https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/glossary-previews-20261001/what-is-an-insurance-claim-supplement/index.html
+- Appraisal: https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/glossary-previews-20261001/what-is-an-appraisal-clause/index.html
+
+**GH Pages (when build succeeds):**
 
 GH Pages (may lag briefly):
 
