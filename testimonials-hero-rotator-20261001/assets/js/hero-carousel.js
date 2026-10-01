@@ -5,15 +5,12 @@
     var slides = Array.prototype.slice.call(root.querySelectorAll(".hero-slide"));
     if (slides.length < 2) return;
 
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var i = 0;
-    var timer = null;
-    var INTERVAL = parseInt(root.getAttribute("data-interval") || "6000", 10);
-    if (isNaN(INTERVAL) || INTERVAL < 2500) INTERVAL = 6000;
+    var INTERVAL = parseInt(root.getAttribute("data-interval") || "5500", 10);
+    if (isNaN(INTERVAL) || INTERVAL < 2000) INTERVAL = 5500;
 
     var dots = Array.prototype.slice.call(document.querySelectorAll("[data-hero-dot]"));
 
-    // Eager-decode all slide images so hidden slides are ready when they fade in
     slides.forEach(function (s) {
       var img = s.querySelector("img");
       if (!img) return;
@@ -22,7 +19,6 @@
       try {
         if (typeof img.decode === "function") img.decode().catch(function () {});
       } catch (e) {}
-      // Force network fetch even if currently opacity:0
       if (!img.complete) {
         var warm = new Image();
         warm.src = img.currentSrc || img.src;
@@ -35,42 +31,35 @@
         s.classList.toggle("is-active", idx === i);
       });
       dots.forEach(function (d, idx) {
-        var on = idx === i;
-        d.classList.toggle("is-active", on);
-        d.setAttribute("aria-current", on ? "true" : "false");
+        d.classList.toggle("is-active", idx === i);
       });
       root.setAttribute("data-active", String(i));
     }
 
     function next() { show(i + 1); }
 
-    function start() {
-      if (reduce) return;
-      stop();
-      timer = window.setInterval(next, INTERVAL);
-    }
+    show(0);
 
-    function stop() {
-      if (timer) {
-        window.clearInterval(timer);
-        timer = null;
+    // Joe lock: MUST auto-rotate. Do not gate on prefers-reduced-motion.
+    // Dual drivers: setInterval + rAF watchdog (GH Pages / background tabs).
+    var last = Date.now();
+    window.setInterval(function () {
+      next();
+      last = Date.now();
+    }, INTERVAL);
+
+    function watchdog(now) {
+      if (now - last >= INTERVAL + 400) {
+        next();
+        last = now;
       }
+      window.requestAnimationFrame(watchdog);
     }
-
-    dots.forEach(function (d, idx) {
-      d.addEventListener("click", function () {
-        show(idx);
-        start();
-      });
-    });
+    window.requestAnimationFrame(watchdog);
 
     document.addEventListener("visibilitychange", function () {
-      if (document.hidden) stop();
-      else start();
+      if (!document.hidden) last = Date.now();
     });
-
-    show(0);
-    start();
   }
 
   if (document.readyState === "loading") {

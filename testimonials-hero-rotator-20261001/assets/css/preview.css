@@ -195,19 +195,17 @@ img { max-width: 100%; display: block; }
 .hero-dots {
   display: flex; gap: 8px; align-items: center; justify-content: flex-start;
 }
-.hero-dots button {
+.hero-dots [data-hero-dot] {
   width: 8px; height: 8px; border-radius: 999px; padding: 0;
   border: none; cursor: pointer;
   background: rgba(255,255,255,0.35);
   transition: background .35s ease, width .35s ease, box-shadow .35s ease;
 }
-.hero-dots button.is-active {
+.hero-dots [data-hero-dot].is-active {
   width: 22px;
   background: var(--lime);
   box-shadow: 0 0 0 2px rgba(152,204,0,0.28);
 }
-.hero-dots button:hover { background: rgba(255,255,255,0.55); }
-.hero-dots button.is-active:hover { background: var(--lime); }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-media--dissolve .hero-slide { transition: none; }
@@ -232,14 +230,15 @@ img { max-width: 100%; display: block; }
   bottom: 18px;
   transform: translateX(-50%);
   display: flex; gap: 8px; align-items: center; justify-content: center;
+  pointer-events: none; /* decorative only — Joe: no manual switch */
 }
-.hero .hero-dots button {
+.hero .hero-dots [data-hero-dot] {
   width: 8px; height: 8px; border-radius: 999px; padding: 0;
-  border: none; cursor: pointer;
+  border: none; cursor: default;
   background: rgba(255,255,255,0.45);
   transition: background .35s ease, width .35s ease, box-shadow .35s ease;
 }
-.hero .hero-dots button.is-active {
+.hero .hero-dots [data-hero-dot].is-active {
   width: 22px;
   background: var(--lime);
   box-shadow: 0 0 0 2px rgba(152,204,0,0.28);

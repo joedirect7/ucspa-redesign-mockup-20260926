@@ -1,15 +1,16 @@
-# Testimonials soft rotating hero — PREVIEW 2026-10-01 (state heroes + calm cards)
+# Testimonials soft rotating hero — PREVIEW 2026-10-01
 
-**Status:** Clickable preview only. **Not** HubSpot live.
+**Status:** Preview only. Not HubSpot live.
 
-## Joe fix pass 2 (2026-10-01 ~6:49 AM ET)
+## Joe lock (2026-10-01 ~6:54 AM ET) — MUST auto-rotate
+- Soft fade auto-rotate FL → NJ → NY every **5.5s**
+- **No** click-to-select · **No** Next button · decorative dots only (`pointer-events: none`)
+- Autoplay **not** gated on `prefers-reduced-motion` (Joe override)
+- Dual timer: `setInterval` + rAF watchdog for GH Pages reliability
+- Cache-bust: `?v=20261001f`
 
-1. **State heroes only** (live UCS state-page HubFS — not city courthouse/marina):
-   - FL: `Public Adjuster Miami Florida.jpeg` → `hero-florida.jpg`
-   - NJ: `Public Aduster New Jersey.jpg` (live typo filename) → `hero-new-jersey.jpg` (Ben Franklin Bridge / NJ shore view)
-   - NY: `Public Adjuster New York (1).webp` → `hero-new-york.jpg` (Liberty + Manhattan)
-2. **Calm cards band** — solid soft gray gradient; Atlantic City photo removed. Cards readable.
-3. Prior locks: title-only frost · state card titles · soft 6s dissolve · soft-power
+## Kept
+- State heroes (live UCS HubFS) · calm cards bg · title-only frost · state card titles
 
-## GH Pages
+## URL
 https://joedirect7.github.io/ucspa-redesign-mockup-20260926/testimonials-hero-rotator-20261001/
