@@ -30,3 +30,5 @@
 - HubSpot CMS /faq live
 - Redesign dark chrome paths
 **2026-09-30 PM intro trim:** Removed the “Browse 20 answers” intro action; the tile now keeps only “Free Claim Help” and the phone CTA. Cache-bust v=20260930203253.
+
+**2026-09-30 PM More-from cleanup:** Renamed the first card to “Free Claim Consult”, removed the Reviews card from the More-from grid, and updated the intro tile primary button. Cache-bust v=20260930203756.
