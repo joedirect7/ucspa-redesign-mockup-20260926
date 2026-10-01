@@ -1,0 +1,397 @@
+/* ============================================================================
+   UCS form-landers polish — PREVIEW ONLY (2026-10-01)
+   Marker: UCS-FORM-LANDERS-POLISH-20261001
+   A True frost FAQ + soft-links strip. Does NOT restyle lead forms.
+   ============================================================================ */
+
+.ucs-preview-banner {
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  background: #181c24;
+  color: #fff;
+  font: 600 13px/1.4 Poppins, Lato, system-ui, sans-serif;
+  padding: 10px 16px;
+  text-align: center;
+  border-bottom: 2px solid #98cc00;
+}
+.ucs-preview-banner a { color: #98cc00; }
+.ucs-preview-banner code {
+  background: rgba(255,255,255,.08);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Soft-links strip — chrome only, no Directions/Map CTAs */
+.ucs-soft-links {
+  background: linear-gradient(180deg, #f4f6f1 0%, #eef1ea 100%);
+  padding: 28px 16px 32px;
+  border-top: 1px solid rgba(24,28,36,.06);
+}
+.ucs-soft-links__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.ucs-soft-links__label {
+  font: 600 12px/1.2 Poppins, Lato, system-ui, sans-serif;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #5a6472;
+  margin: 0 0 12px;
+}
+.ucs-soft-links__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ucs-soft-links__grid a {
+  display: block;
+  text-decoration: none;
+  color: #181c24;
+  font: 500 14px/1.35 Poppins, Lato, system-ui, sans-serif;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(255,255,255,.65);
+  box-shadow:
+    0 0 0 1px rgba(152,204,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.55),
+    0 8px 22px rgba(0,0,0,.06);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.ucs-soft-links__grid a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(152,204,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.7),
+    0 12px 28px rgba(0,0,0,.1);
+  color: #12151c;
+}
+.ucs-soft-links__grid a span {
+  display: block;
+  font: 400 12px/1.3 Lato, system-ui, sans-serif;
+  color: #5a6472;
+  margin-top: 4px;
+}
+
+/* FAQ strip — A True frost accordion */
+.ucs-faq-strip {
+  position: relative;
+  padding: 48px 16px 56px;
+  background:
+    linear-gradient(180deg, rgba(24,28,36,.55), rgba(24,28,36,.72)),
+    url("https://www.ucspa.com/hubfs/ContactUs%20Page/video.png") center/cover no-repeat;
+  color: #fff;
+}
+.ucs-faq-strip__inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.ucs-faq-strip__eyebrow {
+  font: 600 12px/1.2 Poppins, Lato, system-ui, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #98cc00;
+  margin: 0 0 8px;
+  text-align: center;
+}
+.ucs-faq-strip__title {
+  font: 700 28px/1.2 Poppins, Lato, system-ui, sans-serif;
+  margin: 0 0 8px;
+  text-align: center;
+  letter-spacing: -.02em;
+}
+.ucs-faq-strip__sub {
+  font: 400 15px/1.55 Lato, system-ui, sans-serif;
+  color: rgba(255,255,255,.78);
+  text-align: center;
+  margin: 0 0 28px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ucs-faq-item {
+  margin: 0 0 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow:
+    0 0 0 1px rgba(152,204,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.28),
+    inset 0 -1px 0 rgba(0,0,0,.16),
+    0 14px 36px rgba(0,0,0,.28);
+  backdrop-filter: blur(32px) saturate(1.35);
+  -webkit-backdrop-filter: blur(32px) saturate(1.35);
+  overflow: hidden;
+}
+.ucs-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 18px;
+  font: 600 16px/1.35 Poppins, Lato, system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ucs-faq-item summary::-webkit-details-marker { display: none; }
+.ucs-faq-item summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(152,204,0,.88);
+  color: #12151c;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+.ucs-faq-item[open] summary::after { content: "–"; }
+.ucs-faq-item .ucs-faq-a {
+  padding: 0 18px 18px;
+  font: 400 15px/1.6 Lato, system-ui, sans-serif;
+  color: rgba(255,255,255,.88);
+}
+.ucs-faq-item .ucs-faq-a a {
+  color: #98cc00;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Helping cards frost consistency (NJ / water) — visual only */
+.ucs-polish .cHelping-Col,
+.ucs-polish .FAQ-col-Innr {
+  border-radius: 18px !important;
+  background: rgba(255,255,255,.18) !important;
+  border: 1px solid rgba(255,255,255,.4) !important;
+  box-shadow:
+    0 0 0 1px rgba(152,204,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.5),
+    0 14px 36px rgba(0,0,0,.12) !important;
+  backdrop-filter: blur(28px) saturate(1.5) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(1.5) !important;
+}
+.ucs-polish .cHelping-Col {
+  border-style: solid !important; /* kill dashed coupon look */
+}
+
+/* Static mock form — mirrors live HS stacked fields; does NOT post */
+.ucs-mock-form {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 8px 0 4px;
+}
+.ucs-mock-form .hs-form-field { margin: 0 0 12px; }
+.ucs-mock-form label {
+  display: block;
+  color: #fff !important;
+  font: 500 13px/1.3 Lato, system-ui, sans-serif;
+  margin-bottom: 4px;
+}
+.ucs-mock-form input[type="text"],
+.ucs-mock-form input[type="email"],
+.ucs-mock-form input[type="tel"],
+.ucs-mock-form select,
+.ucs-mock-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #eaeaea !important;
+  border: 2px solid #eaeaea !important;
+  color: #2e2e2e !important;
+  padding: 10px 12px;
+  border-radius: 2px;
+  font: 400 15px/1.3 Lato, system-ui, sans-serif;
+}
+.ucs-mock-form textarea { min-height: 96px; resize: vertical; }
+.ucs-mock-form .hs-button {
+  display: inline-block;
+  background: #99cc02 !important;
+  border: 1px solid #99cc02 !important;
+  color: #fff !important;
+  padding: 12px 28px;
+  font: 700 15px/1 Poppins, Lato, system-ui, sans-serif;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.ucs-mock-form .ucs-mock-note {
+  margin-top: 10px;
+  font: 400 12px/1.4 Lato, system-ui, sans-serif;
+  color: rgba(255,255,255,.7);
+}
+
+/* Form-lock badge (claim-help only) */
+.ucs-form-lock-badge {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(152,204,0,.15);
+  border: 1px solid rgba(152,204,0,.55);
+  color: #98cc00;
+  font: 600 11px/1.2 Poppins, Lato, system-ui, sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .ucs-faq-strip__title { font-size: 22px; }
+  .ucs-soft-links__grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================================
+   GLASS AMP — A True frost (Joe lock) around forms / heroes
+   Form place+size on claim-help unchanged; chrome wraps only.
+   ============================================================================ */
+
+:root {
+  --ucs-lime: #98cc00;
+  --glass-a-bg: rgba(24, 28, 36, 0.40);
+  --glass-a-blur: 32px;
+  --glass-a-saturate: 1.35;
+  --glass-a-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-a-lime-edge: 0 0 0 1px rgba(152, 204, 0, 0.45);
+  --glass-a-inset: inset 0 1px 0 rgba(255, 255, 255, 0.28), inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+  --glass-a-shadow: 0 18px 50px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* Claim-help: cinematic frost stage behind existing LP stack (form not moved) */
+body.ucs-polish.ucs-claim-help .lp-main-wrapper,
+body.ucs-polish.ucs-claim-help .body-container--landing-page {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(10,14,20,.55) 0%, rgba(10,14,20,.72) 100%),
+    url("https://www.ucspa.com/hubfs/Imported_Blog_Media/ucs-after-slider-crpped-copy-600x302.png") center top / cover no-repeat #0a0e14 !important;
+  background-attachment: scroll !important;
+  padding-top: 28px !important;
+  padding-bottom: 36px !important;
+}
+
+/* Glass chrome WRAP around claim-help form — same place/size; outer frost only */
+body.ucs-polish.ucs-claim-help #hs_cos_wrapper_dnd_area-module-4,
+body.ucs-polish.ucs-claim-help #hs_form_target_dnd_area-module-4 {
+  max-width: 560px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+body.ucs-polish.ucs-claim-help #hs_cos_wrapper_dnd_area-module-4 {
+  border-radius: 22px !important;
+  padding: 18px 18px 14px !important;
+  background: var(--glass-a-bg) !important;
+  border: var(--glass-a-border) !important;
+  box-shadow: var(--glass-a-shadow), var(--glass-a-inset), var(--glass-a-lime-edge) !important;
+  -webkit-backdrop-filter: blur(var(--glass-a-blur)) saturate(var(--glass-a-saturate)) !important;
+  backdrop-filter: blur(var(--glass-a-blur)) saturate(var(--glass-a-saturate)) !important;
+  box-sizing: border-box !important;
+}
+/* Keep live field chrome (gray inputs / lime submit) — do not restyle inputs */
+
+/* Glass phone callout under form (CallRail kept) */
+body.ucs-polish.ucs-claim-help .cell_16300994381623-padding {
+  max-width: 560px !important;
+  margin: 18px auto 0 !important;
+  border-radius: 18px !important;
+  padding: 16px 20px !important;
+  background: rgba(255,255,255,.12) !important;
+  border: 1px solid rgba(255,255,255,.28) !important;
+  box-shadow: var(--glass-a-shadow), var(--glass-a-inset), var(--glass-a-lime-edge) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(1.4) !important;
+  backdrop-filter: blur(28px) saturate(1.4) !important;
+  box-sizing: border-box !important;
+}
+/* Soften live 200px side crush on mobile for preview readability (visual only) */
+@media (max-width: 640px) {
+  body.ucs-polish.ucs-claim-help .cell_16300994381623-padding {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* H1 / pitch glass readability */
+body.ucs-polish.ucs-claim-help #hs_cos_wrapper_dnd_area-module-3_ {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto 18px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(24,28,36,.32);
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: var(--glass-a-inset), 0 10px 30px rgba(0,0,0,.25);
+  -webkit-backdrop-filter: blur(24px) saturate(1.3);
+  backdrop-filter: blur(24px) saturate(1.3);
+}
+
+/* NJ / water — glass the lead form panels */
+body.ucs-polish .Hero-form-wrp-inner,
+body.ucs-polish .Home-Form-Section .hs_cos_wrapper_type_form,
+body.ucs-polish #hs_cos_wrapper_widget_1629105166188_ {
+  border-radius: 22px !important;
+  padding: 18px !important;
+  background: var(--glass-a-bg) !important;
+  border: var(--glass-a-border) !important;
+  box-shadow: var(--glass-a-shadow), var(--glass-a-inset), var(--glass-a-lime-edge) !important;
+  -webkit-backdrop-filter: blur(var(--glass-a-blur)) saturate(var(--glass-a-saturate)) !important;
+  backdrop-filter: blur(var(--glass-a-blur)) saturate(var(--glass-a-saturate)) !important;
+  box-sizing: border-box !important;
+}
+
+/* NJ Home-Form-Section: frost band instead of flat white */
+body.ucs-polish .Home-Form-Section {
+  background:
+    linear-gradient(180deg, rgba(10,14,20,.5), rgba(10,14,20,.68)),
+    url("https://www.ucspa.com/hubfs/Imported_Blog_Media/ucs-after-slider-crpped-copy-600x302.png") center/cover no-repeat !important;
+  padding-top: 40px !important;
+  padding-bottom: 48px !important;
+}
+body.ucs-polish .Home-Form-Section h2 {
+  color: #98cc00 !important;
+  text-shadow: 0 1px 10px rgba(0,0,0,.35);
+}
+
+/* Helping cards — amp glass on photo-capable sections */
+body.ucs-polish .cHelping-Sctn {
+  background:
+    linear-gradient(180deg, rgba(10,14,20,.55), rgba(10,14,20,.7)),
+    url("https://www.ucspa.com/hubfs/ContactUs%20Page/video.png") center/cover no-repeat !important;
+}
+body.ucs-polish .cHelping-Header h2,
+body.ucs-polish .cHelping-Header h3 {
+  color: #fff !important;
+}
+body.ucs-polish .cHelping-Col h3 { color: #98cc00 !important; }
+body.ucs-polish .cHelping-Col,
+body.ucs-polish .cHelping-Col-Text,
+body.ucs-polish .cHelping-Col p,
+body.ucs-polish .cHelping-Col span {
+  color: rgba(255,255,255,.92) !important;
+}
+
+/* Live FAQ cols on water — frost */
+body.ucs-polish .FAQ-Section {
+  background:
+    linear-gradient(180deg, rgba(10,14,20,.5), rgba(10,14,20,.72)),
+    url("https://www.ucspa.com/hubfs/ContactUs%20Page/video.png") center/cover no-repeat !important;
+}
+body.ucs-polish .FAQ-Header h2,
+body.ucs-polish .FAQ-Header-Text,
+body.ucs-polish .FAQ-col-Innr,
+body.ucs-polish .FAQ-col-Innr h3,
+body.ucs-polish .FAQ-col-Text,
+body.ucs-polish .FAQ-col-Text p {
+  color: #fff !important;
+}
+body.ucs-polish .FAQ-col-Innr h3 { color: #98cc00 !important; }
+
+/* Mock form inside glass — slightly tighter radius on button */
+.ucs-mock-form .hs-button {
+  border-radius: 10px !important;
+  font-family: Poppins, Lato, system-ui, sans-serif !important;
+}
