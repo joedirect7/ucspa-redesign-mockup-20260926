@@ -30,7 +30,14 @@ Joe (2026-10-02): top of `/insurance-claim-help` form banner — change lime H1 
 ```
 
 ## Preview (clickable)
-**Index:** https://joedirect7.github.io/ucspa-redesign-mockup-20260926/claim-help-banner-20261002/
+**Index (GH Pages — may lag ~1–2 min after push):** https://joedirect7.github.io/ucspa-redesign-mockup-20260926/claim-help-banner-20261002/
+
+**Instant fallbacks (work now):**
+- Index: https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/claim-help-banner-20261002/index.html
+- BEFORE: https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/claim-help-banner-20261002/before/index.html
+- AFTER: https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/claim-help-banner-20261002/after/index.html
+- raw.githack index: https://raw.githack.com/joedirect7/ucspa-redesign-mockup-20260926/main/claim-help-banner-20261002/index.html
+- raw.githack AFTER: https://raw.githack.com/joedirect7/ucspa-redesign-mockup-20260926/main/claim-help-banner-20261002/after/index.html
 
 | | URL |
 |--|-----|
