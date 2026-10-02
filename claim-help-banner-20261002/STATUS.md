@@ -55,3 +55,14 @@ Marker: `UCS-CLAIM-HELP-BANNER-20261002`
 
 ## Ship gate
 **STOP** — do not PUT/publish HubSpot until Joe OK via parent. Proposed module HTML swap is one string change in `dnd_area-module-3` params.html only.
+
+
+## Mobile previews (2026-10-02)
+
+Fixed ~390px click-through pages added; HubSpot remains unchanged:
+- **MOBILE AFTER:** `mobile-after/` — **Lower Stress. Higher Settlement**
+- **MOBILE BEFORE:** `mobile-before/` — `More money, less stress, no risk.`
+
+Screenshot captures (390 × 1000 px viewport, banner + top of form):
+- `/workspace/ucs-seo/claim-help-banner-20261002/mobile-after.png`
+- `/workspace/ucs-seo/claim-help-banner-20261002/mobile-before.png`
