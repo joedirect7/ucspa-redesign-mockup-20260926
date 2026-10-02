@@ -1,52 +1,9 @@
 /* UCS-SIM-FERN-SIMPLE-PREVIEW-20261002
-   (1) NY skyline hero + simple title
-   (2) Lower: Sim face + contact (rounded lime box)
-   No frost · no busy section BGs · max/700% scrub · clickable tel/mailto
+   (1) Cleaner NYC skyline hero + title
+   (2) Lower: Sim portrait (pre-cropped) + frost glass contact card
+   Contact frost only — NOT full-page frost redesign
+   max/700% scrub · clickable tel/mailto
 */
-:root {
-  --lime: #99cc00;
-  --lime-deep: #99ca3c;
-  --ink: #181c24;
-  --muted: #5a6170;
-  --white: #fff;
-  --black: #000;
-  --radius: 18px;
-  --radius-sm: 16px;
-  --font: Poppins, Montserrat, system-ui, sans-serif;
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: var(--font);
-  color: var(--ink);
-  background: var(--white);
-  line-height: 1.5;
-}
-a { color: inherit; }
-img { max-width: 100%; height: auto; display: block; }
-
-.preview-banner {
-  background: #1a1f28;
-  color: #cfd6e0;
-  padding: 12px 18px;
-  font-size: 13px;
-  line-height: 1.45;
-  border-bottom: 3px solid var(--lime);
-}
-.preview-banner strong { color: var(--lime); }
-.preview-banner code {
-  background: rgba(255,255,255,0.08);
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-size: 11px;
-}
-
-.wrap {
-  width: min(1140px, 92%);
-  margin: 0 auto;
-}
-
-/* Chrome */
 .site-chrome {
   background: var(--white);
   border-bottom: 1px solid rgba(24,28,36,0.08);
@@ -80,7 +37,7 @@ img { max-width: 100%; height: auto; display: block; }
 .skyline-hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(280px, 42vw, 420px);
+  min-height: clamp(260px, 38vw, 400px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,7 +50,7 @@ img { max-width: 100%; height: auto; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 45%;
   z-index: 0;
 }
 .skyline-hero-scrim {
@@ -137,14 +94,18 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
 }
 
-/* (2) Lower: Sim face + contact — solid clean band, not stacked in hero */
+/* (2) Lower: Sim portrait + frost glass contact (card only) */
 .sim-meet-Section {
-  background: #f3f5ef;
-  padding: 48px 0 56px;
+  /* Soft solid wash so frost blur reads — no busy scene photo */
+  background:
+    radial-gradient(900px 420px at 18% 40%, rgba(152, 204, 0, 0.22), transparent 60%),
+    radial-gradient(700px 380px at 88% 70%, rgba(152, 204, 0, 0.12), transparent 55%),
+    linear-gradient(165deg, #e9ece4 0%, #dfe6d0 48%, #eef1ea 100%);
+  padding: 52px 0 60px;
 }
 .sim-meet-Row {
   display: grid;
-  grid-template-columns: minmax(220px, 360px) minmax(260px, 1fr);
+  grid-template-columns: minmax(220px, 340px) minmax(280px, 1fr);
   gap: 28px;
   align-items: center;
   justify-content: center;
@@ -154,65 +115,80 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow:
-    0 12px 32px rgba(24, 28, 36, 0.12),
+    0 14px 36px rgba(24, 28, 36, 0.14),
     0 0 0 1px rgba(24, 28, 36, 0.06);
-  background: #dde1d6;
+  background: #c8cec0;
   aspect-ratio: 4 / 5;
-  max-height: 420px;
+  max-height: 440px;
+  width: 100%;
 }
 .sim-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 12%;
   display: block;
+  /* Pre-cropped portrait — no wide banner / skyline bleed */
 }
+
+/* A True frost contact card — translucent glass over soft wash (NOT full-page frost) */
 .ebookboxpopup-col {
-  background-color: rgba(153, 204, 2, 0.92);
-  color: #000;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.25;
+  position: relative;
+  isolation: isolate;
   max-width: 520px;
   width: 100%;
   padding: 36px 32px;
-  position: relative;
   border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow:
-    0 12px 32px rgba(24, 28, 36, 0.14),
-    inset 0 1px 0 rgba(255,255,255,0.35);
+  color: #181c24;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
   justify-self: start;
+  /* Frost fill */
+  background:
+    linear-gradient(165deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.42) 48%, rgba(248,250,240,0.55) 100%),
+    rgba(152, 204, 0, 0.10);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  backdrop-filter: blur(28px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 18px 48px rgba(24, 28, 36, 0.14),
+    0 2px 8px rgba(24, 28, 36, 0.06),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    0 0 0 1px rgba(152, 204, 0, 0.35);
+  overflow: hidden;
 }
 .ebookboxpopup-col .lead-line {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   margin: 0 0 18px;
-  line-height: 1.3;
+  line-height: 1.35;
+  color: #181c24;
 }
 .ebookboxpopup-col h3 {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   font-size: clamp(28px, 4vw, 40px);
   line-height: 1.15;
   font-weight: 700;
 }
 .ebookboxpopup-col h3 a {
-  color: #000;
+  color: #181c24;
   text-decoration: none;
   font-size: inherit;
   line-height: inherit;
 }
-.ebookboxpopup-col h3 a:hover { text-decoration: underline; }
+.ebookboxpopup-col h3 a:hover { color: #5a7a00; text-decoration: underline; }
 .ebookboxpopup-col .email-line {
   margin: 0;
   font-size: 18px;
   font-weight: 600;
 }
 .ebookboxpopup-col .email-line a {
-  color: #000;
+  color: #181c24;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.ebookboxpopup-col .email-line a:hover { color: #5a7a00; }
 
 /* Form band */
 .edownldForm-Section {
