@@ -2,22 +2,21 @@
 
 **Status:** PREVIEW ONLY · **NOT shipped to HubSpot** · Holding for Joe OK  
 **Live URL (unchanged):** https://www.ucspa.com/for-agents  
-**Live gap:** 0 JSON-LD blocks (confirmed fetch 2026-10-02)
+**Live gap:** 0 JSON-LD blocks (confirmed fetch 2026-10-02)  
+**Scrub:** 2026-10-02 ~08:22 ET — removed Soft-power / DIY jargon from `description`
 
 ## What changes (when Joe OKs)
 
 | Layer | Change? |
 |-------|---------|
 | Visible visitor copy | **No** — page body / H1 / tables / CTAs stay as live |
-| `<head>` JSON-LD | **Yes** — add one `WebPage` block (soft Organization pointer) |
+| `<head>` JSON-LD | **Yes** — add one `WebPage` block (Organization pointer) |
 | Meta title / description | No (this preview retitles only for review chrome) |
 | HubSpot modules | No until apply |
 
 **Head-only / invisible:** when shipped, the schema is a `<script type="application/ld+json">` in head — not rendered as visible copy.
 
 ## Clickable preview
-> **Note (2026-10-02 ~08:17 ET):** GitHub Pages may briefly still serve the earlier standalone draft (~11KB). Raw/main + htmlpreview already have the live-HTML mirror (~53KB). Prefer htmlpreview until Pages catches up.
-
 
 - **GH Pages:** https://joedirect7.github.io/ucspa-redesign-mockup-20260926/for-agents-schema-preview-20261002/
 - **htmlpreview fallback:** https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/for-agents-schema-preview-20261002/index.html
@@ -37,7 +36,7 @@ Source: `for-agents.WebPage.jsonld`
   "@id": "https://www.ucspa.com/for-agents#webpage",
   "url": "https://www.ucspa.com/for-agents",
   "name": "United Claims Specialists — agent / LLM feed",
-  "description": "Canonical facts for AI agents and assistants about United Claims Specialists: licensed public adjusters for property insurance claims in NJ, NY, PA, and FL. Soft-power claim help; contingency fee; no DIY claim coaching.",
+  "description": "Canonical facts for AI agents and assistants about United Claims Specialists: licensed contingency-fee public adjusters for property insurance claims in NJ, NY, PA, and FL. Free claim consult available; we do not coach homeowners to handle claims alone.",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://www.ucspa.com/#website",
@@ -68,6 +67,13 @@ Source: `for-agents.WebPage.jsonld`
 }
 ```
 
+### Description (scrubbed)
+
+> Canonical facts for AI agents and assistants about United Claims Specialists: licensed contingency-fee public adjusters for property insurance claims in NJ, NY, PA, and FL. Free claim consult available; we do not coach homeowners to handle claims alone.
+
+**Was:** …Soft-power claim help; contingency fee; no DIY claim coaching.  
+**Now:** contingency-fee + free claim consult + “we do not coach homeowners to handle claims alone.”
+
 ## Suggested apply method
 
 Idempotent marker (same overnight schema scripts):
@@ -84,12 +90,11 @@ Place in page head or HubSpot HTML module that renders in `<head>`. Do not dupli
 
 Snippet file: `preview/proposed-head-snippet.html`
 
-## QC — visitor jargon scan
+## QC
 
-**Mirrored live body (chrome + schema stripped):** zero hits for soft-power / Brand line / Soft CTA / score notes / DIY / denial thesis.  
-(Only “PREVIEW” appears in the review-only `<title>` override.)
-
-**JSON-LD `description` string (agent/crawler-visible, invisible to humans):** contains the words **“Soft-power”** and **“DIY”**. Flag for Joe — draft kept as written; optional scrub before ship, e.g. drop those two phrases from `description` while keeping the soft-power *intent* (no denial thesis, no DIY coaching as policy).
+**JSON-LD strings:** zero hits for soft-power / Soft CTA / Brand line / score notes / DIY / denial thesis.  
+**Mirrored live body (chrome + schema stripped):** unchanged from live; no new jargon introduced.  
+**Copy-language:** sentence case OK; state abbrevs NJ/NY/PA/FL; ends with period; no double spaces.
 
 ## Confirmation
 
