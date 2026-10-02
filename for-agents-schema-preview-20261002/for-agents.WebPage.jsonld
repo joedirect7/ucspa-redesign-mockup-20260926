@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.ucspa.com/for-agents#webpage",
+  "url": "https://www.ucspa.com/for-agents",
+  "name": "United Claims Specialists \u2014 agent / LLM feed",
+  "description": "Canonical facts for AI agents and assistants about United Claims Specialists: licensed public adjusters for property insurance claims in NJ, NY, PA, and FL. Soft-power claim help; contingency fee; no DIY claim coaching.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://www.ucspa.com/#website",
+    "url": "https://www.ucspa.com/",
+    "name": "United Claims Specialists"
+  },
+  "about": {
+    "@type": "Organization",
+    "@id": "https://www.ucspa.com/#organization",
+    "name": "United Claims Specialists",
+    "url": "https://www.ucspa.com/",
+    "telephone": "+1-855-321-5677",
+    "email": "claims@ucspa.com",
+    "sameAs": [
+      "https://www.facebook.com/UCSPA19/",
+      "https://x.com/UCS_PA",
+      "https://www.instagram.com/ucs.pa/"
+    ]
+  },
+  "significantLink": [
+    "https://www.ucspa.com/llms.txt",
+    "https://www.ucspa.com/llms-full.txt",
+    "https://www.ucspa.com/insurance-claim-help",
+    "https://www.ucspa.com/faq",
+    "https://www.ucspa.com/recent-settlements"
+  ],
+  "inLanguage": "en-US"
+}
