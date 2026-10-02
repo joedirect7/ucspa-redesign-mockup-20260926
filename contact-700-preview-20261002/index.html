@@ -117,7 +117,7 @@
     text-align: left;
   }
   .ciLeft {
-    flex: 1 1 62%;
+    flex: 1 1 52%;
     min-width: 240px;
   }
   .ciLeft h2 {
@@ -136,7 +136,6 @@
     line-height: 1.45;
     text-align: left;
   }
-  /* Explicit: no orange / no accent spans on numbers or copy */
   .ciLeft h3 span,
   .ciLeft h2 span {
     color: inherit !important;
@@ -145,6 +144,14 @@
   .ciRight {
     flex: 0 0 auto;
     text-align: right;
+  }
+  .ciRight.dual {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
   }
   .cirButton a {
     display: inline-block;
@@ -160,10 +167,24 @@
     padding: 11px 22px;
     text-align: center;
     text-decoration: none;
-    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    transition: background 0.15s, border-color 0.15s, color 0.15s, box-shadow 0.15s;
   }
   .cirButton a:hover {
     background: transparent !important;
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+  /* Quieter secondary: outline / frost on dark bar */
+  .cirButton.secondary a {
+    background: rgba(255,255,255,0.06);
+    border: 2px solid rgba(255,255,255,0.55);
+    color: #fff !important;
+    font-weight: 500;
+    min-width: 180px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+  .cirButton.secondary a:hover {
+    background: rgba(255,255,255,0.12) !important;
     border-color: #fff !important;
     color: #fff !important;
   }
@@ -187,11 +208,6 @@
     font-weight: 500;
   }
 
-  .compare-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
   @media (min-width: 980px) {
     .compare-side {
       display: grid;
@@ -206,8 +222,17 @@
     .compare-side .ciLeft h3 { font-size: 14px; }
     .compare-side .cirButton a {
       min-width: 0;
-      font-size: 14px;
-      padding: 10px 14px;
+      font-size: 13px;
+      padding: 9px 12px;
+    }
+    .compare-side .ciRight.dual {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }
+    .compare-side .ciRight.dual .cirButton a {
+      width: 100%;
+      min-width: 0;
     }
   }
   @media (max-width: 720px) {
@@ -217,6 +242,16 @@
     }
     .ciLeft h2, .ciLeft h3 { text-align: center; }
     .ciRight { width: 100%; text-align: center; }
+    .ciRight.dual {
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      width: 100%;
+    }
+    .ciRight.dual .cirButton a {
+      width: 100%;
+      min-width: 0;
+    }
   }
 
   .meta {
@@ -234,24 +269,24 @@
 </head>
 <body>
   <div class="preview-banner">
-    <strong>PREVIEW ONLY</strong> — Contact Section bar copy change (remove 700%).
+    <strong>PREVIEW ONLY</strong> — Contact Section bar: drop 700% + dual CTAs (phone + Free Claim Consult).
     HubSpot module default / soft-publish <em>not</em> touched.
-    Marker: <code>UCS-CONTACT-700-PREVIEW-20261002</code>
+    Marker: <code>UCS-CONTACT-700-PREVIEW-20261002-dual-cta</code>
   </div>
 
   <div class="wrap">
-    <h1>Contact Section — 700% out</h1>
+    <h1>Contact Section — 700% out + dual CTA</h1>
     <p class="lede">
-      Dark grey rounded bar matching live (<code>#2e2e2e</code>), bold white title, soft white subtitle,
-      lime pill CTA. Phone is clickable (<code>tel:18553215677</code>). No orange highlight on numbers.
-      Proposed subtitle drops the “700% difference” claim used by the module default.
+      Dark grey rounded bar matching live (<code>#2e2e2e</code>), bold white title, soft-power subtitle (no 700%),
+      primary lime phone pill + quieter outline “Free Claim Consult” pill.
+      Desktop: pills side-by-side; mobile: stacked. No orange highlight on numbers.
     </p>
 
     <!-- AFTER (primary) -->
     <div class="panel after">
       <div class="label-row">
         <span class="badge after">After — proposed</span>
-        <span class="label-copy">Module <code>sub_title</code> soft-power line (no 700%)</span>
+        <span class="label-copy">Soft-power subtitle + dual CTAs</span>
       </div>
       <div class="contactSection">
         <div class="contactInner">
@@ -259,20 +294,23 @@
             <h2>New, Low-Balled &amp; Denied Claims</h2>
             <h3>A public adjuster can be the difference between an underpaid claim and the settlement you deserve.</h3>
           </div>
-          <div class="ciRight">
+          <div class="ciRight dual">
             <div class="cirButton btnStyle">
               <a href="tel:18553215677">855-321-LOSS(5677)</a>
+            </div>
+            <div class="cirButton btnStyle secondary">
+              <a href="https://www.ucspa.com/insurance-claim-help">Free Claim Consult</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- BEFORE (faded) -->
+    <!-- BEFORE (faded) — single phone only -->
     <div class="panel before">
       <div class="label-row">
         <span class="badge before">Before — live module default</span>
-        <span class="label-copy">Still on mold / fire / flood / wind / many damage + location pages</span>
+        <span class="label-copy">700% subtitle + single phone pill</span>
       </div>
       <div class="contactSection">
         <div class="contactInner">
@@ -287,7 +325,7 @@
           </div>
         </div>
       </div>
-      <p class="strike-note">Replacing: <s>A public adjuster can make a 700% difference.</s></p>
+      <p class="strike-note">Replacing: <s>A public adjuster can make a 700% difference.</s> · adding second CTA</p>
     </div>
 
     <!-- Side-by-side mini strips -->
@@ -322,9 +360,12 @@
               <h2>New, Low-Balled &amp; Denied Claims</h2>
               <h3>A public adjuster can be the difference between an underpaid claim and the settlement you deserve.</h3>
             </div>
-            <div class="ciRight">
+            <div class="ciRight dual">
               <div class="cirButton btnStyle">
                 <a href="tel:18553215677">855-321-LOSS(5677)</a>
+              </div>
+              <div class="cirButton btnStyle secondary">
+                <a href="https://www.ucspa.com/insurance-claim-help">Free Claim Consult</a>
               </div>
             </div>
           </div>
@@ -335,10 +376,10 @@
     <div class="meta">
       <strong>Scope note (preview only)</strong>
       <ul>
-        <li>HubSpot module <code>Contact Section - 2021</code> (id <code>52713049237</code>) default <code>sub_title</code> still = 700% line — <strong>not changed</strong>.</li>
-        <li>AFTER copy already live on some pages that overridden sub_title (e.g. tornado, pipe-burst, wildfire, many city pages).</li>
-        <li>Visual: bar <code>#2e2e2e</code>, radius 10px, lime CTA <code>#99cc00</code>, white type, no orange number accents.</li>
-        <li>CTA href: <code>tel:18553215677</code> · label <code>855-321-LOSS(5677)</code>.</li>
+        <li>HubSpot module <code>Contact Section - 2021</code> (id <code>52713049237</code>) — <strong>not changed</strong>.</li>
+        <li>AFTER: subtitle without 700%; primary lime <code>tel:18553215677</code>; secondary outline → <code>/insurance-claim-help</code>.</li>
+        <li>BEFORE: old 700% line + single phone pill (compare).</li>
+        <li>Visual: bar <code>#2e2e2e</code>, lime <code>#99cc00</code>, white type, no orange accents. Dual pills row on desktop, stack on mobile.</li>
       </ul>
     </div>
   </div>
