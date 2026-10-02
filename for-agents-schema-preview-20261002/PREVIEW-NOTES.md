@@ -16,6 +16,8 @@
 **Head-only / invisible:** when shipped, the schema is a `<script type="application/ld+json">` in head — not rendered as visible copy.
 
 ## Clickable preview
+> **Note (2026-10-02 ~08:17 ET):** GitHub Pages may briefly still serve the earlier standalone draft (~11KB). Raw/main + htmlpreview already have the live-HTML mirror (~53KB). Prefer htmlpreview until Pages catches up.
+
 
 - **GH Pages:** https://joedirect7.github.io/ucspa-redesign-mockup-20260926/for-agents-schema-preview-20261002/
 - **htmlpreview fallback:** https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/for-agents-schema-preview-20261002/index.html

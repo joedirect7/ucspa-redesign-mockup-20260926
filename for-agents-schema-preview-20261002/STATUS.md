@@ -5,6 +5,8 @@
 **Kind:** Live-HTML mirror of https://www.ucspa.com/for-agents with proposed head JSON-LD injected
 
 ## Preview URL
+> **Note (2026-10-02 ~08:17 ET):** GitHub Pages may briefly still serve the earlier standalone draft (~11KB). Raw/main + htmlpreview already have the live-HTML mirror (~53KB). Prefer htmlpreview until Pages catches up.
+
 
 https://joedirect7.github.io/ucspa-redesign-mockup-20260926/for-agents-schema-preview-20261002/
 
