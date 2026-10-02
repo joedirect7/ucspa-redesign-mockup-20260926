@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "mold-damage-insurance-claims",
+    "scrubbed_blocks": 1,
+    "higher_before": 1,
+    "higher_after": 1,
+    "contact700_in_after_snapshot": 0,
+    "has_rounded_form": true
+  },
+  {
+    "slug": "hail-damage-insurance-claims",
+    "scrubbed_blocks": 1,
+    "higher_before": 1,
+    "higher_after": 1,
+    "contact700_in_after_snapshot": 0,
+    "has_rounded_form": true
+  },
+  {
+    "slug": "hail-damage-insurance-claims-0",
+    "scrubbed_blocks": 2,
+    "higher_before": 3,
+    "higher_after": 2,
+    "contact700_in_after_snapshot": 0,
+    "has_rounded_form": true
+  },
+  {
+    "slug": "roof-leak",
+    "scrubbed_blocks": 2,
+    "higher_before": 2,
+    "higher_after": 1,
+    "contact700_in_after_snapshot": 0,
+    "has_rounded_form": true
+  },
+  {
+    "slug": "xactimate-estimates-roofing-claims",
+    "scrubbed_blocks": 0,
+    "higher_before": 0,
+    "higher_after": 1,
+    "contact700_in_after_snapshot": 0,
+    "has_rounded_form": true
+  }
+]
