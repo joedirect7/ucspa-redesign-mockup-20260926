@@ -1,0 +1,31 @@
+{
+  "ts": "2026-10-02T08:48:16.152612",
+  "method": "LANCZOS downscale 0.75 + BILINEAR upscale (browser 75% zoom look at 100%)",
+  "note": "Applied to all 6 hero-journey JPGs; rotator/crossfade unchanged; no HubSpot",
+  "files": [
+    {
+      "slug": "01-getting-the-call",
+      "bytes": 323258
+    },
+    {
+      "slug": "02-inspecting",
+      "bytes": 447475
+    },
+    {
+      "slug": "03-helping-owners",
+      "bytes": 343718
+    },
+    {
+      "slug": "04-researching-scoping",
+      "bytes": 405188
+    },
+    {
+      "slug": "05-estimating",
+      "bytes": 342554
+    },
+    {
+      "slug": "06-negotiating",
+      "bytes": 384633
+    }
+  ]
+}

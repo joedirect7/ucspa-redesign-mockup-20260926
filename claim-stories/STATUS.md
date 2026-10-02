@@ -32,3 +32,10 @@
 ## Shots
 - `shots/desktop-hero.png` (reshot 2026-09-30 ~10:52 EDT — beat 4 Researching & scoping behind frost)
 - Contact sheet: `_gen/previews/CONTACT-SHEET-pa-journey.jpg`
+
+## Face polish 2026-10-02 (Joe: 100% should look like 75%)
+- Issue: distressed insured face (esp. slide 01 phone/cream sweater) looked harsh/grainy at 100% browser zoom; OK at 75%.
+- Fix: reprocessed all 6 `hero-journey/*.jpg` — LANCZOS downscale 0.75 + BILINEAR upscale (browser 75% look at 100%). Masters PNG unchanged (not served).
+- Kept: auto crossfade dissolve (7s / 2s), no dots, A True frost, H1 Claim Stories, object-position 28% 28% (insured left of frost).
+- **Not HubSpot.** Preview only.
+- Face crops: `_gen/face-polish-20261002/face-01-BEFORE-100pct.png`, `face-01-AFTER-100pct.png`, `face-01-COMPARE.png`
