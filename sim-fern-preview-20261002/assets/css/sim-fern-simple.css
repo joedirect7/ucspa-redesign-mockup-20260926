@@ -1,0 +1,452 @@
+/* UCS-SIM-FERN-SIMPLE-PREVIEW-20261002
+   Live-like Sim Fern layout — NO frost redesign.
+   Only: rounded corner boxes, max/700% scrub, clickable tel/mailto.
+*/
+:root {
+  --lime: #99cc00;
+  --lime-deep: #99ca3c;
+  --ink: #181c24;
+  --muted: #5a6170;
+  --white: #fff;
+  --black: #000;
+  --radius: 18px;
+  --radius-sm: 16px;
+  --font: Poppins, Montserrat, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.5;
+}
+a { color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+
+.preview-banner {
+  background: #1a1f28;
+  color: #cfd6e0;
+  padding: 12px 18px;
+  font-size: 13px;
+  line-height: 1.45;
+  border-bottom: 3px solid var(--lime);
+}
+.preview-banner strong { color: var(--lime); }
+.preview-banner code {
+  background: rgba(255,255,255,0.08);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.wrap {
+  width: min(1140px, 92%);
+  margin: 0 auto;
+}
+
+/* Chrome */
+.site-chrome {
+  background: var(--white);
+  border-bottom: 1px solid rgba(24,28,36,0.08);
+}
+.site-chrome-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  width: min(1140px, 92%);
+  margin: 0 auto;
+}
+.site-chrome img { height: 56px; width: auto; }
+.chrome-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lime);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+.chrome-phone:hover { filter: brightness(0.95); }
+
+/* Hero — simple white like live */
+.ebookHero-Section {
+  background: #fff;
+  padding: 48px 0 28px;
+  text-align: center;
+}
+.ebookHero-Section h1 {
+  margin: 0 0 10px;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+}
+.ebookHero-Subtitle h3 {
+  margin: 0;
+  font-size: clamp(20px, 2.6vw, 32px);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.ebookHero-Subtitle h3 span {
+  color: var(--lime);
+  font-weight: 600;
+}
+
+/* Photo + green corner box — LIVE layout, rounded */
+.ebookbox-Section {
+  background-image: url(https://www.ucspa.com/hubfs/headshot-optimized2.jpg);
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  min-height: 420px;
+}
+.ebookbox-Row {
+  display: flex;
+  justify-content: flex-start;
+}
+.ebookboxpopup-col {
+  background-color: rgba(153, 204, 2, 0.88);
+  color: #000;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25;
+  max-width: 480px;
+  padding: 40px 36px;
+  position: relative;
+  /* Joe: round the corner boxes — match site ~18px */
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow:
+    0 12px 32px rgba(24, 28, 36, 0.14),
+    inset 0 1px 0 rgba(255,255,255,0.35);
+}
+.ebookboxpopup-col .lead-line {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 18px;
+  line-height: 1.25;
+}
+.ebookboxpopup-col h3 {
+  margin: 0 0 8px;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+.ebookboxpopup-col h3 a {
+  color: #000;
+  text-decoration: none;
+  font-size: inherit;
+  line-height: inherit;
+}
+.ebookboxpopup-col h3 a:hover { text-decoration: underline; }
+.ebookboxpopup-col .email-line {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.ebookboxpopup-col .email-line a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Mobile-only green box (Sim contact — not leftover Gwynne) */
+.ebookbox-grnmbl-Section {
+  display: none;
+  background: #fff;
+  padding: 24px 0 8px;
+}
+.ebookbox-grnmbl-Section .ebookboxpopup-col {
+  background-color: rgb(153, 202, 60);
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Form band */
+.edownldForm-Section {
+  background: #fff;
+  padding: 56px 0;
+}
+.edownldForm-Row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: start;
+}
+.edownldForm-left-ttlgrp h2 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.edownldForm-left-ttlgrp h4 {
+  margin: 0 0 18px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.edownldForm-left-text p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+.edownldForm-right {
+  background: #f7f8f5;
+  border: 1px solid rgba(24,28,36,0.08);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: 0 8px 24px rgba(24,28,36,0.06);
+}
+.edownldForm-right h3 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  text-align: center;
+}
+.fake-form label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.fake-form input,
+.fake-form textarea {
+  width: 100%;
+  border: 1px solid #d5d8de;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  margin-bottom: 10px;
+  background: #fff;
+}
+.fake-form .row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.fake-form .btn-disabled {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--lime);
+  color: #fff;
+  border: 0;
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+.form-note {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Green bullets band */
+.sldr-newclm-sctn {
+  background: #99cc01;
+  padding: 36px 0 44px;
+  color: #000;
+}
+.sldr-clm-Row ul {
+  margin: 0 0 22px;
+  padding: 0 0 0 8px;
+  list-style: none;
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 920px;
+}
+.sldr-clm-Row ul li {
+  position: relative;
+  padding: 8px 0 8px 28px;
+}
+.sldr-clm-Row ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+}
+.sldr-clm-Row .paid-line {
+  margin: 0;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Process cards — live black band, more rounded */
+.Our-location-section {
+  background: #000;
+  padding: 56px 0 40px;
+  color: #fff;
+}
+.Our-location-Header h2 {
+  margin: 0 0 36px;
+  text-align: center;
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.2;
+  color: #fff;
+}
+.Our-location-Row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.Our-location-col {
+  background: #fff;
+  color: #181c24;
+  text-align: center;
+  padding: 28px 18px 24px;
+  /* Joe: round content boxes — match PD cards ~18px */
+  border-radius: var(--radius);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.Our-location-col::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; right: 0;
+  height: 5px;
+  background: var(--lime);
+}
+.Our-location-col-icon {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.Our-location-col-icon img {
+  max-width: 48px;
+  filter: invert(1);
+  margin: 0 auto;
+}
+.Our-location-col-Title h3 {
+  margin: 8px 0 10px;
+  font-size: 20px;
+  color: var(--lime);
+}
+.Our-location-col-Text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Bottom contact band */
+.contact-band {
+  background: #000;
+  padding: 0 0 48px;
+}
+.contact-inner {
+  background: #99cc01;
+  border-radius: var(--radius);
+  padding: 28px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+}
+.contact-inner p {
+  margin: 0;
+  flex: 1 1 280px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.35;
+}
+.contact-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.contact-ctas a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 18px;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+.cta-phone {
+  background: var(--lime);
+  color: #fff !important;
+  border: 2px solid #7aa600;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.cta-email {
+  background: #2e2e2e;
+  color: #fff !important;
+  border: 2px solid #2e2e2e;
+}
+.cta-consult {
+  background: transparent;
+  color: #181c24 !important;
+  border: 2px solid #181c24;
+}
+
+.scope-note {
+  width: min(1140px, 92%);
+  margin: 28px auto 48px;
+  padding: 18px 20px;
+  background: #f4f5f2;
+  border: 1px solid rgba(24,28,36,0.1);
+  border-radius: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.scope-note strong { color: var(--ink); }
+.scope-note ul { margin: 8px 0 0; padding-left: 18px; }
+
+@media (max-width: 980px) {
+  .edownldForm-Row { grid-template-columns: 1fr; }
+  .Our-location-Row { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 767px) {
+  .ebookbox-Section {
+    padding: 40px 0 60px;
+    min-height: 320px;
+    background-position: 80% 0;
+  }
+  .ebookboxpopup-col {
+    max-width: 280px;
+    padding: 22px 18px;
+    font-size: 18px;
+  }
+  .ebookboxpopup-col .lead-line { font-size: 18px; }
+  .ebookboxpopup-col h3 { font-size: 26px; }
+  .ebookboxpopup-col .email-line { font-size: 16px; }
+  .ebookbox-grnmbl-Section { display: block; }
+  .Our-location-Row { grid-template-columns: 1fr; }
+  .contact-inner { justify-content: center; text-align: center; }
+  .contact-ctas { justify-content: center; }
+}
