@@ -1,26 +1,16 @@
-# STATUS — /for-agents JSON-LD preview (PREVIEW ONLY)
+# STATUS — for-agents WebPage JSON-LD preview
 
-**When:** 2026-10-02 ~07:05 ET  
-**Live HubSpot:** **not changed**  
-**Draft:** `schema-drafts/for-agents-20261002/for-agents.WebPage.jsonld`
+**When:** 2026-10-02 ~08:16 ET  
+**Live HubSpot:** **not changed** (hold ship for Joe OK)  
+**Kind:** Live-HTML mirror of https://www.ucspa.com/for-agents with proposed head JSON-LD injected
 
 ## Preview URL
 
 https://joedirect7.github.io/ucspa-redesign-mockup-20260926/for-agents-schema-preview-20261002/
 
-## What Joe sees
+htmlpreview fallback:  
+https://htmlpreview.github.io/?https://github.com/joedirect7/ucspa-redesign-mockup-20260926/blob/main/for-agents-schema-preview-20261002/index.html
 
-- Before/after: live = **0 JSON-LD**; proposed = 1× `WebPage` + Organization pointer
-- Full JSON-LD (also injected in preview `<head>` for local validation)
-- Download `.jsonld`
-- Ship checklist — needs Joe OK before HubSpot apply
+## Notes
 
-## Soft-power constraints kept
-
-- No denial thesis / no DIY claim coaching
-- NAP: `+1-855-321-5677`, `claims@ucspa.com`
-- significantLink → llms.txt, llms-full.txt, claim-help, faq, recent-settlements
-
-## Marker
-
-`UCS-FOR-AGENTS-SCHEMA-PREVIEW-20261002`
+See PREVIEW-NOTES.md. Marker `ucs-schema-jsonld`. Head-only / invisible when shipped. Box source: `schema-drafts/for-agents-20261002/`.
